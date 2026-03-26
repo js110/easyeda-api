@@ -1,0 +1,39 @@
+{
+  "className": "SYS_HeaderMenu",
+  "methodName": "removeSystemHeaderMenuItem",
+  "slug": "SYS_HeaderMenu.removeSystemHeaderMenuItem",
+  "docPath": "references/classes/SYS_HeaderMenu.md",
+  "examplePath": "examples/methods/SYS_HeaderMenu/removeSystemHeaderMenuItem.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_HeaderMenu/removeSystemHeaderMenuItem.json",
+  "signatures": [
+    "removeSystemHeaderMenuItem(id: Array<string>, props?: {         removeTheBeforeDivider?: boolean;         removeTheAfterDivider?: boolean;     }): Promise<boolean>"
+  ],
+  "description": "移除系统顶部菜单项",
+  "classSummary": "系统 / 顶部菜单类",
+  "remarks": "一旦菜单被移除，需要重启嘉立创 EDA 软件才可以恢复\n\n本接口无法移除  接口导入的系统顶部菜单项\n\n本接口无法移除第一级菜单，`id` 数组请至少传递 `2` 个值\n\n本接口无法移除 \\*\\*高级\\*\\* 菜单下的任何子菜单\n\n注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`\n\n非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+  "returnSummary": "Promise<boolean>\n\n移除操作是否成功，菜单已移除但分隔线未找到也会返回 `true` 的结果",
+  "params": [
+    {
+      "name": "id",
+      "type": "Array<string>",
+      "description": "菜单项 ID 树，将会按照数组顺序按层级匹配菜单项，并移除数组最后一位对应的菜单项"
+    },
+    {
+      "name": "props",
+      "type": "\\{ removeTheBeforeDivider?: boolean; removeTheAfterDivider?: boolean; \\}",
+      "description": "_（可选）_ 其它参数，是否移除菜单项之前、之后的分隔线"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_HeaderMenu_removeSystemHeaderMenuItem_' + Date.now();\n  const result = await eda.sys_HeaderMenu.removeSystemHeaderMenuItem('id', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

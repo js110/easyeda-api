@@ -1,0 +1,26 @@
+{
+  "className": "DMT_Panel",
+  "methodName": "getCurrentPanelInfo",
+  "slug": "DMT_Panel.getCurrentPanelInfo",
+  "docPath": "references/classes/DMT_Panel.md",
+  "examplePath": "examples/methods/DMT_Panel/getCurrentPanelInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Panel/getCurrentPanelInfo.json",
+  "signatures": [
+    "getCurrentPanelInfo(): Promise<IDMT_PanelItem | undefined>"
+  ],
+  "description": "获取当前面板的详细属性",
+  "classSummary": "文档树 / 面板管理类",
+  "remarks": "将会获取当前打开且拥有最后输入焦点的面板的详细属性",
+  "returnSummary": "Promise<[IDMT\\_PanelItem](../interfaces/IDMT_PanelItem.md) \\| undefined>\n\n面板的详细属性，如若为 `undefined` 则获取失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Panel_getCurrentPanelInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const result = await eda.dmt_Panel.getCurrentPanelInfo();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n  };\n})(eda);"
+}

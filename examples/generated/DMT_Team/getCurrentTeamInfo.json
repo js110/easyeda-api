@@ -1,0 +1,28 @@
+{
+  "className": "DMT_Team",
+  "methodName": "getCurrentTeamInfo",
+  "slug": "DMT_Team.getCurrentTeamInfo",
+  "docPath": "references/classes/DMT_Team.md",
+  "examplePath": "examples/methods/DMT_Team/getCurrentTeamInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Team/getCurrentTeamInfo.json",
+  "signatures": [
+    "getCurrentTeamInfo(): Promise<IDMT_TeamItem | undefined>"
+  ],
+  "description": "获取当前团队的详细属性",
+  "classSummary": "文档树 / 团队类",
+  "remarks": "将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的所属团队的详细属性",
+  "returnSummary": "Promise<[IDMT\\_TeamItem](../interfaces/IDMT_TeamItem.md) \\| undefined>\n\n团队的详细属性，如若为 `undefined` 则获取失败",
+  "params": [],
+  "exampleNotes": [
+    "如果当前焦点不在某个工程文档上，`getCurrentTeamInfo()` 可能返回空或直接抛错，所以案例额外补了 `getAllTeamsInfo()` 作为兜底参考。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Team_getCurrentTeamInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  let result;\n  let apiError = null;\n  try {\n    result = await eda.dmt_Team.getCurrentTeamInfo();\n  } catch (error) {\n    apiError = error?.message ?? String(error);\n  }\n  const allTeams = await eda.dmt_Team.getAllTeamsInfo();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n    apiError,\n    fallbackTeam: allTeams?.[0] ?? null,\n    fallbackTeamCount: Array.isArray(allTeams) ? allTeams.length : null,\n    explanation: result ? '已获取到当前焦点工程关联的团队信息。' : '当前没有可判定的焦点团队时，案例会额外返回团队列表中的第一个团队作为理解返回结构的参考。',\n  };\n})(eda);"
+}

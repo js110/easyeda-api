@@ -1,0 +1,34 @@
+{
+  "className": "SYS_FormatConversion",
+  "methodName": "convertAltiumDesignerLibrariesToEasyEDAMultiFiles",
+  "slug": "SYS_FormatConversion.convertAltiumDesignerLibrariesToEasyEDAMultiFiles",
+  "docPath": "references/classes/SYS_FormatConversion.md",
+  "examplePath": "examples/methods/SYS_FormatConversion/convertAltiumDesignerLibrariesToEasyEDAMultiFiles.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_FormatConversion/convertAltiumDesignerLibrariesToEasyEDAMultiFiles.json",
+  "signatures": [
+    "convertAltiumDesignerLibrariesToEasyEDAMultiFiles(file: File | Array<File>): Promise<Array<File>>"
+  ],
+  "description": "转换 Altium Designer 库到多个嘉立创库文件（每个器件一个文件）",
+  "classSummary": "系统 / 格式转换（Chameleon）类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<File>>\n\n多个嘉立创库文件",
+  "params": [
+    {
+      "name": "file",
+      "type": "File \\| Array<File>",
+      "description": "Altium Designer 库文件"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FormatConversion_convertAltiumDesignerLibrariesToEasyEDAMultiFiles_' + Date.now();\n  const result = await eda.sys_FormatConversion.convertAltiumDesignerLibrariesToEasyEDAMultiFiles(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

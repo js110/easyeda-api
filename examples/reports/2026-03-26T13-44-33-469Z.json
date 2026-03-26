@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-03-26T13:44:33.463Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+    "pendingRequests": 0,
+    "timestamp": 1774532673451
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": false,
+    "projectUuid": null,
+    "projectName": null,
+    "documentType": 2,
+    "tabId": "3b14e3ac8f58419599bbb715b04fca48@0819f05c4eef4c71ace90d822a990e87",
+    "documentUuid": "3b14e3ac8f58419599bbb715b04fca48",
+    "schematicPageUuid": null,
+    "pcbUuid": null,
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "3b14e3ac8f58419599bbb715b04fca48"
+  },
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "PCB_Drc.getAllNetClasses",
+      "status": "blocked",
+      "reason": "当前没有打开工程。",
+      "contextSnapshot": {
+        "hasProject": false,
+        "projectUuid": null,
+        "projectName": null,
+        "documentType": 2,
+        "tabId": "3b14e3ac8f58419599bbb715b04fca48@0819f05c4eef4c71ace90d822a990e87",
+        "documentUuid": "3b14e3ac8f58419599bbb715b04fca48",
+        "schematicPageUuid": null,
+        "pcbUuid": null,
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "3b14e3ac8f58419599bbb715b04fca48"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

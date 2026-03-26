@@ -1,0 +1,28 @@
+{
+  "className": "SYS_PanelControl",
+  "methodName": "closeLeftPanel",
+  "slug": "SYS_PanelControl.closeLeftPanel",
+  "docPath": "references/classes/SYS_PanelControl.md",
+  "examplePath": "examples/methods/SYS_PanelControl/closeLeftPanel.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_PanelControl/closeLeftPanel.json",
+  "signatures": [
+    "closeLeftPanel(): void"
+  ],
+  "description": "关闭左侧面板",
+  "classSummary": "系统 / 面板控制类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_PanelControl_closeLeftPanel_' + Date.now();\n  const result = await eda.sys_PanelControl.closeLeftPanel();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-03-26T13:58:19.739Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+    "pendingRequests": 1,
+    "timestamp": 1774533499724
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": false,
+    "projectUuid": null,
+    "projectName": null,
+    "documentType": 2,
+    "tabId": "d6ef72b59b81433f80c3e1799955eb63@0819f05c4eef4c71ace90d822a990e87",
+    "documentUuid": "d6ef72b59b81433f80c3e1799955eb63",
+    "schematicPageUuid": null,
+    "pcbUuid": null,
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "d6ef72b59b81433f80c3e1799955eb63"
+  },
+  "seededAnchorContext": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 1,
+    "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "7e63af2d471a22d3",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "7e63af2d471a22d3"
+  },
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "PCB_PrimitiveLine.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。",
+      "contextSnapshot": {
+        "hasProject": false,
+        "projectUuid": null,
+        "projectName": null,
+        "documentType": 2,
+        "tabId": "d6ef72b59b81433f80c3e1799955eb63@0819f05c4eef4c71ace90d822a990e87",
+        "documentUuid": "d6ef72b59b81433f80c3e1799955eb63",
+        "schematicPageUuid": null,
+        "pcbUuid": null,
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "d6ef72b59b81433f80c3e1799955eb63"
+      },
+      "restoreAttempt": {
+        "restored": false,
+        "reason": "Request 873012ef-b257-4b1f-bf5b-3bf9c15979ab timed out after 30000ms"
+      }
+    }
+  ]
+}

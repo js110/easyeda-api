@@ -1,0 +1,26 @@
+{
+  "className": "SYS_LoadingAndProgressBar",
+  "methodName": "showLoading",
+  "slug": "SYS_LoadingAndProgressBar.showLoading",
+  "docPath": "references/classes/SYS_LoadingAndProgressBar.md",
+  "examplePath": "examples/methods/SYS_LoadingAndProgressBar/showLoading.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_LoadingAndProgressBar/showLoading.json",
+  "signatures": [
+    "showLoading(): void"
+  ],
+  "description": "显示无进度加载覆盖",
+  "classSummary": "系统 / 加载与进度条类",
+  "remarks": "没有进度指示，但会存在与进度条一致的灰色覆盖，阻止用户进一步操作",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_LoadingAndProgressBar_showLoading_' + Date.now();\n  const result = await eda.sys_LoadingAndProgressBar.showLoading();\n  return { fixtureName, result };\n})(eda);"
+}

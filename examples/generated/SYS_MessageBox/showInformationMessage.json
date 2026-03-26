@@ -1,0 +1,42 @@
+{
+  "className": "SYS_MessageBox",
+  "methodName": "showInformationMessage",
+  "slug": "SYS_MessageBox.showInformationMessage",
+  "docPath": "references/classes/SYS_MessageBox.md",
+  "examplePath": "examples/methods/SYS_MessageBox/showInformationMessage.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_MessageBox/showInformationMessage.json",
+  "signatures": [
+    "showInformationMessage(content: string, title?: string, buttonTitle?: string): void"
+  ],
+  "description": "显示消息框",
+  "classSummary": "> 警告：此 API 现已弃用。\n>\n> 已更名为 SYS\\_Dialog\n\n系统 / 消息框类",
+  "remarks": "显示一个文字消息提示框",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "content",
+      "type": "string",
+      "description": "消息文本，支持使用 `\\n` 换行"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "_（可选）_ 消息框标题"
+    },
+    {
+      "name": "buttonTitle",
+      "type": "string",
+      "description": "_（可选）_ 按钮标题，为空则不显示按钮"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBox_showInformationMessage_' + Date.now();\n  const result = await eda.sys_MessageBox.showInformationMessage('content', undefined, 'Codex example running inside EasyEDA');\n  return { fixtureName, result };\n})(eda);"
+}

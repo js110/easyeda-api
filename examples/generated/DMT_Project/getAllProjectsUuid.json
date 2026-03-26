@@ -1,0 +1,42 @@
+{
+  "className": "DMT_Project",
+  "methodName": "getAllProjectsUuid",
+  "slug": "DMT_Project.getAllProjectsUuid",
+  "docPath": "references/classes/DMT_Project.md",
+  "examplePath": "examples/methods/DMT_Project/getAllProjectsUuid.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/DMT_Project/getAllProjectsUuid.json",
+  "signatures": [
+    "getAllProjectsUuid(teamUuid?: string, folderUuid?: string, workspaceUuid?: string): Promise<Array<string>>"
+  ],
+  "description": "获取所有工程的 UUID",
+  "classSummary": "文档树 / 工程管理类",
+  "remarks": "如若指定 `teamUuid` ，则获取指定团队下的所有工程；\n\n如若指定 `folderUuid` ，则获取指定文件夹下的所有工程；\n\n`teamUuid` 、`folderUuid` 需要且仅允许指定其一，如若都指定则只取 `folderUuid` ；\n\n如若指定 `workspaceUuid` ，则在指定 Workspace 下获取指定团队/文件夹下的所有工程",
+  "returnSummary": "Promise<Array<string>>\n\n工程 UUID 数组",
+  "params": [
+    {
+      "name": "teamUuid",
+      "type": "string",
+      "description": "_（可选）_ 团队 UUID"
+    },
+    {
+      "name": "folderUuid",
+      "type": "string",
+      "description": "_（可选）_ 文件夹 UUID，如若不指定，则默认为团队的根文件夹"
+    },
+    {
+      "name": "workspaceUuid",
+      "type": "string",
+      "description": "_（可选）_ 工作区 UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Project_getAllProjectsUuid_' + Date.now();\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  if (!teamUuid) { throw new Error('当前账号下没有可用团队，无法解析 folderUuid。'); }\n  const folderCandidates = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  const folderUuid = folderCandidates?.[0];\n  const workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\n  const workspaceUuid = workspaces?.[0]?.uuid;\n  const result = await eda.dmt_Project.getAllProjectsUuid(teamUuid, folderUuid, workspaceUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,26 @@
+{
+  "className": "DMT_Pcb",
+  "methodName": "getCurrentPcbInfo",
+  "slug": "DMT_Pcb.getCurrentPcbInfo",
+  "docPath": "references/classes/DMT_Pcb.md",
+  "examplePath": "examples/methods/DMT_Pcb/getCurrentPcbInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Pcb/getCurrentPcbInfo.json",
+  "signatures": [
+    "getCurrentPcbInfo(): Promise<IDMT_PcbItem | undefined>"
+  ],
+  "description": "获取当前 PCB 的详细属性",
+  "classSummary": "文档树 / PCB 管理类",
+  "remarks": "将会获取当前打开且拥有最后输入焦点的 PCB 的详细属性",
+  "returnSummary": "Promise<[IDMT\\_PcbItem](../interfaces/IDMT_PcbItem.md) \\| undefined>\n\nPCB 的详细属性，如若为 `undefined` 则获取失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Pcb_getCurrentPcbInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const result = await eda.dmt_Pcb.getCurrentPcbInfo();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n  };\n})(eda);"
+}

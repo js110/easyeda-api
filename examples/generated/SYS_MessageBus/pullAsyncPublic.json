@@ -1,0 +1,34 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "pullAsyncPublic",
+  "slug": "SYS_MessageBus.pullAsyncPublic",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/pullAsyncPublic.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/pullAsyncPublic.json",
+  "signatures": [
+    "pullAsyncPublic(topic: string): Promise<any>"
+  ],
+  "description": "公共消息总线：拉消息 Promise 版本",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "每次只能拉一个消息，可以使用 `await` 等待消息拉取",
+  "returnSummary": "Promise<any>\n\n拉取到的消息",
+  "params": [
+    {
+      "name": "topic",
+      "type": "string",
+      "description": "主题"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_pullAsyncPublic_' + Date.now();\n  const result = await eda.sys_MessageBus.pullAsyncPublic('topic');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,26 @@
+{
+  "className": "LIB_LibrariesList",
+  "methodName": "getAllLibrariesList",
+  "slug": "LIB_LibrariesList.getAllLibrariesList",
+  "docPath": "references/classes/LIB_LibrariesList.md",
+  "examplePath": "examples/methods/LIB_LibrariesList/getAllLibrariesList.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/LIB_LibrariesList/getAllLibrariesList.json",
+  "signatures": [
+    "getAllLibrariesList(): Promise<Array<ILIB_LibraryInfo>>"
+  ],
+  "description": "获取所有库的列表",
+  "classSummary": "综合库 / 库列表类",
+  "remarks": "此处不会获取到系统库、个人库、工程库、收藏库的信息，如需获取它们的信息，请使用 [getSystemLibraryUuid](./LIB_LibrariesList.md) 、[getPersonalLibraryUuid](./LIB_LibrariesList.md) 、[getProjectLibraryUuid](./LIB_LibrariesList.md) 、[getFavoriteLibraryUuid](./LIB_LibrariesList.md) 接口",
+  "returnSummary": "Promise<Array<[ILIB\\_LibraryInfo](../interfaces/ILIB_LibraryInfo.md) >>\n\n库信息列表",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_LibrariesList_getAllLibrariesList_' + Date.now();\n  const result = await eda.lib_LibrariesList.getAllLibrariesList();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

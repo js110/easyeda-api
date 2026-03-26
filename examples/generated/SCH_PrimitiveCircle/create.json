@@ -1,0 +1,69 @@
+{
+  "className": "SCH_PrimitiveCircle",
+  "methodName": "create",
+  "slug": "SCH_PrimitiveCircle.create",
+  "docPath": "references/classes/SCH_PrimitiveCircle.md",
+  "examplePath": "examples/methods/SCH_PrimitiveCircle/create.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitiveCircle/create.json",
+  "signatures": [
+    "create(centerX: number, centerY: number, radius: number, color?: string | null, fillColor?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null, fillStyle?: ESCH_PrimitiveFillStyle | null): Promise<ISCH_PrimitiveCircle>"
+  ],
+  "description": "创建圆",
+  "classSummary": "原理图 & 符号 / 圆图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) >\n\n圆图元对象",
+  "params": [
+    {
+      "name": "centerX",
+      "type": "number",
+      "description": "圆心 X"
+    },
+    {
+      "name": "centerY",
+      "type": "number",
+      "description": "圆心 Y"
+    },
+    {
+      "name": "radius",
+      "type": "number",
+      "description": "半径"
+    },
+    {
+      "name": "color",
+      "type": "string \\| null",
+      "description": "_（可选）_ 颜色，`null` 表示默认"
+    },
+    {
+      "name": "fillColor",
+      "type": "string \\| null",
+      "description": "_（可选）_ 填充颜色，`none` 表示无填充，`null` 表示默认"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number \\| null",
+      "description": "_（可选）_ 线宽，范围 `1-10` ，`null` 表示默认"
+    },
+    {
+      "name": "lineType",
+      "type": "ESCH\\_PrimitiveLineType \\| null",
+      "description": "_（可选）_ 线型，`null` 表示默认"
+    },
+    {
+      "name": "fillStyle",
+      "type": "ESCH\\_PrimitiveFillStyle \\| null",
+      "description": "_（可选）_ 填充样式，`null` 表示默认"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveCircle_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveCircle.create(\n    120,\n    80,\n    30,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveCircle.delete([primitiveId]); }\n  }\n})(eda);"
+}

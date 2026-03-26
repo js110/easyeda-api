@@ -1,0 +1,32 @@
+{
+  "className": "SYS_Storage",
+  "methodName": "getExtensionUserConfig",
+  "slug": "SYS_Storage.getExtensionUserConfig",
+  "docPath": "references/classes/SYS_Storage.md",
+  "examplePath": "examples/methods/SYS_Storage/getExtensionUserConfig.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Storage/getExtensionUserConfig.json",
+  "signatures": [
+    "getExtensionUserConfig(key: string): any | undefined"
+  ],
+  "description": "获取扩展用户配置",
+  "classSummary": "系统 / 存储类",
+  "remarks": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "any \\| undefined\n\n配置项对应的值，不存在将返回 `undefined`",
+  "params": [
+    {
+      "name": "key",
+      "type": "string",
+      "description": "配置项"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Storage_getExtensionUserConfig_' + Date.now();\n  const result = await eda.sys_Storage.getExtensionUserConfig('key');\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

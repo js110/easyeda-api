@@ -1,0 +1,39 @@
+{
+  "className": "DMT_EditorControl",
+  "methodName": "openDocument",
+  "slug": "DMT_EditorControl.openDocument",
+  "docPath": "references/classes/DMT_EditorControl.md",
+  "examplePath": "examples/methods/DMT_EditorControl/openDocument.md",
+  "kind": "ui",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/DMT_EditorControl/openDocument.json",
+  "signatures": [
+    "openDocument(documentUuid: string, splitScreenId?: string): Promise<string | undefined>"
+  ],
+  "description": "打开文档",
+  "classSummary": "文档树 / 编辑器控制类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n标签页 ID，如若为 `undefined` ，则打开文档失败",
+  "params": [
+    {
+      "name": "documentUuid",
+      "type": "string",
+      "description": "文档 UUID，此处支持 IDMT\\_SchematicItem.uuid 、IDMT\\_SchematicPageItem.uuid 、IDMT\\_PcbItem.uuid 、IDMT\\_PanelItem.uuid 作为输入"
+    },
+    {
+      "name": "splitScreenId",
+      "type": "string",
+      "description": "_（可选）_ 分屏 ID，即 DMT\\_EditorControl.getSplitScreenTree() 方法获取到的 IDMT\\_EditorSplitScreenItem.id"
+    }
+  ],
+  "exampleNotes": [
+    "打开文档案例会优先复用当前工程里的第一张原理图页，避免传入无效 UUID。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_EditorControl_openDocument_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  const projectDocumentUuid = currentProject?.data?.[0]?.schematic?.page?.[0]?.uuid ?? currentProject?.data?.[0]?.pcb?.uuid;\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  const splitScreenId = currentDocument?.tabId ? await eda.dmt_EditorControl.getSplitScreenIdByTabId(currentDocument.tabId) : undefined;\n  const result = await eda.dmt_EditorControl.openDocument(projectDocumentUuid, splitScreenId);\n  return { fixtureName, result };\n})(eda);"
+}

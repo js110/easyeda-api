@@ -1,0 +1,34 @@
+{
+  "className": "SYS_Timer",
+  "methodName": "clearIntervalTimer",
+  "slug": "SYS_Timer.clearIntervalTimer",
+  "docPath": "references/classes/SYS_Timer.md",
+  "examplePath": "examples/methods/SYS_Timer/clearIntervalTimer.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Timer/clearIntervalTimer.json",
+  "signatures": [
+    "clearIntervalTimer(id: string): boolean"
+  ],
+  "description": "清除指定循环定时器",
+  "classSummary": "系统 / 定时器类",
+  "remarks": "",
+  "returnSummary": "boolean\n\n定时器是否清除成功",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "定时器 ID"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Timer_clearIntervalTimer_' + Date.now();\n  const result = await eda.sys_Timer.clearIntervalTimer('id');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

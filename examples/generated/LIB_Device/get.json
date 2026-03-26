@@ -1,0 +1,37 @@
+{
+  "className": "LIB_Device",
+  "methodName": "get",
+  "slug": "LIB_Device.get",
+  "docPath": "references/classes/LIB_Device.md",
+  "examplePath": "examples/methods/LIB_Device/get.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Device/get.json",
+  "signatures": [
+    "get(deviceUuid: string, libraryUuid?: string): Promise<ILIB_DeviceItem | undefined>"
+  ],
+  "description": "获取器件的所有属性",
+  "classSummary": "综合库 / 器件类",
+  "remarks": "",
+  "returnSummary": "Promise<[ILIB\\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \\| undefined>\n\n器件属性",
+  "params": [
+    {
+      "name": "deviceUuid",
+      "type": "string",
+      "description": "器件 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，默认为系统库，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Device_get_' + Date.now();\n  const deviceCandidates = await eda.lib_Device.search('STM32');\n  const deviceItem = deviceCandidates?.[0];\n  const deviceUuid = deviceItem?.uuid;\n  const deviceLibraryUuid = deviceItem?.libraryUuid;\n  const result = await eda.lib_Device.get(deviceUuid, deviceLibraryUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

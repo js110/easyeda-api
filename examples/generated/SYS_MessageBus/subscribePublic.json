@@ -1,0 +1,39 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "subscribePublic",
+  "slug": "SYS_MessageBus.subscribePublic",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/subscribePublic.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/subscribePublic.json",
+  "signatures": [
+    "subscribePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask"
+  ],
+  "description": "公共消息总线：订阅消息",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "持久性订阅消息",
+  "returnSummary": "[ISYS\\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)\n\n消息总线任务",
+  "params": [
+    {
+      "name": "topic",
+      "type": "string",
+      "description": "主题"
+    },
+    {
+      "name": "callbackFn",
+      "type": "(message: any) => void",
+      "description": "接收到消息后的回调"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_subscribePublic_' + Date.now();\n  const result = await eda.sys_MessageBus.subscribePublic('topic', async (shortcutKey) => { await eda.sys_Message.showToastMessage('Shortcut fired: ' + shortcutKey.join('+')); });\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

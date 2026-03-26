@@ -1,0 +1,34 @@
+{
+  "className": "SYS_PanelControl",
+  "methodName": "openLeftPanel",
+  "slug": "SYS_PanelControl.openLeftPanel",
+  "docPath": "references/classes/SYS_PanelControl.md",
+  "examplePath": "examples/methods/SYS_PanelControl/openLeftPanel.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_PanelControl/openLeftPanel.json",
+  "signatures": [
+    "openLeftPanel(tab?: ESYS_LeftPanelTab): void"
+  ],
+  "description": "打开左侧面板",
+  "classSummary": "系统 / 面板控制类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "tab",
+      "type": "ESYS\\_LeftPanelTab",
+      "description": "_（可选）_ 标签页，如若不指定则不切换标签页"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_LeftPanelTab，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_PanelControl_openLeftPanel_' + Date.now();\n  const result = await eda.sys_PanelControl.openLeftPanel(undefined);\n  return { fixtureName, result };\n})(eda);"
+}

@@ -1,0 +1,28 @@
+{
+  "className": "SYS_Environment",
+  "methodName": "isEasyEDAProEdition",
+  "slug": "SYS_Environment.isEasyEDAProEdition",
+  "docPath": "references/classes/SYS_Environment.md",
+  "examplePath": "examples/methods/SYS_Environment/isEasyEDAProEdition.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Environment/isEasyEDAProEdition.json",
+  "signatures": [
+    "isEasyEDAProEdition(): boolean"
+  ],
+  "description": "是否为 EasyEDA Pro 版本",
+  "classSummary": "系统 / 运行环境类",
+  "remarks": "",
+  "returnSummary": "boolean\n\n是否为 EasyEDA Pro 版本",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Environment_isEasyEDAProEdition_' + Date.now();\n  const result = await eda.sys_Environment.isEasyEDAProEdition();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

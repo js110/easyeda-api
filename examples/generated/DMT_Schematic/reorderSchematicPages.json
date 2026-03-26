@@ -1,0 +1,39 @@
+{
+  "className": "DMT_Schematic",
+  "methodName": "reorderSchematicPages",
+  "slug": "DMT_Schematic.reorderSchematicPages",
+  "docPath": "references/classes/DMT_Schematic.md",
+  "examplePath": "examples/methods/DMT_Schematic/reorderSchematicPages.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Schematic/reorderSchematicPages.json",
+  "signatures": [
+    "reorderSchematicPages(schematicUuid: string, schematicPageItemsArray: Array<IDMT_SchematicPageItem>): Promise<boolean>"
+  ],
+  "description": "重新排序原理图图页",
+  "classSummary": "文档树 / 原理图管理类",
+  "remarks": "此处源原理图图页属性的数组需要通过 [DMT\\_Schematic.getAllSchematicPagesInfo()](./DMT_Schematic.md) 或其它上游方法取得，完成数组排序后传入",
+  "returnSummary": "Promise<boolean>\n\n排序操作是否成功",
+  "params": [
+    {
+      "name": "schematicUuid",
+      "type": "string",
+      "description": "执行排序的图页所关联的原理图 UUID"
+    },
+    {
+      "name": "schematicPageItemsArray",
+      "type": "Array<IDMT\\_SchematicPageItem >",
+      "description": "所有原理图图页属性的数组"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Schematic_reorderSchematicPages_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const schematics = await eda.dmt_Schematic.getAllSchematicsInfo();\n  const schematicUuid = schematics?.[0]?.uuid;\n  const result = await eda.dmt_Schematic.reorderSchematicPages(schematicUuid, []);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

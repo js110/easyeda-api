@@ -1,0 +1,39 @@
+{
+  "className": "SCH_PrimitiveCircle",
+  "methodName": "modify",
+  "slug": "SCH_PrimitiveCircle.modify",
+  "docPath": "references/classes/SCH_PrimitiveCircle.md",
+  "examplePath": "examples/methods/SCH_PrimitiveCircle/modify.md",
+  "kind": "update",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/SCH_PrimitiveCircle/modify.json",
+  "signatures": [
+    "modify(primitiveId: string | ISCH_PrimitiveCircle, property: {         centerX?: number;         centerY?: number;         radius?: number;         color?: string | null;         fillColor?: string | null;         lineWidth?: number | null;         lineType?: ESCH_PrimitiveLineType | null;         fillStyle?: ESCH_PrimitiveFillStyle | null;     }): Promise<ISCH_PrimitiveCircle | undefined>"
+  ],
+  "description": "修改圆",
+  "classSummary": "原理图 & 符号 / 圆图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveCircle](./ISCH_PrimitiveCircle.md) \\| undefined>\n\n圆图元对象",
+  "params": [
+    {
+      "name": "primitiveId",
+      "type": "string \\| ISCH\\_PrimitiveCircle",
+      "description": "图元 ID"
+    },
+    {
+      "name": "property",
+      "type": "{ centerX?: number; centerY?: number; radius?: number; color?: string \\| null; fillColor?: string \\| null; lineWidth?: number \\| null; lineType?: ESCH\\_PrimitiveLineType \\| null; fillStyle?: ESCH\\_PrimitiveFillStyle \\| null; }",
+      "description": "修改参数"
+    }
+  ],
+  "exampleNotes": [
+    "修改案例会先创建一个临时图元，再构造一个最小但真实的 property 对象执行 modify，最后自动清理。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveCircle_modify_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveCircle.create(\n    120,\n    80,\n    30,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于修改的测试图元。'); }\n  const property = {\n    radius: 40,\n  };\n  try {\n    const before = await eda.sch_PrimitiveCircle.get(primitiveId);\n    const result = await eda.sch_PrimitiveCircle.modify(primitiveId, property);\n    const after = await eda.sch_PrimitiveCircle.get(primitiveId);\n    return {\n      fixtureName,\n      primitiveId,\n      property,\n      before,\n      result,\n      after,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveCircle.delete([primitiveId]); }\n  }\n})(eda);"
+}

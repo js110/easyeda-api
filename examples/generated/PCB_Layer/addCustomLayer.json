@@ -1,0 +1,26 @@
+{
+  "className": "PCB_Layer",
+  "methodName": "addCustomLayer",
+  "slug": "PCB_Layer.addCustomLayer",
+  "docPath": "references/classes/PCB_Layer.md",
+  "examplePath": "examples/methods/PCB_Layer/addCustomLayer.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_Layer/addCustomLayer.json",
+  "signatures": [
+    "addCustomLayer(): Promise<TPCB_LayersOfCustom | undefined>"
+  ],
+  "description": "新增自定义层",
+  "classSummary": "PCB & 封装 / 图层操作类",
+  "remarks": "",
+  "returnSummary": "Promise<[TPCB\\_LayersOfCustom](../types/TPCB_LayersOfCustom.md) \\| undefined>\n\n新增的自定义层的图层 ID，如若为 `undefined` 则为新增失败，可能是自定义层数量已达到上限",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Layer_addCustomLayer_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_Layer.addCustomLayer();\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_Layer.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

@@ -1,0 +1,44 @@
+{
+  "className": "DMT_Folder",
+  "methodName": "modifyFolderName",
+  "slug": "DMT_Folder.modifyFolderName",
+  "docPath": "references/classes/DMT_Folder.md",
+  "examplePath": "examples/methods/DMT_Folder/modifyFolderName.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Folder/modifyFolderName.json",
+  "signatures": [
+    "modifyFolderName(teamUuid: string, folderUuid: string, folderName: string): Promise<boolean>"
+  ],
+  "description": "修改文件夹名称",
+  "classSummary": "文档树 / 文件夹类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否修改成功",
+  "params": [
+    {
+      "name": "teamUuid",
+      "type": "string",
+      "description": "团队 UUID"
+    },
+    {
+      "name": "folderUuid",
+      "type": "string",
+      "description": "文件夹 UUID"
+    },
+    {
+      "name": "folderName",
+      "type": "string",
+      "description": "文件夹名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Folder_modifyFolderName_' + Date.now();\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  if (!teamUuid) { throw new Error('当前账号下没有可用团队，无法解析 folderUuid。'); }\n  const folderCandidates = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  const folderUuid = folderCandidates?.[0];\n  const result = await eda.dmt_Folder.modifyFolderName(teamUuid, folderUuid, 'folderName');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

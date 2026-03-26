@@ -1,0 +1,26 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "getAllSupportedLanguages",
+  "slug": "SYS_I18n.getAllSupportedLanguages",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/getAllSupportedLanguages.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_I18n/getAllSupportedLanguages.json",
+  "signatures": [
+    "getAllSupportedLanguages(): Array<string>"
+  ],
+  "description": "查询所有支持的语言",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "",
+  "returnSummary": "Array<string>\n\n所有支持的语言列表",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_getAllSupportedLanguages_' + Date.now();\n  const result = await eda.sys_I18n.getAllSupportedLanguages();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

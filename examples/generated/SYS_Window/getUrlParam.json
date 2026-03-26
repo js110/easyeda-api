@@ -1,0 +1,32 @@
+{
+  "className": "SYS_Window",
+  "methodName": "getUrlParam",
+  "slug": "SYS_Window.getUrlParam",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/getUrlParam.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Window/getUrlParam.json",
+  "signatures": [
+    "getUrlParam(key: string): string | null"
+  ],
+  "description": "获取 URL 参数",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "",
+  "returnSummary": "string \\| null\n\n参数值",
+  "params": [
+    {
+      "name": "key",
+      "type": "string",
+      "description": "参数名"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_getUrlParam_' + Date.now();\n  const result = await eda.sys_Window.getUrlParam('key');\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,34 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "deleteEqualLengthNetGroup",
+  "slug": "PCB_Drc.deleteEqualLengthNetGroup",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/deleteEqualLengthNetGroup.md",
+  "kind": "delete",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Drc/deleteEqualLengthNetGroup.json",
+  "signatures": [
+    "deleteEqualLengthNetGroup(equalLengthNetGroupName: string): Promise<boolean>"
+  ],
+  "description": "删除等长网络组",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "equalLengthNetGroupName",
+      "type": "string",
+      "description": "等长网络组名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_deleteEqualLengthNetGroup_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Drc.deleteEqualLengthNetGroup('equalLengthNetGroupName');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

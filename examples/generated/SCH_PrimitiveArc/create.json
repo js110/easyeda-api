@@ -1,0 +1,79 @@
+{
+  "className": "SCH_PrimitiveArc",
+  "methodName": "create",
+  "slug": "SCH_PrimitiveArc.create",
+  "docPath": "references/classes/SCH_PrimitiveArc.md",
+  "examplePath": "examples/methods/SCH_PrimitiveArc/create.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitiveArc/create.json",
+  "signatures": [
+    "create(startX: number, startY: number, referenceX: number, referenceY: number, endX: number, endY: number, color?: string | null, fillColor?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null): Promise<ISCH_PrimitiveArc | undefined>"
+  ],
+  "description": "创建圆弧",
+  "classSummary": "原理图 & 符号 / 圆弧图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveArc](./ISCH_PrimitiveArc.md) \\| undefined>\n\n圆弧图元对象",
+  "params": [
+    {
+      "name": "startX",
+      "type": "number",
+      "description": "起始点 X"
+    },
+    {
+      "name": "startY",
+      "type": "number",
+      "description": "起始点 Y"
+    },
+    {
+      "name": "referenceX",
+      "type": "number",
+      "description": "参考点 X"
+    },
+    {
+      "name": "referenceY",
+      "type": "number",
+      "description": "参考点 Y"
+    },
+    {
+      "name": "endX",
+      "type": "number",
+      "description": "终止点 X"
+    },
+    {
+      "name": "endY",
+      "type": "number",
+      "description": "终止点 Y"
+    },
+    {
+      "name": "color",
+      "type": "string \\| null",
+      "description": "_（可选）_ 颜色，`null` 表示默认"
+    },
+    {
+      "name": "fillColor",
+      "type": "string \\| null",
+      "description": "_（可选）_ 填充颜色，`none` 表示无填充，`null` 表示默认"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number \\| null",
+      "description": "_（可选）_ 线宽，范围 `1-10` ，`null` 表示默认"
+    },
+    {
+      "name": "lineType",
+      "type": "ESCH\\_PrimitiveLineType \\| null",
+      "description": "_（可选）_ 线型，`null` 表示默认"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveArc_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveArc.create(\n    120,\n    80,\n    160,\n    100,\n    200,\n    80,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveArc.delete([primitiveId]); }\n  }\n})(eda);"
+}

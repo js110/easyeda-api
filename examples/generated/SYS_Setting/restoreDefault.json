@@ -1,0 +1,28 @@
+{
+  "className": "SYS_Setting",
+  "methodName": "restoreDefault",
+  "slug": "SYS_Setting.restoreDefault",
+  "docPath": "references/classes/SYS_Setting.md",
+  "examplePath": "examples/methods/SYS_Setting/restoreDefault.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Setting/restoreDefault.json",
+  "signatures": [
+    "restoreDefault(): Promise<boolean>"
+  ],
+  "description": "全局恢复默认设置",
+  "classSummary": "系统 / 设置类",
+  "remarks": "将所有 EDA 设置恢复到默认状态，本操作将会丢失所有设置项，在调用时请特别注意",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Setting_restoreDefault_' + Date.now();\n  const result = await eda.sys_Setting.restoreDefault();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

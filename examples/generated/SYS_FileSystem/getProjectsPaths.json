@@ -1,0 +1,26 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "getProjectsPaths",
+  "slug": "SYS_FileSystem.getProjectsPaths",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/getProjectsPaths.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileSystem/getProjectsPaths.json",
+  "signatures": [
+    "getProjectsPaths(): Promise<Array<string>>"
+  ],
+  "description": "获取工程目录路径",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "注意 1：本接口仅离线客户端有效，在浏览器环境内调用将始终 `throw Error`\n\n注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "Promise<Array<string>>\n\n工程目录路径数组",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_getProjectsPaths_' + Date.now();\n  const result = await eda.sys_FileSystem.getProjectsPaths();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

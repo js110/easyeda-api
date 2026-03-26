@@ -1,0 +1,84 @@
+{
+  "className": "SCH_PrimitiveText",
+  "methodName": "create",
+  "slug": "SCH_PrimitiveText.create",
+  "docPath": "references/classes/SCH_PrimitiveText.md",
+  "examplePath": "examples/methods/SCH_PrimitiveText/create.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitiveText/create.json",
+  "signatures": [
+    "create(x: number, y: number, content: string, rotation?: number, textColor?: string | null, fontName?: string | null, fontSize?: number | null, bold?: boolean, italic?: boolean, underLine?: boolean, alignMode?: ESCH_PrimitiveTextAlignMode): Promise<ISCH_PrimitiveText | undefined>"
+  ],
+  "description": "创建文本",
+  "classSummary": "原理图 & 符号 / 文本图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveText](./ISCH_PrimitiveText.md) \\| undefined>\n\n文本图元对象",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": "坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "坐标 Y"
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "description": "文本内容"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "description": "_（可选）_ 旋转角度，可选 `0` `90` `180` `270`"
+    },
+    {
+      "name": "textColor",
+      "type": "string \\| null",
+      "description": "_（可选）_ 文本颜色，`null` 表示默认"
+    },
+    {
+      "name": "fontName",
+      "type": "string \\| null",
+      "description": "_（可选）_ 字体名称，`null` 表示默认"
+    },
+    {
+      "name": "fontSize",
+      "type": "number \\| null",
+      "description": "_（可选）_ 字体大小，`null` 表示默认"
+    },
+    {
+      "name": "bold",
+      "type": "boolean",
+      "description": "_（可选）_ 是否加粗"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "description": "_（可选）_ 是否斜体"
+    },
+    {
+      "name": "underLine",
+      "type": "boolean",
+      "description": "_（可选）_ 是否加下划线"
+    },
+    {
+      "name": "alignMode",
+      "type": "ESCH\\_PrimitiveTextAlignMode",
+      "description": "_（可选）_ 对齐模式，`0` 左顶，`1` 中顶，`2` 右顶，`3` 左中，`4` 中中，`5` 右中，`6` 左底，`7` 中底，`8` 右底"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveText_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveText.create(\n    120,\n    80,\n    fixtureName,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveText.delete([primitiveId]); }\n  }\n})(eda);"
+}

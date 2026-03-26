@@ -1,0 +1,42 @@
+{
+  "className": "LIB_Footprint",
+  "methodName": "openInEditor",
+  "slug": "LIB_Footprint.openInEditor",
+  "docPath": "references/classes/LIB_Footprint.md",
+  "examplePath": "examples/methods/LIB_Footprint/openInEditor.md",
+  "kind": "ui",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/LIB_Footprint/openInEditor.json",
+  "signatures": [
+    "openInEditor(footprintUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>"
+  ],
+  "description": "在编辑器打开文档",
+  "classSummary": "综合库 / 封装类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n标签页 ID，对应 [IDMT\\_EditorTabItem.tabId](../interfaces/IDMT_EditorTabItem.md) ，可使用 [DMT\\_EditorControl.getSplitScreenIdByTabId()](./DMT_EditorControl.md) 获取到分屏 ID",
+  "params": [
+    {
+      "name": "footprintUuid",
+      "type": "string",
+      "description": "封装 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "splitScreenId",
+      "type": "string",
+      "description": "_（可选）_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 DMT\\_EditorControl 内的接口获取"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Footprint_openInEditor_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  const splitScreenId = currentDocument?.tabId ? await eda.dmt_EditorControl.getSplitScreenIdByTabId(currentDocument.tabId) : undefined;\n  const result = await eda.lib_Footprint.openInEditor(footprintUuid, footprintLibraryUuid, splitScreenId);\n  return { fixtureName, result };\n})(eda);"
+}

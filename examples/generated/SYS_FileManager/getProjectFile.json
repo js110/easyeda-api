@@ -1,0 +1,42 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "getProjectFile",
+  "slug": "SYS_FileManager.getProjectFile",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/getProjectFile.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileManager/getProjectFile.json",
+  "signatures": [
+    "getProjectFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>"
+  ],
+  "description": "获取工程文件",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "可以使用 [SYS\\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统\n\n注意：本接口需要启用 \\*\\*工程管理 > 下载工程\\*\\* 权限，没有权限调用将始终 `throw Error`",
+  "returnSummary": "Promise<File \\| undefined>\n\n工程文件数据，`undefined` 表示当前未打开工程或数据获取失败",
+  "params": [
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名"
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "description": "_（可选）_ 加密密码"
+    },
+    {
+      "name": "fileType",
+      "type": "'epro' \\| 'epro2'",
+      "description": "_（可选）_ 文件格式"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_getProjectFile_' + Date.now();\n  const result = await eda.sys_FileManager.getProjectFile(undefined, undefined, undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

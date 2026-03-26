@@ -1,0 +1,32 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "getExtensionFile",
+  "slug": "SYS_FileSystem.getExtensionFile",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/getExtensionFile.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileSystem/getExtensionFile.json",
+  "signatures": [
+    "getExtensionFile(uri: string): Promise<File | undefined>"
+  ],
+  "description": "获取扩展内的文件",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "",
+  "returnSummary": "Promise<File \\| undefined>\n\nFile 格式文件",
+  "params": [
+    {
+      "name": "uri",
+      "type": "string",
+      "description": "文件路径"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_getExtensionFile_' + Date.now();\n  const result = await eda.sys_FileSystem.getExtensionFile('uri');\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

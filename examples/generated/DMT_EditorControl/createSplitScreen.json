@@ -1,0 +1,40 @@
+{
+  "className": "DMT_EditorControl",
+  "methodName": "createSplitScreen",
+  "slug": "DMT_EditorControl.createSplitScreen",
+  "docPath": "references/classes/DMT_EditorControl.md",
+  "examplePath": "examples/methods/DMT_EditorControl/createSplitScreen.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_EditorControl/createSplitScreen.json",
+  "signatures": [
+    "createSplitScreen(splitScreenType: EDMT_EditorSplitScreenDirection, tabId: string): Promise<{         sourceSplitScreenId: string;         newSplitScreenId: string;     } | undefined>"
+  ],
+  "description": "创建分屏",
+  "classSummary": "文档树 / 编辑器控制类",
+  "remarks": "请确认 [tabId](./DMT_EditorControl.md) 对应的分屏存在两个以上的标签页，否则分屏将不会执行，并返回 `undefined`",
+  "returnSummary": "Promise<{ sourceSplitScreenId: string; newSplitScreenId: string; } \\| undefined>\n\n分屏 ID，`sourceSplitScreenId` 代表源分屏，`newSplitScreenId` 代表新分屏",
+  "params": [
+    {
+      "name": "splitScreenType",
+      "type": "EDMT\\_EditorSplitScreenDirection",
+      "description": "分屏类型，`horizontal` 水平、`vertical` 垂直"
+    },
+    {
+      "name": "tabId",
+      "type": "string",
+      "description": "标签页 ID，该标签页将会被移入新的分屏中"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 EDMT_EditorSplitScreenDirection，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。",
+    "案例会优先使用当前活动标签页。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_EditorControl_createSplitScreen_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  const tabId = currentDocument?.tabId;\n  const created = await eda.dmt_EditorControl.createSplitScreen(undefined, tabId);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_EditorControl.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

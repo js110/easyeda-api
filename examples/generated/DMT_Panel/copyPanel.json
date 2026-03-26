@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Panel",
+  "methodName": "copyPanel",
+  "slug": "DMT_Panel.copyPanel",
+  "docPath": "references/classes/DMT_Panel.md",
+  "examplePath": "examples/methods/DMT_Panel/copyPanel.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Panel/copyPanel.json",
+  "signatures": [
+    "copyPanel(panelUuid: string): Promise<string | undefined>"
+  ],
+  "description": "复制面板",
+  "classSummary": "文档树 / 面板管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n新面板 UUID，如若为 `undefined` 则复制失败",
+  "params": [
+    {
+      "name": "panelUuid",
+      "type": "string",
+      "description": "源面板 UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Panel_copyPanel_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const panels = await eda.dmt_Panel.getAllPanelsInfo();\n  const panelUuid = panels?.[0]?.uuid;\n  const created = await eda.dmt_Panel.copyPanel(panelUuid);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Panel.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

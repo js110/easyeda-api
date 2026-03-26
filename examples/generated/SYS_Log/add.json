@@ -1,0 +1,39 @@
+{
+  "className": "SYS_Log",
+  "methodName": "add",
+  "slug": "SYS_Log.add",
+  "docPath": "references/classes/SYS_Log.md",
+  "examplePath": "examples/methods/SYS_Log/add.md",
+  "kind": "create",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/SYS_Log/add.json",
+  "signatures": [
+    "add(message: string, type?: ESYS_LogType): void"
+  ],
+  "description": "添加日志条目",
+  "classSummary": "系统 / 日志类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "message",
+      "type": "string",
+      "description": "日志内容"
+    },
+    {
+      "name": "type",
+      "type": "ESYS\\_LogType",
+      "description": "_（可选）_ 日志类型"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_LogType，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Log_add_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sys_Log.add('Codex example running inside EasyEDA', undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sys_Log.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

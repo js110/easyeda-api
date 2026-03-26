@@ -1,0 +1,26 @@
+{
+  "className": "LIB_LibrariesList",
+  "methodName": "getPersonalLibraryUuid",
+  "slug": "LIB_LibrariesList.getPersonalLibraryUuid",
+  "docPath": "references/classes/LIB_LibrariesList.md",
+  "examplePath": "examples/methods/LIB_LibrariesList/getPersonalLibraryUuid.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_LibrariesList/getPersonalLibraryUuid.json",
+  "signatures": [
+    "getPersonalLibraryUuid(): Promise<string | undefined>"
+  ],
+  "description": "获取个人库的 UUID",
+  "classSummary": "综合库 / 库列表类",
+  "remarks": "将会获取当前编辑器工作区下的个人库的 UUID，在私有部署环境下不存在个人库，此接口将永远返回 `undefined`",
+  "returnSummary": "Promise<string \\| undefined>\n\n个人库的 UUID",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_LibrariesList_getPersonalLibraryUuid_' + Date.now();\n  const result = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

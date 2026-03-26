@@ -1,0 +1,52 @@
+{
+  "className": "SYS_IFrame",
+  "methodName": "openIFrame",
+  "slug": "SYS_IFrame.openIFrame",
+  "docPath": "references/classes/SYS_IFrame.md",
+  "examplePath": "examples/methods/SYS_IFrame/openIFrame.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_IFrame/openIFrame.json",
+  "signatures": [
+    "openIFrame(htmlFileName: string, width?: number, height?: number, id?: string, props?: {         maximizeButton?: boolean;         minimizeButton?: boolean;         minimizeStyle?: 'collapsed' | 'constricted';         buttonCallbackFn?: (button: 'close' | 'minimize' | 'maximize') => void | Promise<void>;         onBeforeCloseCallFn?: () => boolean | undefined | Promise<boolean | undefined>;         grayscaleMask?: boolean;         title?: string;     }): Promise<boolean>"
+  ],
+  "description": "打开内联框架窗口",
+  "classSummary": "系统 / 内联框架窗口类",
+  "remarks": "本接口仅扩展包允许调用，用户需要在扩展包内包含用于内联的 HTML 文件；\n\n本接口调用后将会打开一个 Dialog 窗口，该 Dialog 窗口的标题为 HTML 文件的 ` ` ，标题栏有关闭按钮；\n\n正文部分为内联框架，`width` 和 `height` 均为正文部分内联框架的宽高；\n\n内联框架需要展示 `htmlFileName` 的内容，该 HTML 从扩展包内获取，并已在安装时被存储至 IndexedDB 中\n\n注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "htmlFileName",
+      "type": "string",
+      "description": "需要加载的 HTML 文件在扩展包内的路径，从扩展根目录起始，例如 `/iframe/index.html`"
+    },
+    {
+      "name": "width",
+      "type": "number",
+      "description": "_（可选）_ 内联框架窗口的宽度"
+    },
+    {
+      "name": "height",
+      "type": "number",
+      "description": "_（可选）_ 内联框架窗口的高度"
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "description": "_（可选）_ 内联框架窗口 ID，用于关闭内联框架窗口"
+    },
+    {
+      "name": "props",
+      "type": "{ maximizeButton?: boolean; minimizeButton?: boolean; minimizeStyle?: 'collapsed' \\| 'constricted'; buttonCallbackFn?: (button: 'close' \\| 'minimize' \\| 'maximize') => void \\| Promise<void>; onBeforeCloseCallFn?: () => boolean \\| undefined \\| Promise<boolean \\| undefined>; grayscaleMask?: boolean; title?: string; }",
+      "description": "_（可选）_ 其它参数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_IFrame_openIFrame_' + Date.now();\n  const result = await eda.sys_IFrame.openIFrame('htmlFileName', undefined, undefined, undefined, undefined);\n  return { fixtureName, result };\n})(eda);"
+}

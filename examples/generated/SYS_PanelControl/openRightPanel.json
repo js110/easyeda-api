@@ -1,0 +1,34 @@
+{
+  "className": "SYS_PanelControl",
+  "methodName": "openRightPanel",
+  "slug": "SYS_PanelControl.openRightPanel",
+  "docPath": "references/classes/SYS_PanelControl.md",
+  "examplePath": "examples/methods/SYS_PanelControl/openRightPanel.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_PanelControl/openRightPanel.json",
+  "signatures": [
+    "openRightPanel(tab?: ESYS_RightPanelTab): void"
+  ],
+  "description": "打开右侧面板",
+  "classSummary": "系统 / 面板控制类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "tab",
+      "type": "ESYS\\_RightPanelTab",
+      "description": "_（可选）_ 标签页，如若不指定则不切换标签页"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_RightPanelTab，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_PanelControl_openRightPanel_' + Date.now();\n  const result = await eda.sys_PanelControl.openRightPanel(undefined);\n  return { fixtureName, result };\n})(eda);"
+}

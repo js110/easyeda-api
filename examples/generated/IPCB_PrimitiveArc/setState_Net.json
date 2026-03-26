@@ -1,0 +1,28 @@
+{
+  "className": "IPCB_PrimitiveArc",
+  "methodName": "setState_Net",
+  "slug": "IPCB_PrimitiveArc.setState_Net",
+  "docPath": "references/classes/IPCB_PrimitiveArc.md",
+  "examplePath": "examples/methods/IPCB_PrimitiveArc/setState_Net.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "selection-primitive-mutation",
+  "generatedPath": "examples/generated/IPCB_PrimitiveArc/setState_Net.json",
+  "signatures": [
+    "setState_Net(net: string): IPCB_PrimitiveArc"
+  ],
+  "description": "",
+  "classSummary": "圆弧线图元",
+  "remarks": "",
+  "returnSummary": "",
+  "params": [],
+  "exampleNotes": [
+    "这类接口实例通常来自当前选中的图元对象，因此自动验证默认走 manual 模式。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___IPCB_PrimitiveArc_setState_Net_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const selectedPrimitiveIds = eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\n  const primitiveId = Array.isArray(selectedPrimitiveIds) ? selectedPrimitiveIds[0] : undefined;\n  if (!primitiveId) {\n    throw new Error('请先在PCB画布上选中一个与 IPCB_PrimitiveArc 匹配的图元，再运行这个案例。');\n  }\n  const fetched = await eda.pcb_PrimitiveArc.get([primitiveId]);\n  const primitive = Array.isArray(fetched) ? fetched[0] : fetched;\n  if (!primitive) { throw new Error('没有取到目标图元对象。'); }\n  const editable = primitive.toAsync ? primitive.toAsync() : primitive;\n  const before = editable.getState_Net ? editable.getState_Net() : undefined;\n  editable.setState_Net('GND');\n  if (editable.done) { editable.done(); }\n  const afterFetch = await eda.pcb_PrimitiveArc.get([primitiveId]);\n  const afterPrimitive = Array.isArray(afterFetch) ? afterFetch[0] : afterFetch;\n  const after = afterPrimitive?.getState_Net ? afterPrimitive.getState_Net() : undefined;\n  return { fixtureName, primitiveId, before, after };\n})(eda);"
+}

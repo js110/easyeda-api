@@ -1,0 +1,34 @@
+{
+  "className": "DMT_Project",
+  "methodName": "openProject",
+  "slug": "DMT_Project.openProject",
+  "docPath": "references/classes/DMT_Project.md",
+  "examplePath": "examples/methods/DMT_Project/openProject.md",
+  "kind": "ui",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/DMT_Project/openProject.json",
+  "signatures": [
+    "openProject(projectUuid: string): Promise<boolean>"
+  ],
+  "description": "打开工程",
+  "classSummary": "文档树 / 工程管理类",
+  "remarks": "本操作将会在 EDA 前端打开指定工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据",
+  "returnSummary": "Promise<boolean>\n\n是否成功打开工程",
+  "params": [
+    {
+      "name": "projectUuid",
+      "type": "string",
+      "description": "工程 UUID"
+    }
+  ],
+  "exampleNotes": [
+    "案例优先使用当前打开工程的 UUID。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Project_openProject_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  const projectUuid = currentProject?.uuid;\n  const result = await eda.dmt_Project.openProject(projectUuid);\n  return { fixtureName, result };\n})(eda);"
+}

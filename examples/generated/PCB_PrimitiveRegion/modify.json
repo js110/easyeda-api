@@ -1,0 +1,39 @@
+{
+  "className": "PCB_PrimitiveRegion",
+  "methodName": "modify",
+  "slug": "PCB_PrimitiveRegion.modify",
+  "docPath": "references/classes/PCB_PrimitiveRegion.md",
+  "examplePath": "examples/methods/PCB_PrimitiveRegion/modify.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/PCB_PrimitiveRegion/modify.json",
+  "signatures": [
+    "modify(primitiveId: string | IPCB_PrimitiveRegion, property: {         layer?: TPCB_LayersOfRegion;         complexPolygon?: IPCB_Polygon;         ruleType?: Array<EPCB_PrimitiveRegionRuleType>;         regionName?: string;         lineWidth?: number;         primitiveLock?: boolean;     }): Promise<IPCB_PrimitiveRegion | undefined>"
+  ],
+  "description": "修改区域",
+  "classSummary": "PCB & 封装 / 禁止区域和约束区域图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \\| undefined>\n\n区域图元对象，`undefined` 表示修改失败",
+  "params": [
+    {
+      "name": "primitiveId",
+      "type": "string \\| IPCB\\_PrimitiveRegion",
+      "description": "图元 ID"
+    },
+    {
+      "name": "property",
+      "type": "{ layer?: TPCB\\_LayersOfRegion ; complexPolygon?: IPCB\\_Polygon ; ruleType?: Array<EPCB\\_PrimitiveRegionRuleType >; regionName?: string; lineWidth?: number; primitiveLock?: boolean; }",
+      "description": "修改参数"
+    }
+  ],
+  "exampleNotes": [
+    "修改案例会先创建一个临时图元，再构造一个最小但真实的 property 对象执行 modify，最后自动清理。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveRegion_modify_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixturePolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 300, 200, 0, 0]);\n  if (!fixturePolygon) { throw new Error('无法创建用于案例演示的测试多边形。'); }\n  const createdPrimitive = await eda.pcb_PrimitiveRegion.create(\n    1,\n    fixturePolygon,\n    undefined,\n    fixtureName,\n    10,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于修改的测试图元。'); }\n  const property = {\n    regionName: fixtureName + '_updated',\n    lineWidth: 12,\n  };\n  try {\n    const before = await eda.pcb_PrimitiveRegion.get(primitiveId);\n    const result = await eda.pcb_PrimitiveRegion.modify(primitiveId, property);\n    const after = await eda.pcb_PrimitiveRegion.get(primitiveId);\n    return {\n      fixtureName,\n      primitiveId,\n      property,\n      before,\n      result,\n      after,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveRegion.delete([primitiveId]); }\n  }\n})(eda);"
+}

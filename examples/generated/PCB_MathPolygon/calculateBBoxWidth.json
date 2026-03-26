@@ -1,0 +1,34 @@
+{
+  "className": "PCB_MathPolygon",
+  "methodName": "calculateBBoxWidth",
+  "slug": "PCB_MathPolygon.calculateBBoxWidth",
+  "docPath": "references/classes/PCB_MathPolygon.md",
+  "examplePath": "examples/methods/PCB_MathPolygon/calculateBBoxWidth.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_MathPolygon/calculateBBoxWidth.json",
+  "signatures": [
+    "calculateBBoxWidth(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>): number"
+  ],
+  "description": "calculateBBoxWidth(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>): number;",
+  "classSummary": "PCB & 封装 / 多边形数学类",
+  "remarks": "",
+  "returnSummary": "number",
+  "params": [
+    {
+      "name": "complexPolygon",
+      "type": "TPCB\\_PolygonSourceArray \\| Array<TPCB\\_PolygonSourceArray >",
+      "description": ""
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_MathPolygon_calculateBBoxWidth_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_MathPolygon.calculateBBoxWidth(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,52 @@
+{
+  "className": "LIB_PanelLibrary",
+  "methodName": "search",
+  "slug": "LIB_PanelLibrary.search",
+  "docPath": "references/classes/LIB_PanelLibrary.md",
+  "examplePath": "examples/methods/LIB_PanelLibrary/search.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_PanelLibrary/search.json",
+  "signatures": [
+    "search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_PanelLibrarySearchItem>>"
+  ],
+  "description": "搜索面板库",
+  "classSummary": "综合库 / 面板库类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<[ILIB\\_PanelLibrarySearchItem](../interfaces/ILIB_PanelLibrarySearchItem.md) >>\n\n搜索到的面板库属性列表",
+  "params": [
+    {
+      "name": "key",
+      "type": "string",
+      "description": "搜索关键字"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，默认为系统库，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "classification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 分类，默认为全部"
+    },
+    {
+      "name": "itemsOfPage",
+      "type": "number",
+      "description": "_（可选）_ 一页搜索结果的数量"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "_（可选）_ 页数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_PanelLibrary_search_' + Date.now();\n  const panelLibraryCandidates = await eda.lib_PanelLibrary.search('A4');\n  const panelLibraryItem = panelLibraryCandidates?.[0];\n  const panelLibraryUuid = panelLibraryItem?.uuid;\n  const panelLibraryLibraryUuid = panelLibraryItem?.libraryUuid;\n  const result = await eda.lib_PanelLibrary.search('key', panelLibraryLibraryUuid, undefined, undefined, undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

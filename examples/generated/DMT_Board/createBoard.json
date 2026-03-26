@@ -1,0 +1,37 @@
+{
+  "className": "DMT_Board",
+  "methodName": "createBoard",
+  "slug": "DMT_Board.createBoard",
+  "docPath": "references/classes/DMT_Board.md",
+  "examplePath": "examples/methods/DMT_Board/createBoard.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Board/createBoard.json",
+  "signatures": [
+    "createBoard(schematicUuid?: string, pcbUuid?: string): Promise<string | undefined>"
+  ],
+  "description": "创建板子",
+  "classSummary": "文档树 / 板子管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n板子名称，如若为 `undefined` 则创建失败",
+  "params": [
+    {
+      "name": "schematicUuid",
+      "type": "string",
+      "description": "_（可选）_ 关联原理图 UUID"
+    },
+    {
+      "name": "pcbUuid",
+      "type": "string",
+      "description": "_（可选）_ 关联 PCB UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Board_createBoard_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const schematics = await eda.dmt_Schematic.getAllSchematicsInfo();\n  const schematicUuid = schematics?.[0]?.uuid;\n  const pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\n  const pcbUuid = pcbs?.[0]?.uuid;\n  const created = await eda.dmt_Board.createBoard(schematicUuid, pcbUuid);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Board.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

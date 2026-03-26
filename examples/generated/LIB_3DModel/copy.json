@@ -1,0 +1,52 @@
+{
+  "className": "LIB_3DModel",
+  "methodName": "copy",
+  "slug": "LIB_3DModel.copy",
+  "docPath": "references/classes/LIB_3DModel.md",
+  "examplePath": "examples/methods/LIB_3DModel/copy.md",
+  "kind": "create",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/LIB_3DModel/copy.json",
+  "signatures": [
+    "copy(modelUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newModelName?: string): Promise<string | undefined>"
+  ],
+  "description": "复制 3D 模型",
+  "classSummary": "综合库 / 3D 模型类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n目标库内新 3D 模型的 UUID",
+  "params": [
+    {
+      "name": "modelUuid",
+      "type": "string",
+      "description": "3D 模型 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "targetLibraryUuid",
+      "type": "string",
+      "description": "目标库 UUID"
+    },
+    {
+      "name": "targetClassification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 目标库内的分类"
+    },
+    {
+      "name": "newModelName",
+      "type": "string",
+      "description": "_（可选）_ 新 3D 模型名称，如若目标库内存在重名 3D 模型将导致复制失败"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_3DModel_copy_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const created = await eda.lib_3DModel.copy('modelUuid', libraryUuid, 'targetLibraryUuid', undefined, undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.lib_3DModel.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

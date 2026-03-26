@@ -1,0 +1,47 @@
+{
+  "className": "PCB_Event",
+  "methodName": "addPrimitiveEventListener",
+  "slug": "PCB_Event.addPrimitiveEventListener",
+  "docPath": "references/classes/PCB_Event.md",
+  "examplePath": "examples/methods/PCB_Event/addPrimitiveEventListener.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_Event/addPrimitiveEventListener.json",
+  "signatures": [
+    "addPrimitiveEventListener(id: string, eventType: 'all' | EPCB_PrimitiveEventType, callFn: (eventType: EPCB_PrimitiveEventType, props: [         {             primitiveId: string;             primitiveType: EPCB_PrimitiveType;             net?: string;             designator?: string;             parentComponentPrimitiveId?: string;             parentComponentDesignator?: string;         }     ]) => void | Promise<void>, onlyOnce?: boolean): void"
+  ],
+  "description": "新增图元事件监听",
+  "classSummary": "PCB & 封装 / 事件类",
+  "remarks": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "事件 ID，用以防止重复注册事件"
+    },
+    {
+      "name": "eventType",
+      "type": "'all' \\| EPCB\\_PrimitiveEventType",
+      "description": "事件类型"
+    },
+    {
+      "name": "callFn",
+      "type": "(eventType: EPCB\\_PrimitiveEventType, props: \\ { primitiveId: string; primitiveType: [EPCB\\_PrimitiveType ; net?: string; designator?: string; parentComponentPrimitiveId?: string; parentComponentDesignator?: string; } \\]) => void \\| Promise<void>",
+      "description": "事件触发时的回调函数"
+    },
+    {
+      "name": "onlyOnce",
+      "type": "boolean",
+      "description": "_（可选）_ 是否仅监听一次"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Event_addPrimitiveEventListener_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_Event.addPrimitiveEventListener('id', undefined, 'callFn', undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_Event.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

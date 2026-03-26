@@ -1,0 +1,34 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "setDocumentSource",
+  "slug": "SYS_FileManager.setDocumentSource",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/setDocumentSource.md",
+  "kind": "update",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_FileManager/setDocumentSource.json",
+  "signatures": [
+    "setDocumentSource(source: string): Promise<boolean>"
+  ],
+  "description": "修改文档源码",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否修改成功，如果输入的文档源码格式错误，将返回 `false` 的结果",
+  "params": [
+    {
+      "name": "source",
+      "type": "string",
+      "description": "文档源码"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_setDocumentSource_' + Date.now();\n  const result = await eda.sys_FileManager.setDocumentSource('source');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

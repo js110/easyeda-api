@@ -1,0 +1,44 @@
+{
+  "className": "SYS_WebSocket",
+  "methodName": "send",
+  "slug": "SYS_WebSocket.send",
+  "docPath": "references/classes/SYS_WebSocket.md",
+  "examplePath": "examples/methods/SYS_WebSocket/send.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_WebSocket/send.json",
+  "signatures": [
+    "send(id: string, data: string | ArrayBuffer | Blob | ArrayBufferView, extensionUuid?: string): void"
+  ],
+  "description": "向 WebSocket 服务器发送数据",
+  "classSummary": "系统 / WebSocket 类",
+  "remarks": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "自定义的 WebSocket ID"
+    },
+    {
+      "name": "data",
+      "type": "string \\| ArrayBuffer \\| Blob \\| ArrayBufferView",
+      "description": "发送的数据"
+    },
+    {
+      "name": "extensionUuid",
+      "type": "string",
+      "description": "_（可选）_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_WebSocket_send_' + Date.now();\n  const result = await eda.sys_WebSocket.send('id', 'data', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

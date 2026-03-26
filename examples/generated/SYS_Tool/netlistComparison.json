@@ -1,0 +1,39 @@
+{
+  "className": "SYS_Tool",
+  "methodName": "netlistComparison",
+  "slug": "SYS_Tool.netlistComparison",
+  "docPath": "references/classes/SYS_Tool.md",
+  "examplePath": "examples/methods/SYS_Tool/netlistComparison.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Tool/netlistComparison.json",
+  "signatures": [
+    "netlistComparison(netlist1: string | {         projectUuid: string;         documentUuid: string;     } | File, netlist2: string | {         projectUuid: string;         documentUuid: string;     } | File): Promise<Array<{         type: 'Net' | 'Component';         object: string;         netlist1Name: Array<string>;         netlist2Name: Array<string>;     }>>"
+  ],
+  "description": "网表对比",
+  "classSummary": "系统 / 工具类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<{ type: 'Net' \\| 'Component'; object: string; netlist1Name: Array<string>; netlist2Name: Array<string>; }>>\n\n网表对比结果",
+  "params": [
+    {
+      "name": "netlist1",
+      "type": "string \\| { projectUuid: string; documentUuid: string; } \\| File",
+      "description": "网表 1，可以为：①当前工程内的原理图、PCB 的 UUID；②其它工程的工程 UUID 和原理图、PCB UUID；③原理图、PCB 文件数据"
+    },
+    {
+      "name": "netlist2",
+      "type": "string \\| { projectUuid: string; documentUuid: string; } \\| File",
+      "description": "网表 2，可以为：①当前工程内的原理图、PCB 的 UUID；②其它工程的工程 UUID 和原理图、PCB UUID；③原理图、PCB 文件数据"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Tool_netlistComparison_' + Date.now();\n  const result = await eda.sys_Tool.netlistComparison('netlist1', 'netlist2');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

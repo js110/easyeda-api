@@ -1,0 +1,28 @@
+{
+  "className": "SCH_PrimitiveComponent",
+  "methodName": "setNetPortComponentUuid_BI",
+  "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_BI",
+  "docPath": "references/classes/SCH_PrimitiveComponent.md",
+  "examplePath": "examples/methods/SCH_PrimitiveComponent/setNetPortComponentUuid_BI.md",
+  "kind": "update",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/SCH_PrimitiveComponent/setNetPortComponentUuid_BI.json",
+  "signatures": [
+    "setNetPortComponentUuid_BI(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>"
+  ],
+  "description": "",
+  "classSummary": "原理图 & 符号 / 器件图元类",
+  "remarks": "",
+  "returnSummary": "",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveComponent_setNetPortComponentUuid_BI_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_PrimitiveComponent.setNetPortComponentUuid_BI('component');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

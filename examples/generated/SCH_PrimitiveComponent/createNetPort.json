@@ -1,0 +1,59 @@
+{
+  "className": "SCH_PrimitiveComponent",
+  "methodName": "createNetPort",
+  "slug": "SCH_PrimitiveComponent.createNetPort",
+  "docPath": "references/classes/SCH_PrimitiveComponent.md",
+  "examplePath": "examples/methods/SCH_PrimitiveComponent/createNetPort.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitiveComponent/createNetPort.json",
+  "signatures": [
+    "createNetPort(direction: 'IN' | 'OUT' | 'BI', net: string, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent$1 | undefined>"
+  ],
+  "description": "创建网络端口",
+  "classSummary": "原理图 & 符号 / 器件图元类",
+  "remarks": "",
+  "returnSummary": "Promise<ISCH\\_PrimitiveComponent$1 \\| undefined>\n\n器件图元对象",
+  "params": [
+    {
+      "name": "direction",
+      "type": "'IN' \\| 'OUT' \\| 'BI'",
+      "description": "端口方向"
+    },
+    {
+      "name": "net",
+      "type": "string",
+      "description": "网络名称"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "description": "坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "坐标 Y"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "description": "_（可选）_ 旋转角度"
+    },
+    {
+      "name": "mirror",
+      "type": "boolean",
+      "description": "_（可选）_ 是否镜像"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveComponent_createNetPort_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const deviceCandidates = await eda.lib_Device.search('STM32');\n  const deviceItem = deviceCandidates?.[0];\n  if (!deviceItem?.uuid || !deviceItem?.libraryUuid) { throw new Error('没有找到可用于原理图器件创建的库器件样本。'); }\n  const createdPrimitive = await eda.sch_PrimitiveComponent.create(\n    { libraryUuid: deviceItem.libraryUuid, uuid: deviceItem.uuid },\n    120,\n    80,\n    undefined,\n    0,\n    false,\n    true,\n    true,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveComponent.delete([primitiveId]); }\n  }\n})(eda);"
+}

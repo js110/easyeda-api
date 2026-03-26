@@ -1,0 +1,34 @@
+{
+  "className": "SYS_IFrame",
+  "methodName": "closeIFrame",
+  "slug": "SYS_IFrame.closeIFrame",
+  "docPath": "references/classes/SYS_IFrame.md",
+  "examplePath": "examples/methods/SYS_IFrame/closeIFrame.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_IFrame/closeIFrame.json",
+  "signatures": [
+    "closeIFrame(id?: string): Promise<boolean>"
+  ],
+  "description": "关闭内联框架窗口",
+  "classSummary": "系统 / 内联框架窗口类",
+  "remarks": "关闭指定 ID 的内联框架窗口\n\n注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "_（可选）_ 内联框架窗口 ID，如若传入 `undefined` ，将关闭由本扩展打开的所有内联框架窗口"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_IFrame_closeIFrame_' + Date.now();\n  const result = await eda.sys_IFrame.closeIFrame(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

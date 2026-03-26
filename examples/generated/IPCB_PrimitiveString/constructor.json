@@ -1,0 +1,30 @@
+{
+  "className": "IPCB_PrimitiveString",
+  "methodName": "constructor",
+  "slug": "IPCB_PrimitiveString.constructor",
+  "docPath": "references/classes/IPCB_PrimitiveString.md",
+  "examplePath": "examples/methods/IPCB_PrimitiveString/constructor.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "selection-primitive-read",
+  "generatedPath": "examples/generated/IPCB_PrimitiveString/constructor.json",
+  "signatures": [
+    "constructor(layer: TPCB_LayersOfImage, x: number, y: number, text: string, fontFamily?: string, fontSize?: number, lineWidth?: number, alignMode?: EPCB_PrimitiveStringAlignMode, rotation?: number, reverse?: boolean, expansion?: number, mirror?: boolean, primitiveLock?: boolean, primitiveId?: string)"
+  ],
+  "description": "",
+  "classSummary": "文本图元",
+  "remarks": "",
+  "returnSummary": "",
+  "params": [],
+  "exampleNotes": [
+    "这类接口实例通常来自当前选中的图元对象，因此自动验证默认走 manual 模式。",
+    "这个参数是枚举类型 EPCB_PrimitiveStringAlignMode，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。",
+    "案例会先从当前文档里取一个真实图元 ID，再调用目标接口，方便你理解这类读取 API 的入参来源。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___IPCB_PrimitiveString_constructor_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const selectedPrimitiveIds = eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\n  const primitiveId = Array.isArray(selectedPrimitiveIds) ? selectedPrimitiveIds[0] : undefined;\n  if (!primitiveId) {\n    throw new Error('请先在PCB画布上选中一个与 IPCB_PrimitiveString 匹配的图元，再运行这个案例。');\n  }\n  const fetched = await eda.pcb_PrimitiveString.get([primitiveId]);\n  const primitive = Array.isArray(fetched) ? fetched[0] : fetched;\n  if (!primitive) { throw new Error('没有取到目标图元对象。'); }\n  const primitiveIdCandidates = await eda.pcb_PrimitiveString.getAllPrimitiveId();\n  const primitiveId = Array.isArray(primitiveIdCandidates) ? primitiveIdCandidates[0] : undefined;\n  if (!primitiveId) { throw new Error('当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。'); }\n  const result = await primitive.constructor(1, 1200, 1200, 'text', undefined, undefined, 10, undefined, 0, undefined, undefined, false, false, primitiveId);\n  return { fixtureName, primitiveId, result };\n})(eda);"
+}

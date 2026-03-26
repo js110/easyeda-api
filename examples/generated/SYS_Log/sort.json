@@ -1,0 +1,35 @@
+{
+  "className": "SYS_Log",
+  "methodName": "sort",
+  "slug": "SYS_Log.sort",
+  "docPath": "references/classes/SYS_Log.md",
+  "examplePath": "examples/methods/SYS_Log/sort.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Log/sort.json",
+  "signatures": [
+    "sort(types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>"
+  ],
+  "description": "筛选并获取日志条目",
+  "classSummary": "系统 / 日志类",
+  "remarks": "如果日志面板处于打开状态，筛选操作会同时在前端展现",
+  "returnSummary": "Promise<Array<[ISYS\\_LogLine](../interfaces/ISYS_LogLine.md) >>\n\n符合筛选条件的日志条目数组",
+  "params": [
+    {
+      "name": "types",
+      "type": "ESYS\\_LogType \\| Array<ESYS\\_LogType >",
+      "description": "_（可选）_ 日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "这个参数是枚举类型 ESYS_LogType | Array<ESYS_LogType>，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Log_sort_' + Date.now();\n  const result = await eda.sys_Log.sort(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

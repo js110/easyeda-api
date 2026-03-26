@@ -1,0 +1,28 @@
+{
+  "className": "DMT_EditorControl",
+  "methodName": "mergeAllDocumentFromSplitScreen",
+  "slug": "DMT_EditorControl.mergeAllDocumentFromSplitScreen",
+  "docPath": "references/classes/DMT_EditorControl.md",
+  "examplePath": "examples/methods/DMT_EditorControl/mergeAllDocumentFromSplitScreen.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_EditorControl/mergeAllDocumentFromSplitScreen.json",
+  "signatures": [
+    "mergeAllDocumentFromSplitScreen(): Promise<boolean>"
+  ],
+  "description": "合并所有分屏",
+  "classSummary": "文档树 / 编辑器控制类",
+  "remarks": "仅当存在子分屏时可用，将会取消所有子分屏，并将所有文档标签页合并到初始分屏内",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_EditorControl_mergeAllDocumentFromSplitScreen_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const result = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

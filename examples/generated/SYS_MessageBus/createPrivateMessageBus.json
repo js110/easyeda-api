@@ -1,0 +1,26 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "createPrivateMessageBus",
+  "slug": "SYS_MessageBus.createPrivateMessageBus",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/createPrivateMessageBus.md",
+  "kind": "create",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/SYS_MessageBus/createPrivateMessageBus.json",
+  "signatures": [
+    "createPrivateMessageBus(): void"
+  ],
+  "description": "创建私有消息总线",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_createPrivateMessageBus_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sys_MessageBus.createPrivateMessageBus();\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sys_MessageBus.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

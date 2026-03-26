@@ -1,0 +1,34 @@
+{
+  "className": "SYS_FontManager",
+  "methodName": "deleteFont",
+  "slug": "SYS_FontManager.deleteFont",
+  "docPath": "references/classes/SYS_FontManager.md",
+  "examplePath": "examples/methods/SYS_FontManager/deleteFont.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_FontManager/deleteFont.json",
+  "signatures": [
+    "deleteFont(fontName: string): Promise<boolean>"
+  ],
+  "description": "删除字体列表内的指定字体",
+  "classSummary": "系统 / 字体管理类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n删除操作是否成功",
+  "params": [
+    {
+      "name": "fontName",
+      "type": "string",
+      "description": "字体名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FontManager_deleteFont_' + Date.now();\n  const result = await eda.sys_FontManager.deleteFont('fontName');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

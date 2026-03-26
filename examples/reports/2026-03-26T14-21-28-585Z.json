@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-03-26T14:21:25.092Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "249f4840-0f2d-47c1-a5b0-f47ef8904422",
+    "pendingRequests": 1,
+    "timestamp": 1774534885080
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "249f4840-0f2d-47c1-a5b0-f47ef8904422",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "249f4840-0f2d-47c1-a5b0-f47ef8904422",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 1,
+    "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "7e63af2d471a22d3",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "7e63af2d471a22d3"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "PCB_PrimitivePad.get",
+      "status": "failed",
+      "error": "错误：无法创建焊盘图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "ddfd856250744d06"
+      }
+    }
+  ]
+}

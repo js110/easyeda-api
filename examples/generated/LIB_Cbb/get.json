@@ -1,0 +1,39 @@
+{
+  "className": "LIB_Cbb",
+  "methodName": "get",
+  "slug": "LIB_Cbb.get",
+  "docPath": "references/classes/LIB_Cbb.md",
+  "examplePath": "examples/methods/LIB_Cbb/get.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Cbb/get.json",
+  "signatures": [
+    "get(cbbUuid: string, libraryUuid?: string): Promise<ILIB_CbbItem | undefined>"
+  ],
+  "description": "获取复用模块的所有属性",
+  "classSummary": "综合库 / 复用模块类",
+  "remarks": "",
+  "returnSummary": "Promise<[ILIB\\_CbbItem](../interfaces/ILIB_CbbItem.md) \\| undefined>\n\n复用模块属性",
+  "params": [
+    {
+      "name": "cbbUuid",
+      "type": "string",
+      "description": "复用模块 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [
+    "当前工作区不一定能搜索到可用的复用模块样本，运行前请先替换成真实 cbbUuid。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Cbb_get_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_Cbb.get('cbbUuid', libraryUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

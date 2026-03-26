@@ -1,0 +1,34 @@
+{
+  "className": "PCB_PrimitivePour",
+  "methodName": "delete",
+  "slug": "PCB_PrimitivePour.delete",
+  "docPath": "references/classes/PCB_PrimitivePour.md",
+  "examplePath": "examples/methods/PCB_PrimitivePour/delete.md",
+  "kind": "delete",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/PCB_PrimitivePour/delete.json",
+  "signatures": [
+    "delete(primitiveIds: string | IPCB_PrimitivePour | Array<string> | Array<IPCB_PrimitivePour>): Promise<boolean>"
+  ],
+  "description": "删除覆铜边框",
+  "classSummary": "PCB & 封装 / 覆铜边框图元类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n删除操作是否成功",
+  "params": [
+    {
+      "name": "primitiveIds",
+      "type": "string \\| IPCB\\_PrimitivePour \\| Array<string> \\| Array<IPCB\\_PrimitivePour >",
+      "description": "覆铜边框的图元 ID 或覆铜边框图元对象"
+    }
+  ],
+  "exampleNotes": [
+    "删除案例会先创建一个临时图元，再立即调用删除接口，避免误删当前工程里的真实对象。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitivePour_delete_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixturePolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 300, 200, 0, 0]);\n  if (!fixturePolygon) { throw new Error('无法创建用于案例演示的测试多边形。'); }\n  const createdPrimitive = await eda.pcb_PrimitivePour.create(\n    'GND',\n    1,\n    fixturePolygon,\n    undefined,\n    false,\n    fixtureName,\n    1,\n    10,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可删除的测试图元。'); }\n  const deleted = await eda.pcb_PrimitivePour.delete([primitiveId]);\n  return { fixtureName, primitiveId, deleted };\n})(eda);"
+}

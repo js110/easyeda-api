@@ -1,0 +1,67 @@
+{
+  "className": "SCH_ManufactureData",
+  "methodName": "getBomFile",
+  "slug": "SCH_ManufactureData.getBomFile",
+  "docPath": "references/classes/SCH_ManufactureData.md",
+  "examplePath": "examples/methods/SCH_ManufactureData/getBomFile.md",
+  "kind": "query",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SCH_ManufactureData/getBomFile.json",
+  "signatures": [
+    "getBomFile(fileName?: string, fileType?: 'xlsx' | 'csv', template?: string, filterOptions?: Array<{         property: string;         includeValue: boolean | string;     }>, statistics?: Array<string>, property?: Array<string>, columns?: Array<IPCB_BomPropertiesTableColumns>, assemblyVariantsConfig?: {         text: string;         value: string;     }): Promise<File | undefined>"
+  ],
+  "description": "获取 BOM 文件",
+  "classSummary": "原理图 & 符号 / 生产资料类",
+  "remarks": "可以使用 [SYS\\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统",
+  "returnSummary": "Promise<File \\| undefined>\n\nBOM 文件数据",
+  "params": [
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名"
+    },
+    {
+      "name": "fileType",
+      "type": "'xlsx' \\| 'csv'",
+      "description": "_（可选）_ 文件类型"
+    },
+    {
+      "name": "template",
+      "type": "string",
+      "description": "_（可选）_ 模板名称"
+    },
+    {
+      "name": "filterOptions",
+      "type": "Array<{ property: string; includeValue: boolean \\| string; }>",
+      "description": "_（可选）_ 过滤规则，仅应包含需要启用的规则，`property` 为规则名称，`includeValue` 为匹配的值"
+    },
+    {
+      "name": "statistics",
+      "type": "Array<string>",
+      "description": "_（可选）_ 统计，包含所有需要启用的统计项的名称"
+    },
+    {
+      "name": "property",
+      "type": "Array<string>",
+      "description": "_（可选）_ 属性，包含所有需要启用的属性的名称"
+    },
+    {
+      "name": "columns",
+      "type": "Array<IPCB\\_BomPropertiesTableColumns >",
+      "description": "_（可选）_ 列的属性及排序，`title` 、`sort` 、`group` 、`orderWeight` 不传入则取默认值，`null` 代表 \\*\\*无\\*\\* 或 \\*\\*空\\*\\*"
+    },
+    {
+      "name": "assemblyVariantsConfig",
+      "type": "\\{ text: string; value: string; \\}",
+      "description": "_（可选）_ 装配体变量配置"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_ManufactureData_getBomFile_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_ManufactureData.getBomFile(undefined, undefined, undefined, undefined, undefined, undefined, [], undefined);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

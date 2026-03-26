@@ -1,0 +1,44 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "saveRuleConfiguration",
+  "slug": "PCB_Drc.saveRuleConfiguration",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/saveRuleConfiguration.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Drc/saveRuleConfiguration.json",
+  "signatures": [
+    "saveRuleConfiguration(ruleConfiguration: {         [key: string]: any;     }, configurationName: string, allowOverwrite?: boolean): Promise<boolean>"
+  ],
+  "description": "保存设计规则配置",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "只有自定义配置可以覆盖保存，系统配置不允许修改和覆盖",
+  "returnSummary": "Promise<boolean>\n\n保存是否成功",
+  "params": [
+    {
+      "name": "ruleConfiguration",
+      "type": "\\{ \\[key: string\\]: any; \\}",
+      "description": "设计规则配置"
+    },
+    {
+      "name": "configurationName",
+      "type": "string",
+      "description": "配置名称"
+    },
+    {
+      "name": "allowOverwrite",
+      "type": "boolean",
+      "description": "_（可选）_ 是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false` ，请注意可能的数据丢失风险"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_saveRuleConfiguration_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Drc.saveRuleConfiguration('ruleConfiguration', 'configurationName', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

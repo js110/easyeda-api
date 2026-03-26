@@ -1,0 +1,42 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "createDifferentialPair",
+  "slug": "PCB_Drc.createDifferentialPair",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/createDifferentialPair.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_Drc/createDifferentialPair.json",
+  "signatures": [
+    "createDifferentialPair(differentialPairName: string, positiveNet: string, negativeNet: string): Promise<boolean>"
+  ],
+  "description": "创建差分对",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "differentialPairName",
+      "type": "string",
+      "description": "差分对名称"
+    },
+    {
+      "name": "positiveNet",
+      "type": "string",
+      "description": "正网络名称"
+    },
+    {
+      "name": "negativeNet",
+      "type": "string",
+      "description": "负网络名称"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_createDifferentialPair_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_Drc.createDifferentialPair('differentialPairName', 'positiveNet', 'negativeNet');\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_Drc.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

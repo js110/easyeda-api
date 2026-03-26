@@ -1,0 +1,49 @@
+{
+  "className": "LIB_3DModel",
+  "methodName": "create",
+  "slug": "LIB_3DModel.create",
+  "docPath": "references/classes/LIB_3DModel.md",
+  "examplePath": "examples/methods/LIB_3DModel/create.md",
+  "kind": "create",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/LIB_3DModel/create.json",
+  "signatures": [
+    "create(libraryUuid: string, modelFile: Blob, classification?: ILIB_ClassificationIndex | Array<string>, unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.METER | ESYS_Unit.MIL | ESYS_Unit.INCH): Promise<string[] | undefined>"
+  ],
+  "description": "创建 3D 模型",
+  "classSummary": "综合库 / 3D 模型类",
+  "remarks": "",
+  "returnSummary": "Promise<string\\[\\] \\| undefined>\n\n3D 模型 UUID",
+  "params": [
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "modelFile",
+      "type": "Blob",
+      "description": "3D 模型文件数据"
+    },
+    {
+      "name": "classification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 分类"
+    },
+    {
+      "name": "unit",
+      "type": "ESYS\\_Unit.MILLIMETER \\| ESYS\\_Unit.CENTIMETER \\| ESYS\\_Unit.METER \\| ESYS\\_Unit.MIL \\| ESYS\\_Unit.INCH",
+      "description": "_(Optional)_"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.METER | ESYS_Unit.MIL | ESYS_Unit.INCH，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_3DModel_create_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const created = await eda.lib_3DModel.create(libraryUuid, undefined, undefined, undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.lib_3DModel.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "manual": 11,
+    "passed": 8
+  },
+  "results": [
+    {
+      "originalSlug": "DMT_Team.getAllInvolvedTeamInfo",
+      "slug": "DMT_Team.getAllInvolvedTeamInfo",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "LIB_Classification.getNameByIndex",
+      "slug": "LIB_Classification.getNameByIndex",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_Device.getByLcscIds<T extends boolean>",
+      "slug": "LIB_Device.getByLcscIds",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_Footprint.get",
+      "slug": "LIB_Footprint.get",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_Footprint.openInEditor",
+      "slug": "LIB_Footprint.openInEditor",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_PanelLibrary.openInEditor",
+      "slug": "LIB_PanelLibrary.openInEditor",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_Symbol.get",
+      "slug": "LIB_Symbol.get",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "LIB_Symbol.openInEditor",
+      "slug": "LIB_Symbol.openInEditor",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getCbbFileByCbbUuid",
+      "slug": "SYS_FileManager.getCbbFileByCbbUuid",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getDocumentFile",
+      "slug": "SYS_FileManager.getDocumentFile",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getDocumentFootprintSources",
+      "slug": "SYS_FileManager.getDocumentFootprintSources",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getDocumentSource",
+      "slug": "SYS_FileManager.getDocumentSource",
+      "status": "passed",
+      "windowId": "92f5ca2e-cb74-4385-b51c-90f96eceed2e"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getProjectFile",
+      "slug": "SYS_FileManager.getProjectFile",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileManager.getProjectFileByProjectUuid",
+      "slug": "SYS_FileManager.getProjectFileByProjectUuid",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileSystem.getDocumentsPath",
+      "slug": "SYS_FileSystem.getDocumentsPath",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileSystem.getEdaPath",
+      "slug": "SYS_FileSystem.getEdaPath",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileSystem.getLibrariesPaths",
+      "slug": "SYS_FileSystem.getLibrariesPaths",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileSystem.getProjectsPaths",
+      "slug": "SYS_FileSystem.getProjectsPaths",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    },
+    {
+      "originalSlug": "SYS_FileSystem.listFilesOfFileSystem",
+      "slug": "SYS_FileSystem.listFilesOfFileSystem",
+      "status": "manual",
+      "reason": "validationMode=manual"
+    }
+  ]
+}

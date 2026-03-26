@@ -1,0 +1,26 @@
+{
+  "className": "PCB_SelectControl",
+  "methodName": "getCurrentMousePosition",
+  "slug": "PCB_SelectControl.getCurrentMousePosition",
+  "docPath": "references/classes/PCB_SelectControl.md",
+  "examplePath": "examples/methods/PCB_SelectControl/getCurrentMousePosition.md",
+  "kind": "query",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/PCB_SelectControl/getCurrentMousePosition.json",
+  "signatures": [
+    "getCurrentMousePosition(): Promise<{         x: number;         y: number;     } | undefined>"
+  ],
+  "description": "获取当前鼠标在画布上的位置",
+  "classSummary": "PCB & 封装 / 选择控制类",
+  "remarks": "",
+  "returnSummary": "Promise<{ x: number; y: number; } \\| undefined>\n\n鼠标在画布上的位置，`undefined` 代表当前鼠标不在画布上",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_SelectControl_getCurrentMousePosition_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_SelectControl.getCurrentMousePosition();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

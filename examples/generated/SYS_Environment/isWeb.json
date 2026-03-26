@@ -1,0 +1,28 @@
+{
+  "className": "SYS_Environment",
+  "methodName": "isWeb",
+  "slug": "SYS_Environment.isWeb",
+  "docPath": "references/classes/SYS_Environment.md",
+  "examplePath": "examples/methods/SYS_Environment/isWeb.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Environment/isWeb.json",
+  "signatures": [
+    "isWeb(): boolean"
+  ],
+  "description": "是否处于浏览器环境",
+  "classSummary": "系统 / 运行环境类",
+  "remarks": "",
+  "returnSummary": "boolean\n\n是否处于浏览器环境",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Environment_isWeb_' + Date.now();\n  const result = await eda.sys_Environment.isWeb();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,26 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "getCurrentLanguage",
+  "slug": "SYS_I18n.getCurrentLanguage",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/getCurrentLanguage.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_I18n/getCurrentLanguage.json",
+  "signatures": [
+    "getCurrentLanguage(): Promise<string>"
+  ],
+  "description": "获取当前语言环境",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "能够获取到的语言受 EDA 当前支持语言限制，其它 API 支持的语言需要显式指定 `language` 参数才能使用",
+  "returnSummary": "Promise<string>\n\n语言",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_getCurrentLanguage_' + Date.now();\n  const result = await eda.sys_I18n.getCurrentLanguage();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

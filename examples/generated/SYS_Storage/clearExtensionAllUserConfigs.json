@@ -1,0 +1,28 @@
+{
+  "className": "SYS_Storage",
+  "methodName": "clearExtensionAllUserConfigs",
+  "slug": "SYS_Storage.clearExtensionAllUserConfigs",
+  "docPath": "references/classes/SYS_Storage.md",
+  "examplePath": "examples/methods/SYS_Storage/clearExtensionAllUserConfigs.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Storage/clearExtensionAllUserConfigs.json",
+  "signatures": [
+    "clearExtensionAllUserConfigs(): Promise<boolean>"
+  ],
+  "description": "清除扩展所有用户配置",
+  "classSummary": "系统 / 存储类",
+  "remarks": "此举会删除当前扩展的所有用户配置信息，请谨慎操作\n\n注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Storage_clearExtensionAllUserConfigs_' + Date.now();\n  const result = await eda.sys_Storage.clearExtensionAllUserConfigs();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

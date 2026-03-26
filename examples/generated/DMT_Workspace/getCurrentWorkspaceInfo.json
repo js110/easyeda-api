@@ -1,0 +1,26 @@
+{
+  "className": "DMT_Workspace",
+  "methodName": "getCurrentWorkspaceInfo",
+  "slug": "DMT_Workspace.getCurrentWorkspaceInfo",
+  "docPath": "references/classes/DMT_Workspace.md",
+  "examplePath": "examples/methods/DMT_Workspace/getCurrentWorkspaceInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Workspace/getCurrentWorkspaceInfo.json",
+  "signatures": [
+    "getCurrentWorkspaceInfo(): Promise<IDMT_WorkspaceItem | undefined>"
+  ],
+  "description": "获取当前工作区的详细属性",
+  "classSummary": "文档树 / 工作区类",
+  "remarks": "将会获取当前工作区的详细属性",
+  "returnSummary": "Promise<[IDMT\\_WorkspaceItem](../interfaces/IDMT_WorkspaceItem.md) \\| undefined>\n\n工作区的详细属性，如若为 `undefined` 则获取失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Workspace_getCurrentWorkspaceInfo_' + Date.now();\n  const result = await eda.dmt_Workspace.getCurrentWorkspaceInfo();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

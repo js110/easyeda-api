@@ -1,0 +1,39 @@
+{
+  "className": "SYS_Unit",
+  "methodName": "mmToInch",
+  "slug": "SYS_Unit.mmToInch",
+  "docPath": "references/classes/SYS_Unit.md",
+  "examplePath": "examples/methods/SYS_Unit/mmToInch.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Unit/mmToInch.json",
+  "signatures": [
+    "mmToInch(mm: number, numberOfDecimals?: number): number"
+  ],
+  "description": "单位转换：毫米到英寸",
+  "classSummary": "系统 / 单位类",
+  "remarks": "",
+  "returnSummary": "number\n\n输出英寸数",
+  "params": [
+    {
+      "name": "mm",
+      "type": "number",
+      "description": "输入毫米数"
+    },
+    {
+      "name": "numberOfDecimals",
+      "type": "number",
+      "description": "_（可选）_ 保留小数位数，默认为 `4`"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Unit_mmToInch_' + Date.now();\n  const result = await eda.sys_Unit.mmToInch(0, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

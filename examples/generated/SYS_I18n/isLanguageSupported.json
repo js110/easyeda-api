@@ -1,0 +1,34 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "isLanguageSupported",
+  "slug": "SYS_I18n.isLanguageSupported",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/isLanguageSupported.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_I18n/isLanguageSupported.json",
+  "signatures": [
+    "isLanguageSupported(language: string): boolean"
+  ],
+  "description": "检查语言是否受支持",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "",
+  "returnSummary": "boolean\n\n是否受支持",
+  "params": [
+    {
+      "name": "language",
+      "type": "string",
+      "description": "语言"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_isLanguageSupported_' + Date.now();\n  const result = await eda.sys_I18n.isLanguageSupported('language');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

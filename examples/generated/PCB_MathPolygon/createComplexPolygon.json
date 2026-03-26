@@ -1,0 +1,32 @@
+{
+  "className": "PCB_MathPolygon",
+  "methodName": "createComplexPolygon",
+  "slug": "PCB_MathPolygon.createComplexPolygon",
+  "docPath": "references/classes/PCB_MathPolygon.md",
+  "examplePath": "examples/methods/PCB_MathPolygon/createComplexPolygon.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_MathPolygon/createComplexPolygon.json",
+  "signatures": [
+    "createComplexPolygon(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | Array<IPCB_Polygon>): IPCB_ComplexPolygon | undefined"
+  ],
+  "description": "创建复杂多边形",
+  "classSummary": "PCB & 封装 / 多边形数学类",
+  "remarks": "",
+  "returnSummary": "[IPCB\\_ComplexPolygon](./IPCB_ComplexPolygon.md) \\| undefined\n\n复杂多边形对象，`undefined` 表示数据不合法",
+  "params": [
+    {
+      "name": "complexPolygon",
+      "type": "TPCB\\_PolygonSourceArray \\| Array<TPCB\\_PolygonSourceArray > \\| IPCB\\_Polygon \\| Array<IPCB\\_Polygon >",
+      "description": "复杂多边形数据"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_MathPolygon_createComplexPolygon_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_MathPolygon.createComplexPolygon(undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_MathPolygon.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

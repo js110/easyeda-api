@@ -1,0 +1,39 @@
+{
+  "className": "DMT_Board",
+  "methodName": "modifyBoardName",
+  "slug": "DMT_Board.modifyBoardName",
+  "docPath": "references/classes/DMT_Board.md",
+  "examplePath": "examples/methods/DMT_Board/modifyBoardName.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Board/modifyBoardName.json",
+  "signatures": [
+    "modifyBoardName(originalBoardName: string, boardName: string): Promise<boolean>"
+  ],
+  "description": "修改板子名称",
+  "classSummary": "文档树 / 板子管理类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否修改成功",
+  "params": [
+    {
+      "name": "originalBoardName",
+      "type": "string",
+      "description": "原板子名称"
+    },
+    {
+      "name": "boardName",
+      "type": "string",
+      "description": "新板子名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Board_modifyBoardName_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const result = await eda.dmt_Board.modifyBoardName('originalBoardName', fixtureName);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

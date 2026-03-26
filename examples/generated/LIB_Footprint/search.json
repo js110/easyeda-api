@@ -1,0 +1,52 @@
+{
+  "className": "LIB_Footprint",
+  "methodName": "search",
+  "slug": "LIB_Footprint.search",
+  "docPath": "references/classes/LIB_Footprint.md",
+  "examplePath": "examples/methods/LIB_Footprint/search.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Footprint/search.json",
+  "signatures": [
+    "search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_FootprintSearchItem>>"
+  ],
+  "description": "搜索封装",
+  "classSummary": "综合库 / 封装类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<[ILIB\\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md) >>\n\n搜索到的封装属性列表",
+  "params": [
+    {
+      "name": "key",
+      "type": "string",
+      "description": "搜索关键字"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，默认为系统库，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "classification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 分类，默认为全部"
+    },
+    {
+      "name": "itemsOfPage",
+      "type": "number",
+      "description": "_（可选）_ 一页搜索结果的数量"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "_（可选）_ 页数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Footprint_search_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const result = await eda.lib_Footprint.search('key', footprintLibraryUuid, undefined, undefined, undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

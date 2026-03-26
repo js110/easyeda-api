@@ -1,0 +1,36 @@
+{
+  "className": "PCB_PrimitivePad",
+  "methodName": "get",
+  "slug": "PCB_PrimitivePad.get",
+  "docPath": "references/classes/PCB_PrimitivePad.md",
+  "examplePath": "examples/methods/PCB_PrimitivePad/get.md",
+  "kind": "query",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/PCB_PrimitivePad/get.json",
+  "signatures": [
+    "get(primitiveIds: string): Promise<IPCB_PrimitivePad | undefined>",
+    "get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePad>>"
+  ],
+  "description": "获取焊盘",
+  "classSummary": "PCB & 封装 / 焊盘图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitivePad](./IPCB_PrimitivePad.md) \\| undefined>\n\n焊盘图元对象，`undefined` 表示获取失败",
+  "params": [
+    {
+      "name": "primitiveIds",
+      "type": "string",
+      "description": "焊盘的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组"
+    }
+  ],
+  "exampleNotes": [
+    "这个查询案例会先临时创建一个图元夹具，读取完成后再自动清理，避免依赖当前工程里预先存在的对象。",
+    "案例会先从当前文档里取一个真实图元 ID，再调用目标接口，方便你理解这类读取 API 的入参来源。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitivePad_get_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.pcb_PrimitivePad.create(\n    1,\n    '1',\n    1200,\n    1200,\n    0,\n    ['ELLIPSE', 60, 60],\n    'GND',\n    null,\n    undefined,\n    undefined,\n    undefined,\n    true,\n    undefined,\n    undefined,\n    null,\n    null,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于查询的测试图元。'); }\n  try {\n    const result = await eda.pcb_PrimitivePad.get(primitiveId);\n    return {\n      fixtureName,\n      currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n      currentDocumentType: currentDocument?.documentType ?? null,\n      result,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitivePad.delete([primitiveId]); }\n  }\n})(eda);"
+}

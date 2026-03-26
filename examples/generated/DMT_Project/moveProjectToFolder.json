@@ -1,0 +1,40 @@
+{
+  "className": "DMT_Project",
+  "methodName": "moveProjectToFolder",
+  "slug": "DMT_Project.moveProjectToFolder",
+  "docPath": "references/classes/DMT_Project.md",
+  "examplePath": "examples/methods/DMT_Project/moveProjectToFolder.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Project/moveProjectToFolder.json",
+  "signatures": [
+    "moveProjectToFolder(projectUuid: string, folderUuid?: string): Promise<boolean>"
+  ],
+  "description": "移动工程到文件夹",
+  "classSummary": "文档树 / 工程管理类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否移动成功",
+  "params": [
+    {
+      "name": "projectUuid",
+      "type": "string",
+      "description": "工程 UUID"
+    },
+    {
+      "name": "folderUuid",
+      "type": "string",
+      "description": "_（可选）_ 文件夹 UUID，只能为当前工程所在团队或个人下的文件夹，如若为 `undefined` 则移动到当前团队的根文件夹"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "案例优先使用当前打开工程的 UUID。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Project_moveProjectToFolder_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const projectUuid = currentProject?.uuid;\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  if (!teamUuid) { throw new Error('当前账号下没有可用团队，无法解析 folderUuid。'); }\n  const folderCandidates = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  const folderUuid = folderCandidates?.[0];\n  const result = await eda.dmt_Project.moveProjectToFolder(projectUuid, folderUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

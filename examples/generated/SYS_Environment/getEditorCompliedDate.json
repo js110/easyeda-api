@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Environment",
+  "methodName": "getEditorCompliedDate",
+  "slug": "SYS_Environment.getEditorCompliedDate",
+  "docPath": "references/classes/SYS_Environment.md",
+  "examplePath": "examples/methods/SYS_Environment/getEditorCompliedDate.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Environment/getEditorCompliedDate.json",
+  "signatures": [
+    "getEditorCompliedDate(): string"
+  ],
+  "description": "获取编辑器编译日期",
+  "classSummary": "系统 / 运行环境类",
+  "remarks": "",
+  "returnSummary": "string\n\n编辑器编译日期",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Environment_getEditorCompliedDate_' + Date.now();\n  const result = await eda.sys_Environment.getEditorCompliedDate();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

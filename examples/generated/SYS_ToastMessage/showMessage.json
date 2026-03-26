@@ -1,0 +1,59 @@
+{
+  "className": "SYS_ToastMessage",
+  "methodName": "showMessage",
+  "slug": "SYS_ToastMessage.showMessage",
+  "docPath": "references/classes/SYS_ToastMessage.md",
+  "examplePath": "examples/methods/SYS_ToastMessage/showMessage.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_ToastMessage/showMessage.json",
+  "signatures": [
+    "showMessage(message: string, messageType?: ESYS_ToastMessageType, timer?: number, bottomPanel?: ESYS_BottomPanelTab, buttonTitle?: string, buttonCallbackFn?: string): void"
+  ],
+  "description": "显示吐司消息",
+  "classSummary": "> 警告：此 API 现已弃用。\n>\n> 即将移除吐司消息类，合并入 消息通知类\n\n系统 / 吐司消息类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "message",
+      "type": "string",
+      "description": "消息内容"
+    },
+    {
+      "name": "messageType",
+      "type": "ESYS\\_ToastMessageType",
+      "description": "_（可选）_ 消息类型"
+    },
+    {
+      "name": "timer",
+      "type": "number",
+      "description": "_（可选）_ 自动关闭倒计时秒数，`0` 为不自动关闭"
+    },
+    {
+      "name": "bottomPanel",
+      "type": "ESYS\\_BottomPanelTab",
+      "description": "_（可选）_ 展开底部信息面板"
+    },
+    {
+      "name": "buttonTitle",
+      "type": "string",
+      "description": "_（可选）_ 回调按钮标题"
+    },
+    {
+      "name": "buttonCallbackFn",
+      "type": "string",
+      "description": "_（可选）_ 回调函数内容，字符串形式，会被自动解析并执行"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_ToastMessageType，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_ToastMessage_showMessage_' + Date.now();\n  const result = await eda.sys_ToastMessage.showMessage('Codex example running inside EasyEDA', undefined, 1500, false, 'Codex example running inside EasyEDA', undefined);\n  return { fixtureName, result };\n})(eda);"
+}

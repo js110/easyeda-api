@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-03-26T13:30:41.567Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+    "pendingRequests": 0,
+    "timestamp": 1774531841502
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d83a997b6db407d9f82e0a1d74ecf81",
+    "projectName": "demo",
+    "documentType": 1,
+    "tabId": "c40e29a2e5b9f913@4d83a997b6db407d9f82e0a1d74ecf81",
+    "documentUuid": "c40e29a2e5b9f913",
+    "schematicPageUuid": "c40e29a2e5b9f913",
+    "pcbUuid": "27a12f8318645082",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "c40e29a2e5b9f913"
+  },
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "DMT_Team.getCurrentTeamInfo",
+      "status": "passed",
+      "windowId": "f68ae371-797b-4b19-a629-2568c2c63ef5",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "currentProject",
+          "result",
+          "apiError",
+          "fallbackTeam",
+          "fallbackTeamCount",
+          "explanation"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Team_getCurrentTeamInfo_1774531841626",
+          "currentProject": "demo",
+          "result": {
+            "itemType": "Team",
+            "name": "Personal",
+            "uuid": "7c211dfab31b4ac481f8303db8aec3ef",
+            "identity": 0
+          },
+          "apiError": null,
+          "fallbackTeam": {
+            "itemType": "Team",
+            "name": "Personal",
+            "uuid": "7c211dfab31b4ac481f8303db8aec3ef",
+            "identity": 0
+          },
+          "fallbackTeamCount": 1,
+          "explanation": "已获取到当前焦点工程关联的团队信息。"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d83a997b6db407d9f82e0a1d74ecf81",
+        "projectName": "demo",
+        "documentType": 1,
+        "tabId": "c40e29a2e5b9f913@4d83a997b6db407d9f82e0a1d74ecf81",
+        "documentUuid": "c40e29a2e5b9f913",
+        "schematicPageUuid": "c40e29a2e5b9f913",
+        "pcbUuid": "27a12f8318645082",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "c40e29a2e5b9f913"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "className": "LIB_PanelLibrary",
+  "methodName": "delete",
+  "slug": "LIB_PanelLibrary.delete",
+  "docPath": "references/classes/LIB_PanelLibrary.md",
+  "examplePath": "examples/methods/LIB_PanelLibrary/delete.md",
+  "kind": "delete",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/LIB_PanelLibrary/delete.json",
+  "signatures": [
+    "delete(panelLibraryUuid: string, libraryUuid: string): Promise<boolean>"
+  ],
+  "description": "删除面板库",
+  "classSummary": "综合库 / 面板库类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "panelLibraryUuid",
+      "type": "string",
+      "description": "面板库 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_PanelLibrary_delete_' + Date.now();\n  const panelLibraryCandidates = await eda.lib_PanelLibrary.search('A4');\n  const panelLibraryItem = panelLibraryCandidates?.[0];\n  const panelLibraryUuid = panelLibraryItem?.uuid;\n  const panelLibraryLibraryUuid = panelLibraryItem?.libraryUuid;\n  const result = await eda.lib_PanelLibrary.delete(panelLibraryUuid, panelLibraryLibraryUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,44 @@
+{
+  "className": "LIB_Footprint",
+  "methodName": "updateDocumentSource",
+  "slug": "LIB_Footprint.updateDocumentSource",
+  "docPath": "references/classes/LIB_Footprint.md",
+  "examplePath": "examples/methods/LIB_Footprint/updateDocumentSource.md",
+  "kind": "action",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/LIB_Footprint/updateDocumentSource.json",
+  "signatures": [
+    "updateDocumentSource(footprintUuid: string, libraryUuid: string, documentSource: string): Promise<boolean | undefined>"
+  ],
+  "description": "更新封装的文档源码",
+  "classSummary": "综合库 / 封装类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean \\| undefined>\n\n是否更新成功",
+  "params": [
+    {
+      "name": "footprintUuid",
+      "type": "string",
+      "description": "封装 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "documentSource",
+      "type": "string",
+      "description": "文档源码"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Footprint_updateDocumentSource_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const result = await eda.lib_Footprint.updateDocumentSource(footprintUuid, footprintLibraryUuid, 'documentSource');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

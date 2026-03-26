@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Schematic",
+  "methodName": "getSchematicPageInfo",
+  "slug": "DMT_Schematic.getSchematicPageInfo",
+  "docPath": "references/classes/DMT_Schematic.md",
+  "examplePath": "examples/methods/DMT_Schematic/getSchematicPageInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/DMT_Schematic/getSchematicPageInfo.json",
+  "signatures": [
+    "getSchematicPageInfo(schematicPageUuid: string): Promise<IDMT_SchematicPageItem | undefined>"
+  ],
+  "description": "获取原理图图页的详细属性",
+  "classSummary": "文档树 / 原理图管理类",
+  "remarks": "",
+  "returnSummary": "Promise<[IDMT\\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \\| undefined>\n\n原理图图页的详细属性，如若为 `undefined` 则获取失败",
+  "params": [
+    {
+      "name": "schematicPageUuid",
+      "type": "string",
+      "description": "原理图图页 UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Schematic_getSchematicPageInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const schematicPages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\n  const schematicPageUuid = schematicPages?.[0]?.uuid;\n  const result = await eda.dmt_Schematic.getSchematicPageInfo(schematicPageUuid);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n  };\n})(eda);"
+}

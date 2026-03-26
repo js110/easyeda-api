@@ -1,0 +1,34 @@
+{
+  "className": "DMT_Project",
+  "methodName": "getProjectInfo",
+  "slug": "DMT_Project.getProjectInfo",
+  "docPath": "references/classes/DMT_Project.md",
+  "examplePath": "examples/methods/DMT_Project/getProjectInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/DMT_Project/getProjectInfo.json",
+  "signatures": [
+    "getProjectInfo(projectUuid: string): Promise<IDMT_BriefProjectItem | undefined>"
+  ],
+  "description": "获取工程属性",
+  "classSummary": "文档树 / 工程管理类",
+  "remarks": "本接口只能读取简略的工程属性，如需详细的工程树，请使用 [getCurrentProjectInfo](./DMT_Project.md) 接口",
+  "returnSummary": "Promise<[IDMT\\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \\| undefined>\n\n简略的工程属性，如若为 `undefined` 则获取失败",
+  "params": [
+    {
+      "name": "projectUuid",
+      "type": "string",
+      "description": "工程 UUID"
+    }
+  ],
+  "exampleNotes": [
+    "案例优先使用当前打开工程的 UUID。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Project_getProjectInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  const projectUuid = currentProject?.uuid;\n  const result = await eda.dmt_Project.getProjectInfo(projectUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,34 @@
+{
+  "className": "SYS_ShortcutKey",
+  "methodName": "unregisterShortcutKey",
+  "slug": "SYS_ShortcutKey.unregisterShortcutKey",
+  "docPath": "references/classes/SYS_ShortcutKey.md",
+  "examplePath": "examples/methods/SYS_ShortcutKey/unregisterShortcutKey.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_ShortcutKey/unregisterShortcutKey.json",
+  "signatures": [
+    "unregisterShortcutKey(shortcutKey: TSYS_ShortcutKeys): Promise<boolean>"
+  ],
+  "description": "反注册快捷键",
+  "classSummary": "系统 / 快捷键类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n反注册操作是否成功",
+  "params": [
+    {
+      "name": "shortcutKey",
+      "type": "TSYS\\_ShortcutKeys",
+      "description": "快捷键，不区分传入的排列顺序，将自动排序并查询匹配的快捷键"
+    }
+  ],
+  "exampleNotes": [
+    "快捷键案例默认使用 Ctrl+Shift+G 这一组按键，便于开发者直接替换成自己的组合。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_ShortcutKey_unregisterShortcutKey_' + Date.now();\n  const result = await eda.sys_ShortcutKey.unregisterShortcutKey(['CONTROL', 'SHIFT', 'G']);\n  return { fixtureName, result };\n})(eda);"
+}

@@ -1,0 +1,74 @@
+{
+  "className": "PCB_PrimitiveVia",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveVia.create",
+  "docPath": "references/classes/PCB_PrimitiveVia.md",
+  "examplePath": "examples/methods/PCB_PrimitiveVia/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveVia/create.json",
+  "signatures": [
+    "create(net: string, x: number, y: number, holeDiameter: number, diameter: number, viaType?: EPCB_PrimitiveViaType, designRuleBlindViaName?: string | null, solderMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null, primitiveLock?: boolean): Promise<IPCB_PrimitiveVia | undefined>"
+  ],
+  "description": "创建过孔",
+  "classSummary": "PCB & 封装 / 过孔图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveVia](./IPCB_PrimitiveVia.md) \\| undefined>\n\n过孔图元对象",
+  "params": [
+    {
+      "name": "net",
+      "type": "string",
+      "description": "网络名称"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "description": "坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "坐标 Y"
+    },
+    {
+      "name": "holeDiameter",
+      "type": "number",
+      "description": "孔径"
+    },
+    {
+      "name": "diameter",
+      "type": "number",
+      "description": "外径"
+    },
+    {
+      "name": "viaType",
+      "type": "EPCB\\_PrimitiveViaType",
+      "description": "_（可选）_ 过孔类型"
+    },
+    {
+      "name": "designRuleBlindViaName",
+      "type": "string \\| null",
+      "description": "_（可选）_ 盲埋孔设计规则项名称，定义过孔的开始层与结束层，`null` 表示非盲埋孔"
+    },
+    {
+      "name": "solderMaskExpansion",
+      "type": "IPCB\\_PrimitiveSolderMaskAndPasteMaskExpansion \\| null",
+      "description": "_（可选）_ 阻焊/助焊扩展，`null` 表示跟随规则"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveVia_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.pcb_PrimitiveVia.create(\n    'GND',\n    1200,\n    1200,\n    20,\n    40,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveVia.delete([primitiveId]); }\n  }\n})(eda);"
+}

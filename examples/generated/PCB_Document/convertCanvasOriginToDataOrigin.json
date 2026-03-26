@@ -1,0 +1,39 @@
+{
+  "className": "PCB_Document",
+  "methodName": "convertCanvasOriginToDataOrigin",
+  "slug": "PCB_Document.convertCanvasOriginToDataOrigin",
+  "docPath": "references/classes/PCB_Document.md",
+  "examplePath": "examples/methods/PCB_Document/convertCanvasOriginToDataOrigin.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Document/convertCanvasOriginToDataOrigin.json",
+  "signatures": [
+    "convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{         x: number;         y: number;     }>"
+  ],
+  "description": "输入画布坐标返回该坐标对应的数据坐标",
+  "classSummary": "PCB & 封装 / 文档操作类",
+  "remarks": "嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点",
+  "returnSummary": "Promise<{ x: number; y: number; }>\n\n数据原点坐标",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": ""
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Document_convertCanvasOriginToDataOrigin_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Document.convertCanvasOriginToDataOrigin(1200, 1200);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

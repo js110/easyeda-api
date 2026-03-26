@@ -1,0 +1,39 @@
+{
+  "className": "PCB_PrimitiveDimension",
+  "methodName": "modify",
+  "slug": "PCB_PrimitiveDimension.modify",
+  "docPath": "references/classes/PCB_PrimitiveDimension.md",
+  "examplePath": "examples/methods/PCB_PrimitiveDimension/modify.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/PCB_PrimitiveDimension/modify.json",
+  "signatures": [
+    "modify(primitiveId: string | IPCB_PrimitiveDimension, property: {         dimensionType?: EPCB_PrimitiveDimensionType;         coordinateSet?: TPCB_PrimitiveDimensionCoordinateSet;         layer?: TPCB_LayersOfDimension;         unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;         lineWidth?: number;         precision?: number;         primitiveLock?: boolean;     }): Promise<IPCB_PrimitiveDimension | undefined>"
+  ],
+  "description": "修改尺寸标注",
+  "classSummary": "PCB & 封装 / 尺寸标注图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \\| undefined>\n\n尺寸标注图元对象",
+  "params": [
+    {
+      "name": "primitiveId",
+      "type": "string \\| IPCB\\_PrimitiveDimension",
+      "description": "图元 ID"
+    },
+    {
+      "name": "property",
+      "type": "{ dimensionType?: EPCB\\_PrimitiveDimensionType ; coordinateSet?: TPCB\\_PrimitiveDimensionCoordinateSet ; layer?: TPCB\\_LayersOfDimension ; unit?: ESYS\\_Unit.MILLIMETER \\| ESYS\\_Unit.CENTIMETER \\| ESYS\\_Unit.INCH \\| ESYS\\_Unit.MIL ; lineWidth?: number; precision?: number; primitiveLock?: boolean; }",
+      "description": "修改参数"
+    }
+  ],
+  "exampleNotes": [
+    "修改案例会先创建一个临时图元，再构造一个最小但真实的 property 对象执行 modify，最后自动清理。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveDimension_modify_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.pcb_PrimitiveDimension.create(\n    'Length Dimension',\n    [1000, 1000, 1000, 1150, 1600, 1150, 1600, 1000],\n    undefined,\n    'mil',\n    10,\n    2,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于修改的测试图元。'); }\n  const property = {\n    lineWidth: 12,\n    precision: 3,\n  };\n  try {\n    const before = await eda.pcb_PrimitiveDimension.get(primitiveId);\n    const result = await eda.pcb_PrimitiveDimension.modify(primitiveId, property);\n    const after = await eda.pcb_PrimitiveDimension.get(primitiveId);\n    return {\n      fixtureName,\n      primitiveId,\n      property,\n      before,\n      result,\n      after,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveDimension.delete([primitiveId]); }\n  }\n})(eda);"
+}

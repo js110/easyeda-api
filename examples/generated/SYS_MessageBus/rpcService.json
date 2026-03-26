@@ -1,0 +1,39 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "rpcService",
+  "slug": "SYS_MessageBus.rpcService",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/rpcService.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/rpcService.json",
+  "signatures": [
+    "rpcService(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void"
+  ],
+  "description": "私有消息总线：注册 RPC 服务",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "topic",
+      "type": "string",
+      "description": "主题"
+    },
+    {
+      "name": "callbackFn",
+      "type": "(...args: Array<any>) => any \\| Promise<any>",
+      "description": "接收到消息后的回调"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_rpcService_' + Date.now();\n  const result = await eda.sys_MessageBus.rpcService('topic', async (shortcutKey) => { await eda.sys_Message.showToastMessage('Shortcut fired: ' + shortcutKey.join('+')); });\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Unit",
+  "methodName": "getSystemDataUnit",
+  "slug": "SYS_Unit.getSystemDataUnit",
+  "docPath": "references/classes/SYS_Unit.md",
+  "examplePath": "examples/methods/SYS_Unit/getSystemDataUnit.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Unit/getSystemDataUnit.json",
+  "signatures": [
+    "getSystemDataUnit(): ESYS_Unit.MIL"
+  ],
+  "description": "获取 API 系统数据单位跨度",
+  "classSummary": "系统 / 单位类",
+  "remarks": "当前 API 系统数据单位跨度等效为 `mil` ，不会发生改变",
+  "returnSummary": "[ESYS\\_Unit.MIL](../enums/ESYS_Unit.md)\n\n单位",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Unit_getSystemDataUnit_' + Date.now();\n  const result = await eda.sys_Unit.getSystemDataUnit();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

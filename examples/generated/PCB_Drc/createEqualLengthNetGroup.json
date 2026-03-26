@@ -1,0 +1,42 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "createEqualLengthNetGroup",
+  "slug": "PCB_Drc.createEqualLengthNetGroup",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/createEqualLengthNetGroup.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_Drc/createEqualLengthNetGroup.json",
+  "signatures": [
+    "createEqualLengthNetGroup(equalLengthNetGroupName: string, nets: Array<string>, color: IPCB_EqualLengthNetGroupItem['color']): Promise<boolean>"
+  ],
+  "description": "创建等长网络组",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "equalLengthNetGroupName",
+      "type": "string",
+      "description": "等长网络组名称"
+    },
+    {
+      "name": "nets",
+      "type": "Array<string>",
+      "description": "网络名称数组"
+    },
+    {
+      "name": "color",
+      "type": "IPCB\\_EqualLengthNetGroupItem \\['color'\\]",
+      "description": "等长网络组颜色"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_createEqualLengthNetGroup_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_Drc.createEqualLengthNetGroup('equalLengthNetGroupName', 'nets', undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_Drc.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

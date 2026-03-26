@@ -1,0 +1,52 @@
+{
+  "className": "PCB_ManufactureData",
+  "methodName": "get3DFile",
+  "slug": "PCB_ManufactureData.get3DFile",
+  "docPath": "references/classes/PCB_ManufactureData.md",
+  "examplePath": "examples/methods/PCB_ManufactureData/get3DFile.md",
+  "kind": "query",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/PCB_ManufactureData/get3DFile.json",
+  "signatures": [
+    "get3DFile(fileName?: string, fileType?: 'step' | 'obj', element?: Array<'Component Model' | 'Via' | 'Silkscreen' | 'Wire In Signal Layer'>, modelMode?: 'Outfit' | 'Parts', autoGenerateModels?: boolean): Promise<File | undefined>"
+  ],
+  "description": "获取 3D 模型文件",
+  "classSummary": "PCB & 封装 / 生产资料类",
+  "remarks": "请注意：只有以 STEP 格式导入的元件模型，才能在导出的 STEP 文件中体现\n\n可以使用 [SYS\\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统",
+  "returnSummary": "Promise<File \\| undefined>\n\n3D 模型文件数据",
+  "params": [
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名"
+    },
+    {
+      "name": "fileType",
+      "type": "'step' \\| 'obj'",
+      "description": "_（可选）_ 文件类型"
+    },
+    {
+      "name": "element",
+      "type": "Array<'Component Model' \\| 'Via' \\| 'Silkscreen' \\| 'Wire In Signal Layer'>",
+      "description": "_（可选）_ 导出对象"
+    },
+    {
+      "name": "modelMode",
+      "type": "'Outfit' \\| 'Parts'",
+      "description": "_（可选）_ 导出模式，`Outfit` = 装配体，`Parts` = 零件"
+    },
+    {
+      "name": "autoGenerateModels",
+      "type": "boolean",
+      "description": "_（可选）_ 是否为未绑定 3D 模型的元件自动生成 3D 模型（根据元件的“高度”属性）"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_ManufactureData_get3DFile_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_ManufactureData.get3DFile(undefined, undefined, [], undefined, undefined);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

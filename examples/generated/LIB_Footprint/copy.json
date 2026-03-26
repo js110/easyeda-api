@@ -1,0 +1,52 @@
+{
+  "className": "LIB_Footprint",
+  "methodName": "copy",
+  "slug": "LIB_Footprint.copy",
+  "docPath": "references/classes/LIB_Footprint.md",
+  "examplePath": "examples/methods/LIB_Footprint/copy.md",
+  "kind": "create",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/LIB_Footprint/copy.json",
+  "signatures": [
+    "copy(footprintUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newFootprintName?: string): Promise<string | undefined>"
+  ],
+  "description": "复制封装",
+  "classSummary": "综合库 / 封装类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n目标库内新封装的 UUID",
+  "params": [
+    {
+      "name": "footprintUuid",
+      "type": "string",
+      "description": "封装 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "targetLibraryUuid",
+      "type": "string",
+      "description": "目标库 UUID"
+    },
+    {
+      "name": "targetClassification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 目标库内的分类"
+    },
+    {
+      "name": "newFootprintName",
+      "type": "string",
+      "description": "_（可选）_ 新封装名称，如若目标库内存在重名封装将导致复制失败"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Footprint_copy_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const created = await eda.lib_Footprint.copy(footprintUuid, footprintLibraryUuid, 'targetLibraryUuid', undefined, undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.lib_Footprint.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

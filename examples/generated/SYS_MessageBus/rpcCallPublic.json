@@ -1,0 +1,44 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "rpcCallPublic",
+  "slug": "SYS_MessageBus.rpcCallPublic",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/rpcCallPublic.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/rpcCallPublic.json",
+  "signatures": [
+    "rpcCallPublic(topic: string, message?: any, timeout?: number): Promise<any>"
+  ],
+  "description": "公共消息总线：调用 RPC 服务",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "",
+  "returnSummary": "Promise<any>\n\nRPC 服务返回",
+  "params": [
+    {
+      "name": "topic",
+      "type": "string",
+      "description": "主题"
+    },
+    {
+      "name": "message",
+      "type": "any",
+      "description": "_（可选）_ 消息"
+    },
+    {
+      "name": "timeout",
+      "type": "number",
+      "description": "_（可选）_ 超时"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_rpcCallPublic_' + Date.now();\n  const result = await eda.sys_MessageBus.rpcCallPublic('topic', 'Codex example running inside EasyEDA', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

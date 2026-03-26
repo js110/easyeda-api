@@ -1,0 +1,42 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "addLanguageChangedEventListener",
+  "slug": "SYS_I18n.addLanguageChangedEventListener",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/addLanguageChangedEventListener.md",
+  "kind": "create",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/SYS_I18n/addLanguageChangedEventListener.json",
+  "signatures": [
+    "addLanguageChangedEventListener(id: string, callFn: (newLanguage: string, lastLanguage: string) => void | Promise<void>, onlyOnce: boolean): void"
+  ],
+  "description": "新增语言切换事件监听",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "事件 ID，用以防止重复注册事件"
+    },
+    {
+      "name": "callFn",
+      "type": "(newLanguage: string, lastLanguage: string) => void \\| Promise<void>",
+      "description": "事件触发时的回调函数"
+    },
+    {
+      "name": "onlyOnce",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_addLanguageChangedEventListener_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sys_I18n.addLanguageChangedEventListener('id', 'callFn', false);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sys_I18n.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

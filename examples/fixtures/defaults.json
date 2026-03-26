@@ -1,0 +1,26 @@
+{
+  "namingPrefix": "__codex_example__",
+  "librarySearchKeyword": "STM32",
+  "panelLibrarySearchKeyword": "A4",
+  "lcscIdSample": "C5290014",
+  "uiMessage": "Codex example running inside EasyEDA",
+  "pcb": {
+    "net": "GND",
+    "lineLayer": 1,
+    "startX": 1000,
+    "startY": 1000,
+    "endX": 1600,
+    "endY": 1000,
+    "lineWidth": 10,
+    "viaX": 1200,
+    "viaY": 1200,
+    "holeDiameter": 20,
+    "viaDiameter": 40
+  },
+  "schematic": {
+    "x": 120,
+    "y": 80,
+    "endX": 200,
+    "endY": 80
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "className": "DMT_Panel",
+  "methodName": "createPanel",
+  "slug": "DMT_Panel.createPanel",
+  "docPath": "references/classes/DMT_Panel.md",
+  "examplePath": "examples/methods/DMT_Panel/createPanel.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Panel/createPanel.json",
+  "signatures": [
+    "createPanel(): Promise<string | undefined>"
+  ],
+  "description": "创建面板",
+  "classSummary": "文档树 / 面板管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n面板 UUID，如若为 `undefined` 则创建失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Panel_createPanel_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.dmt_Panel.createPanel();\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Panel.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

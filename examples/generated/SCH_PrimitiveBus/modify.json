@@ -1,0 +1,40 @@
+{
+  "className": "SCH_PrimitiveBus",
+  "methodName": "modify",
+  "slug": "SCH_PrimitiveBus.modify",
+  "docPath": "references/classes/SCH_PrimitiveBus.md",
+  "examplePath": "examples/methods/SCH_PrimitiveBus/modify.md",
+  "kind": "update",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/SCH_PrimitiveBus/modify.json",
+  "signatures": [
+    "modify(primitiveId: string | ISCH_PrimitiveBus, property: {         busName?: string;         line?: Array<number> | Array<Array<number>>;         color?: string | null;         lineWidth?: number | null;         lineType?: ESCH_PrimitiveLineType | null;     }): Promise<ISCH_PrimitiveBus | undefined>"
+  ],
+  "description": "修改总线",
+  "classSummary": "原理图 & 符号 / 总线图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveBus](./ISCH_PrimitiveBus.md) \\| undefined>\n\n总线图元对象",
+  "params": [
+    {
+      "name": "primitiveId",
+      "type": "string \\| ISCH\\_PrimitiveBus",
+      "description": "总线的图元 ID 或总线图元对象"
+    },
+    {
+      "name": "property",
+      "type": "{ busName?: string; line?: Array<number> \\| Array<Array<number>>; color?: string \\| null; lineWidth?: number \\| null; lineType?: ESCH\\_PrimitiveLineType \\| null; }",
+      "description": "修改参数"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "案例会先从当前文档里取一个真实图元 ID，再调用目标接口，方便你理解这类读取 API 的入参来源。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveBus_modify_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const primitiveIdCandidates = await eda.sch_PrimitiveBus.getAllPrimitiveId();\n  const primitiveId = Array.isArray(primitiveIdCandidates) ? primitiveIdCandidates[0] : undefined;\n  if (!primitiveId) { throw new Error('当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。'); }\n  const result = await eda.sch_PrimitiveBus.modify(primitiveId, 0);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,39 @@
+{
+  "className": "LIB_3DModel",
+  "methodName": "delete",
+  "slug": "LIB_3DModel.delete",
+  "docPath": "references/classes/LIB_3DModel.md",
+  "examplePath": "examples/methods/LIB_3DModel/delete.md",
+  "kind": "delete",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/LIB_3DModel/delete.json",
+  "signatures": [
+    "delete(modelUuid: string, libraryUuid: string): Promise<boolean>"
+  ],
+  "description": "删除 3D 模型",
+  "classSummary": "综合库 / 3D 模型类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "modelUuid",
+      "type": "string",
+      "description": "3D 模型 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_3DModel_delete_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_3DModel.delete('modelUuid', libraryUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,39 @@
+{
+  "className": "SYS_Unit",
+  "methodName": "inchToMil",
+  "slug": "SYS_Unit.inchToMil",
+  "docPath": "references/classes/SYS_Unit.md",
+  "examplePath": "examples/methods/SYS_Unit/inchToMil.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Unit/inchToMil.json",
+  "signatures": [
+    "inchToMil(inch: number, numberOfDecimals?: number): number"
+  ],
+  "description": "单位转换：英寸到密尔",
+  "classSummary": "系统 / 单位类",
+  "remarks": "",
+  "returnSummary": "number\n\n输出密尔数",
+  "params": [
+    {
+      "name": "inch",
+      "type": "number",
+      "description": "输入英寸数"
+    },
+    {
+      "name": "numberOfDecimals",
+      "type": "number",
+      "description": "_（可选）_ 保留小数位数，默认为 `4`"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Unit_inchToMil_' + Date.now();\n  const result = await eda.sys_Unit.inchToMil(0, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

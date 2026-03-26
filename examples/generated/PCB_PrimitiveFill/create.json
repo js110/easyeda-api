@@ -1,0 +1,59 @@
+{
+  "className": "PCB_PrimitiveFill",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveFill.create",
+  "docPath": "references/classes/PCB_PrimitiveFill.md",
+  "examplePath": "examples/methods/PCB_PrimitiveFill/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveFill/create.json",
+  "signatures": [
+    "create(layer: TPCB_LayersOfFill, complexPolygon: IPCB_Polygon, net?: string, fillMode?: EPCB_PrimitiveFillMode, lineWidth?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveFill | undefined>"
+  ],
+  "description": "创建填充",
+  "classSummary": "PCB & 封装 / 填充图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveFill](./IPCB_PrimitiveFill.md) \\| undefined>\n\n填充图元对象",
+  "params": [
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfFill",
+      "description": "层"
+    },
+    {
+      "name": "complexPolygon",
+      "type": "IPCB\\_Polygon",
+      "description": "复杂多边形对象"
+    },
+    {
+      "name": "net",
+      "type": "string",
+      "description": "_（可选）_ 网络名称"
+    },
+    {
+      "name": "fillMode",
+      "type": "EPCB\\_PrimitiveFillMode",
+      "description": "_（可选）_ 填充模式"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number",
+      "description": "_（可选）_ 线宽"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveFill_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixturePolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 300, 200, 0, 0]);\n  if (!fixturePolygon) { throw new Error('无法创建用于案例演示的测试多边形。'); }\n  const createdPrimitive = await eda.pcb_PrimitiveFill.create(\n    1,\n    fixturePolygon,\n    'GND',\n    undefined,\n    10,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveFill.delete([primitiveId]); }\n  }\n})(eda);"
+}

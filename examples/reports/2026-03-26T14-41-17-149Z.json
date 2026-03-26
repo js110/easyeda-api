@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-03-26T14:41:11.047Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "pendingRequests": 0,
+    "timestamp": 1774536071036
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 3,
+    "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "ddfd856250744d06",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "ddfd856250744d06"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "SCH_PrimitivePin.get",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "currentProject",
+          "currentDocumentType",
+          "result",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePin_get_1774536074610",
+          "currentProject": "New Project_2026-03-26_20-34-36",
+          "currentDocumentType": 1,
+          "result": {
+            "async": true,
+            "primitiveType": "Pin",
+            "x": 160,
+            "y": 160,
+            "pinNumber": "33",
+            "pinName": "EP",
+            "rotation": 0,
+            "pinLength": 10,
+            "pinColor": null,
+            "pinShape": "None",
+            "pinType": "Undefined",
+            "primitiveId": "aa905399be2bec08-e3"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "7e63af2d471a22d3"
+      }
+    }
+  ]
+}

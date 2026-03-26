@@ -1,0 +1,26 @@
+{
+  "className": "SCH_PrimitiveComponent",
+  "methodName": "getAllPropertyNames",
+  "slug": "SCH_PrimitiveComponent.getAllPropertyNames",
+  "docPath": "references/classes/SCH_PrimitiveComponent.md",
+  "examplePath": "examples/methods/SCH_PrimitiveComponent/getAllPropertyNames.md",
+  "kind": "query",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SCH_PrimitiveComponent/getAllPropertyNames.json",
+  "signatures": [
+    "getAllPropertyNames(): Promise<string[]>"
+  ],
+  "description": "获取所有器件的所有属性名称集合",
+  "classSummary": "原理图 & 符号 / 器件图元类",
+  "remarks": "",
+  "returnSummary": "Promise<string\\[\\]>\n\n所有器件的所有属性名称集合",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveComponent_getAllPropertyNames_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_PrimitiveComponent.getAllPropertyNames();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

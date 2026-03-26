@@ -1,0 +1,63 @@
+{
+  "className": "SYS_Dialog",
+  "methodName": "showSelectDialog",
+  "slug": "SYS_Dialog.showSelectDialog",
+  "docPath": "references/classes/SYS_Dialog.md",
+  "examplePath": "examples/methods/SYS_Dialog/showSelectDialog.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_Dialog/showSelectDialog.json",
+  "signatures": [
+    "showSelectDialog(options: Array<string> | Array<{         value: string;         displayContent: string;     }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: string, multiple?: false, callbackFn?: (value: string) => void | Promise<void>): void",
+    "showSelectDialog(options: Array<string> | Array<{         value: string;         displayContent: string;     }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: Array<string>, multiple?: true, callbackFn?: (value: Array<string>) => void | Promise<void>): void"
+  ],
+  "description": "弹出选择窗口",
+  "classSummary": "系统 / 对话框类",
+  "remarks": "",
+  "returnSummary": "void\n\n用户选择的值，对应传入的 `options` 中的 `value` 字段",
+  "params": [
+    {
+      "name": "options",
+      "type": "Array<string> \\| Array<{ value: string; displayContent: string; }>",
+      "description": "选项列表，可以为字符串数组或对象数组，在未指定 `defaultOption` 时，默认值为列表的第一项；\n\n如若为字符串数组，则选项的值和选项的展示内容将保持一致；\n\n如若为对象数组，则 `value` 表示选项的值，`displayContent` 表示选项的展示内容"
+    },
+    {
+      "name": "beforeContent",
+      "type": "string",
+      "description": "_（可选）_ 选择框上方文字"
+    },
+    {
+      "name": "afterContent",
+      "type": "string",
+      "description": "_（可选）_ 选择框下方文字"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "_（可选）_ 选择框标题"
+    },
+    {
+      "name": "defaultOption",
+      "type": "string",
+      "description": "_（可选）_ 默认选项，以选项的值作为匹配参数，如若 `multiple` 参数为 `true` ，则此处需要传入字符串数组"
+    },
+    {
+      "name": "multiple",
+      "type": "false",
+      "description": "_（可选）_ 是否支持多选，默认为单选框"
+    },
+    {
+      "name": "callbackFn",
+      "type": "(value: string) => void \\| Promise<void>",
+      "description": "_（可选）_ 回调函数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Dialog_showSelectDialog_' + Date.now();\n  const result = await eda.sys_Dialog.showSelectDialog('options', undefined, undefined, undefined, undefined, undefined, async (shortcutKey) => { await eda.sys_Message.showToastMessage('Shortcut fired: ' + shortcutKey.join('+')); });\n  return { fixtureName, result };\n})(eda);"
+}

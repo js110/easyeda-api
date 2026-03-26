@@ -1,0 +1,39 @@
+{
+  "className": "DMT_Folder",
+  "methodName": "deleteFolder",
+  "slug": "DMT_Folder.deleteFolder",
+  "docPath": "references/classes/DMT_Folder.md",
+  "examplePath": "examples/methods/DMT_Folder/deleteFolder.md",
+  "kind": "delete",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Folder/deleteFolder.json",
+  "signatures": [
+    "deleteFolder(teamUuid: string, folderUuid: string): Promise<boolean>"
+  ],
+  "description": "删除文件夹",
+  "classSummary": "文档树 / 文件夹类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "teamUuid",
+      "type": "string",
+      "description": "团队 UUID"
+    },
+    {
+      "name": "folderUuid",
+      "type": "string",
+      "description": "文件夹 UUID"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Folder_deleteFolder_' + Date.now();\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  if (!teamUuid) { throw new Error('当前账号下没有可用团队，无法解析 folderUuid。'); }\n  const folderCandidates = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  const folderUuid = folderCandidates?.[0];\n  const result = await eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

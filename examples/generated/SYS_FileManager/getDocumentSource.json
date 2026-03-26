@@ -1,0 +1,26 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "getDocumentSource",
+  "slug": "SYS_FileManager.getDocumentSource",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/getDocumentSource.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileManager/getDocumentSource.json",
+  "signatures": [
+    "getDocumentSource(): Promise<string | undefined>"
+  ],
+  "description": "获取文档源码",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n文档源码数据，`undefined` 表示当前未打开文档或数据获取失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_getDocumentSource_' + Date.now();\n  const result = await eda.sys_FileManager.getDocumentSource();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

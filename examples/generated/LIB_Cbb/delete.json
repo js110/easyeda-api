@@ -1,0 +1,40 @@
+{
+  "className": "LIB_Cbb",
+  "methodName": "delete",
+  "slug": "LIB_Cbb.delete",
+  "docPath": "references/classes/LIB_Cbb.md",
+  "examplePath": "examples/methods/LIB_Cbb/delete.md",
+  "kind": "delete",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/LIB_Cbb/delete.json",
+  "signatures": [
+    "delete(cbbUuid: string, libraryUuid: string): Promise<boolean>"
+  ],
+  "description": "删除复用模块",
+  "classSummary": "综合库 / 复用模块类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "cbbUuid",
+      "type": "string",
+      "description": "复用模块 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "当前工作区不一定能搜索到可用的复用模块样本，运行前请先替换成真实 cbbUuid。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Cbb_delete_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_Cbb.delete('cbbUuid', libraryUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

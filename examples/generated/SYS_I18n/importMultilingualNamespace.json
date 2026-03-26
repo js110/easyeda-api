@@ -1,0 +1,39 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "importMultilingualNamespace",
+  "slug": "SYS_I18n.importMultilingualNamespace",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/importMultilingualNamespace.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_I18n/importMultilingualNamespace.json",
+  "signatures": [
+    "importMultilingualNamespace(namespace: string, source: ISYS_MultilingualLanguagesData): boolean"
+  ],
+  "description": "导入多语言：指定命名空间",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "",
+  "returnSummary": "boolean\n\n导入是否成功",
+  "params": [
+    {
+      "name": "namespace",
+      "type": "string",
+      "description": "命名空间"
+    },
+    {
+      "name": "source",
+      "type": "ISYS\\_MultilingualLanguagesData",
+      "description": "欲导入的多语言数据对象"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_importMultilingualNamespace_' + Date.now();\n  const result = await eda.sys_I18n.importMultilingualNamespace('namespace', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

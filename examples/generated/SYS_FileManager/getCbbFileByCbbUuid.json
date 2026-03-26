@@ -1,0 +1,44 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "getCbbFileByCbbUuid",
+  "slug": "SYS_FileManager.getCbbFileByCbbUuid",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/getCbbFileByCbbUuid.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/SYS_FileManager/getCbbFileByCbbUuid.json",
+  "signatures": [
+    "getCbbFileByCbbUuid(cbbUuid: string, libraryUuid?: string, props?: {         fileName?: string;         password?: string;         fileType?: 'epro' | 'epro2';         templateSchematicUuid?: string;         templatePcbUuid?: string;     }): Promise<File | undefined>"
+  ],
+  "description": "使用复用模块 UUID 获取复用模块文件",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "可以使用 [SYS\\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统\n\n注意：本接口需要启用 \\*\\*团队模块 > 下载模块\\*\\* 权限，没有权限调用将始终 `throw Error`",
+  "returnSummary": "Promise<File \\| undefined>\n\n复用模块文件数据，`undefined` 表示数据获取失败",
+  "params": [
+    {
+      "name": "cbbUuid",
+      "type": "string",
+      "description": "复用模块 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "props",
+      "type": "{ fileName?: string; password?: string; fileType?: 'epro' \\| 'epro2'; templateSchematicUuid?: string; templatePcbUuid?: string; }",
+      "description": "_(Optional)_"
+    }
+  ],
+  "exampleNotes": [
+    "当前工作区不一定能搜索到可用的复用模块样本，运行前请先替换成真实 cbbUuid。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_getCbbFileByCbbUuid_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.sys_FileManager.getCbbFileByCbbUuid('cbbUuid', libraryUuid, undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

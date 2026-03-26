@@ -1,0 +1,37 @@
+{
+  "className": "DMT_Pcb",
+  "methodName": "copyPcb",
+  "slug": "DMT_Pcb.copyPcb",
+  "docPath": "references/classes/DMT_Pcb.md",
+  "examplePath": "examples/methods/DMT_Pcb/copyPcb.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Pcb/copyPcb.json",
+  "signatures": [
+    "copyPcb(pcbUuid: string, boardName?: string): Promise<string | undefined>"
+  ],
+  "description": "复制 PCB",
+  "classSummary": "文档树 / PCB 管理类",
+  "remarks": "即使此处 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），也不新建复用模块符号，此操作逻辑与当前编辑器前端保持一致",
+  "returnSummary": "Promise<string \\| undefined>\n\n新 PCB UUID，如若为 `undefined` 则复制失败",
+  "params": [
+    {
+      "name": "pcbUuid",
+      "type": "string",
+      "description": "源 PCB UUID"
+    },
+    {
+      "name": "boardName",
+      "type": "string",
+      "description": "_（可选）_ 新 PCB 所属板子名称，如若不指定则为游离 PCB"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Pcb_copyPcb_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\n  const pcbUuid = pcbs?.[0]?.uuid;\n  const created = await eda.dmt_Pcb.copyPcb(pcbUuid, fixtureName);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Pcb.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

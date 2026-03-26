@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Environment",
+  "methodName": "getUserInfo",
+  "slug": "SYS_Environment.getUserInfo",
+  "docPath": "references/classes/SYS_Environment.md",
+  "examplePath": "examples/methods/SYS_Environment/getUserInfo.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Environment/getUserInfo.json",
+  "signatures": [
+    "getUserInfo(): {         username?: string;         nickname?: string;         avatar?: string;         uuid?: string;         customerCode?: string;     }"
+  ],
+  "description": "获取用户信息",
+  "classSummary": "系统 / 运行环境类",
+  "remarks": "",
+  "returnSummary": "\\{ username?: string; nickname?: string; avatar?: string; uuid?: string; customerCode?: string; \\}\n\n用户信息",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Environment_getUserInfo_' + Date.now();\n  const result = await eda.sys_Environment.getUserInfo();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

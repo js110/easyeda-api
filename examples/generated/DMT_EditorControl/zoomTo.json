@@ -1,0 +1,50 @@
+{
+  "className": "DMT_EditorControl",
+  "methodName": "zoomTo",
+  "slug": "DMT_EditorControl.zoomTo",
+  "docPath": "references/classes/DMT_EditorControl.md",
+  "examplePath": "examples/methods/DMT_EditorControl/zoomTo.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_EditorControl/zoomTo.json",
+  "signatures": [
+    "zoomTo(x?: number, y?: number, scaleRatio?: number, tabId?: string): Promise<{         left: number;         right: number;         top: number;         bottom: number;     } | false>"
+  ],
+  "description": "缩放到坐标",
+  "classSummary": "文档树 / 编辑器控制类",
+  "remarks": "在原理图、符号画布坐标单位跨度为 0.01inch，在 PCB、封装画布坐标单位跨度为 mil",
+  "returnSummary": "Promise<{ left: number; right: number; top: number; bottom: number; } \\| false>\n\n缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": "_（可选）_ 中心坐标 X，如若不传入则不改变当前 X 坐标"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "_（可选）_ 中心坐标 Y，如若不传入则不改变当前 Y 坐标"
+    },
+    {
+      "name": "scaleRatio",
+      "type": "number",
+      "description": "_（可选）_ 缩放比，如若不传入则不改变当前缩放比，单位跨度为 `1/100` ，如若传入 `200` ，则表示缩放比为 `200%`"
+    },
+    {
+      "name": "tabId",
+      "type": "string",
+      "description": "_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "案例会优先使用当前活动标签页。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_EditorControl_zoomTo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  const tabId = currentDocument?.tabId;\n  const result = await eda.dmt_EditorControl.zoomTo(1200, 1200, undefined, tabId);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

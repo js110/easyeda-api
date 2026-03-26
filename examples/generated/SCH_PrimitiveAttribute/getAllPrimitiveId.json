@@ -1,0 +1,32 @@
+{
+  "className": "SCH_PrimitiveAttribute",
+  "methodName": "getAllPrimitiveId",
+  "slug": "SCH_PrimitiveAttribute.getAllPrimitiveId",
+  "docPath": "references/classes/SCH_PrimitiveAttribute.md",
+  "examplePath": "examples/methods/SCH_PrimitiveAttribute/getAllPrimitiveId.md",
+  "kind": "query",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SCH_PrimitiveAttribute/getAllPrimitiveId.json",
+  "signatures": [
+    "getAllPrimitiveId(parentPrimitiveId?: string): Promise<Array<string>>"
+  ],
+  "description": "获取所有属性的图元 ID",
+  "classSummary": "原理图 & 符号 / 属性图元类",
+  "remarks": "不传递父图元 ID 将拿到图页中的所有属性图元",
+  "returnSummary": "Promise<Array<string>>\n\n属性的图元 ID 数组",
+  "params": [
+    {
+      "name": "parentPrimitiveId",
+      "type": "string",
+      "description": "_（可选）_ 父图元 ID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveAttribute_getAllPrimitiveId_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(undefined);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

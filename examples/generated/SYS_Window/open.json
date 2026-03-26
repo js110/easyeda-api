@@ -1,0 +1,39 @@
+{
+  "className": "SYS_Window",
+  "methodName": "open",
+  "slug": "SYS_Window.open",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/open.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_Window/open.json",
+  "signatures": [
+    "open(url: string, target?: ESYS_WindowOpenTarget): void"
+  ],
+  "description": "打开资源窗口",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "欲加载资源的 URL 或路径"
+    },
+    {
+      "name": "target",
+      "type": "ESYS\\_WindowOpenTarget",
+      "description": "_（可选）_ 上下文目标"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESYS_WindowOpenTarget，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_open_' + Date.now();\n  const result = await eda.sys_Window.open('url', undefined);\n  return { fixtureName, result };\n})(eda);"
+}

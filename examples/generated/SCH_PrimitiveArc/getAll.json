@@ -1,0 +1,26 @@
+{
+  "className": "SCH_PrimitiveArc",
+  "methodName": "getAll",
+  "slug": "SCH_PrimitiveArc.getAll",
+  "docPath": "references/classes/SCH_PrimitiveArc.md",
+  "examplePath": "examples/methods/SCH_PrimitiveArc/getAll.md",
+  "kind": "query",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SCH_PrimitiveArc/getAll.json",
+  "signatures": [
+    "getAll(): Promise<Array<ISCH_PrimitiveArc>>"
+  ],
+  "description": "获取所有圆弧",
+  "classSummary": "原理图 & 符号 / 圆弧图元类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<[ISCH\\_PrimitiveArc](./ISCH_PrimitiveArc.md) >>\n\n圆弧图元对象数组",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveArc_getAll_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_PrimitiveArc.getAll();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

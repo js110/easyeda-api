@@ -1,0 +1,39 @@
+{
+  "className": "PCB_Document",
+  "methodName": "navigateToCoordinates",
+  "slug": "PCB_Document.navigateToCoordinates",
+  "docPath": "references/classes/PCB_Document.md",
+  "examplePath": "examples/methods/PCB_Document/navigateToCoordinates.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Document/navigateToCoordinates.json",
+  "signatures": [
+    "navigateToCoordinates(x: number, y: number): Promise<boolean>"
+  ],
+  "description": "定位到画布坐标",
+  "classSummary": "PCB & 封装 / 文档操作类",
+  "remarks": "本接口在前端画布上定位到指定的数据层面坐标；\n\n如果希望在进行本操作时前端画布坐标能与传入数据一致， 建议调用 [PCB\\_Document.setCanvasOrigin()](./PCB_Document.md) 方法并设置偏移量为零；\n\n此处的单位为数据层面单位，在跨度上等同于画布层面的 mil",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": "坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "坐标 Y"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Document_navigateToCoordinates_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Document.navigateToCoordinates(1200, 1200);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,32 @@
+{
+  "className": "SYS_FontManager",
+  "methodName": "addFont",
+  "slug": "SYS_FontManager.addFont",
+  "docPath": "references/classes/SYS_FontManager.md",
+  "examplePath": "examples/methods/SYS_FontManager/addFont.md",
+  "kind": "create",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/SYS_FontManager/addFont.json",
+  "signatures": [
+    "addFont(fontName: string): Promise<boolean>"
+  ],
+  "description": "添加字体到字体列表",
+  "classSummary": "系统 / 字体管理类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n添加操作是否成功",
+  "params": [
+    {
+      "name": "fontName",
+      "type": "string",
+      "description": "字体名称"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FontManager_addFont_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sys_FontManager.addFont('fontName');\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sys_FontManager.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

@@ -1,0 +1,72 @@
+{
+  "className": "PCB_PrimitiveImage",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveImage.create",
+  "docPath": "references/classes/PCB_PrimitiveImage.md",
+  "examplePath": "examples/methods/PCB_PrimitiveImage/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveImage/create.json",
+  "signatures": [
+    "create(x: number, y: number, complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | IPCB_ComplexPolygon, layer: TPCB_LayersOfImage, width?: number, height?: number, rotation?: number, horizonMirror?: boolean, primitiveLock?: boolean): Promise<IPCB_PrimitiveImage | undefined>"
+  ],
+  "description": "创建图像",
+  "classSummary": "PCB & 封装 / 图像图元类",
+  "remarks": "如需创建彩色丝印图像，请使用 [二进制内嵌对象图元类](./PCB_PrimitiveObject.md)",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveImage](./IPCB_PrimitiveImage.md) \\| undefined>\n\n图像图元对象",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": "BBox 左上点坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "BBox 左上点坐标 Y"
+    },
+    {
+      "name": "complexPolygon",
+      "type": "TPCB\\_PolygonSourceArray \\| Array<TPCB\\_PolygonSourceArray > \\| IPCB\\_Polygon \\| IPCB\\_ComplexPolygon",
+      "description": "图像源数据（复杂多边形），可以使用 PCB\\_MathPolygon.convertImageToComplexPolygon() 方法将图像文件转换为复杂多边形数据"
+    },
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfImage",
+      "description": "层"
+    },
+    {
+      "name": "width",
+      "type": "number",
+      "description": "_（可选）_ 宽"
+    },
+    {
+      "name": "height",
+      "type": "number",
+      "description": "_（可选）_ 高"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "description": "_（可选）_ 旋转角度"
+    },
+    {
+      "name": "horizonMirror",
+      "type": "boolean",
+      "description": "_（可选）_ 是否水平镜像"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveImage_create_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_PrimitiveImage.create(1200, 1200, undefined, 1, undefined, undefined, 0, undefined, false);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_PrimitiveImage.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

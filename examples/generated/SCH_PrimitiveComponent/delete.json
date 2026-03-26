@@ -1,0 +1,34 @@
+{
+  "className": "SCH_PrimitiveComponent",
+  "methodName": "delete",
+  "slug": "SCH_PrimitiveComponent.delete",
+  "docPath": "references/classes/SCH_PrimitiveComponent.md",
+  "examplePath": "examples/methods/SCH_PrimitiveComponent/delete.md",
+  "kind": "delete",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/SCH_PrimitiveComponent/delete.json",
+  "signatures": [
+    "delete(primitiveIds: string | ISCH_PrimitiveComponent$1 | Array<string> | Array<ISCH_PrimitiveComponent$1>): Promise<boolean>"
+  ],
+  "description": "删除器件",
+  "classSummary": "原理图 & 符号 / 器件图元类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n删除操作是否成功",
+  "params": [
+    {
+      "name": "primitiveIds",
+      "type": "string \\| ISCH\\_PrimitiveComponent$1 \\| Array<string> \\| Array<ISCH\\_PrimitiveComponent$1>",
+      "description": "器件的图元 ID 或器件图元对象"
+    }
+  ],
+  "exampleNotes": [
+    "删除案例会先创建一个临时图元，再立即调用删除接口，避免误删当前工程里的真实对象。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveComponent_delete_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const deviceCandidates = await eda.lib_Device.search('STM32');\n  const deviceItem = deviceCandidates?.[0];\n  if (!deviceItem?.uuid || !deviceItem?.libraryUuid) { throw new Error('没有找到可用于原理图器件创建的库器件样本。'); }\n  const createdPrimitive = await eda.sch_PrimitiveComponent.create(\n    { libraryUuid: deviceItem.libraryUuid, uuid: deviceItem.uuid },\n    120,\n    80,\n    undefined,\n    0,\n    false,\n    true,\n    true,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可删除的测试图元。'); }\n  const deleted = await eda.sch_PrimitiveComponent.delete([primitiveId]);\n  return { fixtureName, primitiveId, deleted };\n})(eda);"
+}

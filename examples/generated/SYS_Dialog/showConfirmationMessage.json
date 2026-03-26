@@ -1,0 +1,52 @@
+{
+  "className": "SYS_Dialog",
+  "methodName": "showConfirmationMessage",
+  "slug": "SYS_Dialog.showConfirmationMessage",
+  "docPath": "references/classes/SYS_Dialog.md",
+  "examplePath": "examples/methods/SYS_Dialog/showConfirmationMessage.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_Dialog/showConfirmationMessage.json",
+  "signatures": [
+    "showConfirmationMessage(content: string, title?: string, mainButtonTitle?: string, buttonTitle?: string, callbackFn?: (mainButtonClicked: boolean) => void): void"
+  ],
+  "description": "弹出确认窗口",
+  "classSummary": "系统 / 对话框类",
+  "remarks": "显示一个拥有确认和取消按钮的窗口",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "content",
+      "type": "string",
+      "description": "消息文本，支持使用 `\\n` 换行"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "_（可选）_ 弹出窗口标题"
+    },
+    {
+      "name": "mainButtonTitle",
+      "type": "string",
+      "description": "_（可选）_ 主要按钮标题"
+    },
+    {
+      "name": "buttonTitle",
+      "type": "string",
+      "description": "_（可选）_ 主要按钮标题"
+    },
+    {
+      "name": "callbackFn",
+      "type": "(mainButtonClicked: boolean) => void",
+      "description": "_（可选）_ 回调函数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Dialog_showConfirmationMessage_' + Date.now();\n  const result = await eda.sys_Dialog.showConfirmationMessage('content', undefined, undefined, 'Codex example running inside EasyEDA', async (shortcutKey) => { await eda.sys_Message.showToastMessage('Shortcut fired: ' + shortcutKey.join('+')); });\n  return { fixtureName, result };\n})(eda);"
+}

@@ -1,0 +1,42 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "getFootprintFileByFootprintUuid",
+  "slug": "SYS_FileManager.getFootprintFileByFootprintUuid",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/getFootprintFileByFootprintUuid.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/SYS_FileManager/getFootprintFileByFootprintUuid.json",
+  "signatures": [
+    "getFootprintFileByFootprintUuid(footprintUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>"
+  ],
+  "description": "使用封装 UUID 获取封装文件",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "可以使用 [SYS\\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统\n\n注意：本接口需要启用 \\*\\*团队库 > 下载库\\*\\* 权限，没有权限调用将始终 `throw Error`",
+  "returnSummary": "Promise<File \\| undefined>\n\n封装文件数据，`undefined` 表示数据获取失败",
+  "params": [
+    {
+      "name": "footprintUuid",
+      "type": "string \\| Array<string>",
+      "description": "封装 UUID 或封装 UUID 列表"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "fileType",
+      "type": "'elibz' \\| 'elibz2'",
+      "description": "_(Optional)_"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_getFootprintFileByFootprintUuid_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.sys_FileManager.getFootprintFileByFootprintUuid(footprintUuid, libraryUuid, undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

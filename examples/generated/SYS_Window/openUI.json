@@ -1,0 +1,37 @@
+{
+  "className": "SYS_Window",
+  "methodName": "openUI",
+  "slug": "SYS_Window.openUI",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/openUI.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_Window/openUI.json",
+  "signatures": [
+    "openUI(uiName: string, args?: {         [key: string]: any;     }): Promise<void>"
+  ],
+  "description": "打开 UI 窗口",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+  "returnSummary": "Promise<void>",
+  "params": [
+    {
+      "name": "uiName",
+      "type": "string",
+      "description": "UI 名称"
+    },
+    {
+      "name": "args",
+      "type": "\\{ \\[key: string\\]: any; \\}",
+      "description": "_（可选）_ 可选参数对象"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_openUI_' + Date.now();\n  const result = await eda.sys_Window.openUI('uiName', undefined);\n  return { fixtureName, result };\n})(eda);"
+}

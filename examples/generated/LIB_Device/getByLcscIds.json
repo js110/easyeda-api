@@ -1,0 +1,45 @@
+{
+  "className": "LIB_Device",
+  "methodName": "getByLcscIds",
+  "slug": "LIB_Device.getByLcscIds",
+  "docPath": "references/classes/LIB_Device.md",
+  "examplePath": "examples/methods/LIB_Device/getByLcscIds.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Device/getByLcscIds.json",
+  "signatures": [
+    "getByLcscIds<T extends boolean>(lcscIds: string, libraryUuid?: string, allowMultiMatch?: T): Promise<T extends true ? ILIB_DeviceSearchItem | undefined : Array<ILIB_DeviceSearchItem>>",
+    "getByLcscIds(lcscIds: Array<string>, libraryUuid?: string, allowMultiMatch?: boolean): Promise<Array<ILIB_DeviceSearchItem>>"
+  ],
+  "description": "使用立创 C 编号获取器件",
+  "classSummary": "综合库 / 器件类",
+  "remarks": "默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；\n\n如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true` ；\n\n私有化部署环境暂无法使用本接口",
+  "returnSummary": "Promise<T extends true ? [ILIB\\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \\| undefined : Array<[ILIB\\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) >>\n\n搜索到的器件属性",
+  "params": [
+    {
+      "name": "lcscIds",
+      "type": "string",
+      "description": "立创 C 编号"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，默认为系统库，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "allowMultiMatch",
+      "type": "T",
+      "description": "_（可选）_ 是否允许单个立创 C 编号匹配多个结果"
+    }
+  ],
+  "exampleNotes": [
+    "LCSC 编号案例默认使用一个真实编号样本，便于你直接替换成自己的料号。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Device_getByLcscIds_' + Date.now();\n  const result = await eda.lib_Device.getByLcscIds(['C5290014'], undefined, false);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

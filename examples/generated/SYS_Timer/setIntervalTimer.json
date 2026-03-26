@@ -1,0 +1,49 @@
+{
+  "className": "SYS_Timer",
+  "methodName": "setIntervalTimer",
+  "slug": "SYS_Timer.setIntervalTimer",
+  "docPath": "references/classes/SYS_Timer.md",
+  "examplePath": "examples/methods/SYS_Timer/setIntervalTimer.md",
+  "kind": "update",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Timer/setIntervalTimer.json",
+  "signatures": [
+    "setIntervalTimer(id: string, timeout: number, callFn: (...args: any) => void, ...args: any): boolean"
+  ],
+  "description": "设置循环定时器",
+  "classSummary": "系统 / 定时器类",
+  "remarks": "如果遇到 ID 重复的定时器，则之前设置的定时器将被清除",
+  "returnSummary": "boolean\n\n定时器是否设置成功",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "定时器 ID，用于定位&删除定时器"
+    },
+    {
+      "name": "timeout",
+      "type": "number",
+      "description": "定时时间，单位 ms"
+    },
+    {
+      "name": "callFn",
+      "type": "(...args: any) => void",
+      "description": "定时调用函数"
+    },
+    {
+      "name": "args",
+      "type": "any",
+      "description": "传给定时调用函数的参数"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Timer_setIntervalTimer_' + Date.now();\n  const result = await eda.sys_Timer.setIntervalTimer('id', 0, undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

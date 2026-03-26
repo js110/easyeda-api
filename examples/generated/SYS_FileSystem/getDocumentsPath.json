@@ -1,0 +1,26 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "getDocumentsPath",
+  "slug": "SYS_FileSystem.getDocumentsPath",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/getDocumentsPath.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileSystem/getDocumentsPath.json",
+  "signatures": [
+    "getDocumentsPath(): Promise<string>"
+  ],
+  "description": "获取文档目录路径",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "返回的路径中，结尾不包含斜杠 `/` （或反斜杠 `\\` ）\n\n注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`\n\n注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "Promise<string>\n\n文档目录路径",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_getDocumentsPath_' + Date.now();\n  const result = await eda.sys_FileSystem.getDocumentsPath();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,26 @@
+{
+  "className": "SYS_FileManager",
+  "methodName": "getDocumentFootprintSources",
+  "slug": "SYS_FileManager.getDocumentFootprintSources",
+  "docPath": "references/classes/SYS_FileManager.md",
+  "examplePath": "examples/methods/SYS_FileManager/getDocumentFootprintSources.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/SYS_FileManager/getDocumentFootprintSources.json",
+  "signatures": [
+    "getDocumentFootprintSources(): Promise<Array<{         footprintUuid: string;         documentSource: string;     }>>"
+  ],
+  "description": "获取文档封装源码",
+  "classSummary": "系统 / 文件管理类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<{ footprintUuid: string; documentSource: string; }>>\n\n文档封装源码数据，数据获取失败将返回空数组",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileManager_getDocumentFootprintSources_' + Date.now();\n  const result = await eda.sys_FileManager.getDocumentFootprintSources();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,37 @@
+{
+  "className": "DMT_Folder",
+  "methodName": "getFolderInfo",
+  "slug": "DMT_Folder.getFolderInfo",
+  "docPath": "references/classes/DMT_Folder.md",
+  "examplePath": "examples/methods/DMT_Folder/getFolderInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/DMT_Folder/getFolderInfo.json",
+  "signatures": [
+    "getFolderInfo(teamUuid: string, folderUuid: string): Promise<IDMT_FolderItem | undefined>"
+  ],
+  "description": "获取文件夹详细属性",
+  "classSummary": "文档树 / 文件夹类",
+  "remarks": "当 [parentFolderUuid](../interfaces/IDMT_FolderItem.md) 等于 [teamUuid](../interfaces/IDMT_FolderItem.md) 时，代表当前文件夹为指定团队下的一级文件夹",
+  "returnSummary": "Promise<[IDMT\\_FolderItem](../interfaces/IDMT_FolderItem.md) \\| undefined>\n\n文件夹属性，如若为 `undefined` 则获取失败",
+  "params": [
+    {
+      "name": "teamUuid",
+      "type": "string",
+      "description": "团队 UUID"
+    },
+    {
+      "name": "folderUuid",
+      "type": "string",
+      "description": "文件夹 UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Folder_getFolderInfo_' + Date.now();\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  if (!teamUuid) { throw new Error('当前账号下没有可用团队，无法解析 folderUuid。'); }\n  const folderCandidates = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  const folderUuid = folderCandidates?.[0];\n  const result = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

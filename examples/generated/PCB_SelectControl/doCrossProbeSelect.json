@@ -1,0 +1,54 @@
+{
+  "className": "PCB_SelectControl",
+  "methodName": "doCrossProbeSelect",
+  "slug": "PCB_SelectControl.doCrossProbeSelect",
+  "docPath": "references/classes/PCB_SelectControl.md",
+  "examplePath": "examples/methods/PCB_SelectControl/doCrossProbeSelect.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_SelectControl/doCrossProbeSelect.json",
+  "signatures": [
+    "doCrossProbeSelect(components?: Array<string>, pins?: Array<string>, nets?: Array<string>, highlight?: boolean, select?: boolean): Promise<boolean>"
+  ],
+  "description": "进行交叉选择",
+  "classSummary": "PCB & 封装 / 选择控制类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>",
+  "params": [
+    {
+      "name": "components",
+      "type": "Array<string>",
+      "description": "_（可选）_ 器件位号"
+    },
+    {
+      "name": "pins",
+      "type": "Array<string>",
+      "description": "_（可选）_ 器件位号\\_引脚编号，格式为 \\['U1\\_1', 'U1\\_2'\\]"
+    },
+    {
+      "name": "nets",
+      "type": "Array<string>",
+      "description": "_（可选）_ 网络名称"
+    },
+    {
+      "name": "highlight",
+      "type": "boolean",
+      "description": "_（可选）_ 是否高亮"
+    },
+    {
+      "name": "select",
+      "type": "boolean",
+      "description": "_（可选）_ 操作是否成功"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_SelectControl_doCrossProbeSelect_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_SelectControl.doCrossProbeSelect(undefined, undefined, undefined, undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

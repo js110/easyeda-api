@@ -1,0 +1,39 @@
+{
+  "className": "DMT_Schematic",
+  "methodName": "modifySchematicName",
+  "slug": "DMT_Schematic.modifySchematicName",
+  "docPath": "references/classes/DMT_Schematic.md",
+  "examplePath": "examples/methods/DMT_Schematic/modifySchematicName.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Schematic/modifySchematicName.json",
+  "signatures": [
+    "modifySchematicName(schematicUuid: string, schematicName: string): Promise<boolean>"
+  ],
+  "description": "修改原理图名称",
+  "classSummary": "文档树 / 原理图管理类",
+  "remarks": "如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联 PCB 名称",
+  "returnSummary": "Promise<boolean>\n\n是否修改成功",
+  "params": [
+    {
+      "name": "schematicUuid",
+      "type": "string",
+      "description": "原理图 UUID"
+    },
+    {
+      "name": "schematicName",
+      "type": "string",
+      "description": "原理图名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Schematic_modifySchematicName_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const schematics = await eda.dmt_Schematic.getAllSchematicsInfo();\n  const schematicUuid = schematics?.[0]?.uuid;\n  const result = await eda.dmt_Schematic.modifySchematicName(schematicUuid, fixtureName);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

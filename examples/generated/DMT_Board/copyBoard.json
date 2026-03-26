@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Board",
+  "methodName": "copyBoard",
+  "slug": "DMT_Board.copyBoard",
+  "docPath": "references/classes/DMT_Board.md",
+  "examplePath": "examples/methods/DMT_Board/copyBoard.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Board/copyBoard.json",
+  "signatures": [
+    "copyBoard(sourceBoardName: string): Promise<string | undefined>"
+  ],
+  "description": "复制板子",
+  "classSummary": "文档树 / 板子管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n新板子名称，如若为 `undefined` 则复制失败",
+  "params": [
+    {
+      "name": "sourceBoardName",
+      "type": "string",
+      "description": "源板子名称"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Board_copyBoard_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.dmt_Board.copyBoard('sourceBoardName');\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Board.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

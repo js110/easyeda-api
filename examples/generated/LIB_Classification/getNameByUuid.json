@@ -1,0 +1,49 @@
+{
+  "className": "LIB_Classification",
+  "methodName": "getNameByUuid",
+  "slug": "LIB_Classification.getNameByUuid",
+  "docPath": "references/classes/LIB_Classification.md",
+  "examplePath": "examples/methods/LIB_Classification/getNameByUuid.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Classification/getNameByUuid.json",
+  "signatures": [
+    "getNameByUuid(libraryUuid: string, libraryType: ELIB_LibraryType, primaryClassificationUuid: string, secondaryClassificationUuid?: string): Promise<{         primaryClassificationName: string;         secondaryClassificationName?: string | undefined;     } | undefined>"
+  ],
+  "description": "获取指定 UUID 的分类的名称",
+  "classSummary": "综合库 / 库分类索引类",
+  "remarks": "",
+  "returnSummary": "Promise<{ primaryClassificationName: string; secondaryClassificationName?: string \\| undefined; } \\| undefined>\n\n两级分类的名称",
+  "params": [
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID"
+    },
+    {
+      "name": "libraryType",
+      "type": "ELIB\\_LibraryType",
+      "description": "库类型"
+    },
+    {
+      "name": "primaryClassificationUuid",
+      "type": "string",
+      "description": "一级分类 UUID"
+    },
+    {
+      "name": "secondaryClassificationUuid",
+      "type": "string",
+      "description": "_（可选）_ 二级分类 UUID，如若不指定，则只获取一级分类的信息"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ELIB_LibraryType，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Classification_getNameByUuid_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_Classification.getNameByUuid(libraryUuid, undefined, 'primaryClassificationUuid', undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

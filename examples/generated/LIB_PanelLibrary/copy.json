@@ -1,0 +1,52 @@
+{
+  "className": "LIB_PanelLibrary",
+  "methodName": "copy",
+  "slug": "LIB_PanelLibrary.copy",
+  "docPath": "references/classes/LIB_PanelLibrary.md",
+  "examplePath": "examples/methods/LIB_PanelLibrary/copy.md",
+  "kind": "create",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/LIB_PanelLibrary/copy.json",
+  "signatures": [
+    "copy(panelLibraryUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newPanelLibraryName?: string): Promise<string | undefined>"
+  ],
+  "description": "复制面板库",
+  "classSummary": "综合库 / 面板库类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n目标库内新面板库的 UUID",
+  "params": [
+    {
+      "name": "panelLibraryUuid",
+      "type": "string",
+      "description": "面板库 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "targetLibraryUuid",
+      "type": "string",
+      "description": "目标库 UUID"
+    },
+    {
+      "name": "targetClassification",
+      "type": "ILIB\\_ClassificationIndex \\| Array<string>",
+      "description": "_（可选）_ 目标库内的分类"
+    },
+    {
+      "name": "newPanelLibraryName",
+      "type": "string",
+      "description": "_（可选）_ 新面板库名称，如若目标库内存在重名面板库将导致复制失败"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_PanelLibrary_copy_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const panelLibraryCandidates = await eda.lib_PanelLibrary.search('A4');\n  const panelLibraryItem = panelLibraryCandidates?.[0];\n  const panelLibraryUuid = panelLibraryItem?.uuid;\n  const panelLibraryLibraryUuid = panelLibraryItem?.libraryUuid;\n  const created = await eda.lib_PanelLibrary.copy(panelLibraryUuid, panelLibraryLibraryUuid, 'targetLibraryUuid', undefined, undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.lib_PanelLibrary.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

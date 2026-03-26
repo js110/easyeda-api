@@ -1,0 +1,28 @@
+{
+  "className": "SYS_PanelControl",
+  "methodName": "isRightPanelLocked",
+  "slug": "SYS_PanelControl.isRightPanelLocked",
+  "docPath": "references/classes/SYS_PanelControl.md",
+  "examplePath": "examples/methods/SYS_PanelControl/isRightPanelLocked.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_PanelControl/isRightPanelLocked.json",
+  "signatures": [
+    "isRightPanelLocked(): Promise<boolean>"
+  ],
+  "description": "查询右侧面板是否已锁定",
+  "classSummary": "系统 / 面板控制类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否已锁定",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_PanelControl_isRightPanelLocked_' + Date.now();\n  const result = await eda.sys_PanelControl.isRightPanelLocked();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

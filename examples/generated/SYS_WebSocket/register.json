@@ -1,0 +1,52 @@
+{
+  "className": "SYS_WebSocket",
+  "methodName": "register",
+  "slug": "SYS_WebSocket.register",
+  "docPath": "references/classes/SYS_WebSocket.md",
+  "examplePath": "examples/methods/SYS_WebSocket/register.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_WebSocket/register.json",
+  "signatures": [
+    "register(id: string, serviceUri: string, receiveMessageCallFn?: (event: MessageEvent<any>) => void | Promise<void>, connectedCallFn?: () => void | Promise<void>, protocols?: string | Array<string>): void"
+  ],
+  "description": "注册 WebSocket 连接",
+  "classSummary": "系统 / WebSocket 类",
+  "remarks": "可以用来执行前检测 WebSocket 连接是否正常，但需要注意 \\*\\*不要尝试相同 ID 不同参数的连接\\*\\*，这会造成混乱： 如果存在指定 ID 且处于活跃状态中的 WebSocket 连接，那么其余参数的变更将不会被应用\n\n注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "自定义 WebSocket ID"
+    },
+    {
+      "name": "serviceUri",
+      "type": "string",
+      "description": "WebSocket 服务地址"
+    },
+    {
+      "name": "receiveMessageCallFn",
+      "type": "(event: MessageEvent<any>) => void \\| Promise<void>",
+      "description": "_（可选）_ 接收到消息时的回调函数"
+    },
+    {
+      "name": "connectedCallFn",
+      "type": "() => void \\| Promise<void>",
+      "description": "_（可选）_ 连接建立时的回调函数"
+    },
+    {
+      "name": "protocols",
+      "type": "string \\| Array<string>",
+      "description": "_（可选）_ 子协议"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_WebSocket_register_' + Date.now();\n  const result = await eda.sys_WebSocket.register('id', 'serviceUri', undefined, undefined, undefined);\n  return { fixtureName, result };\n})(eda);"
+}

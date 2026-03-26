@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Window",
+  "methodName": "getCurrentTheme",
+  "slug": "SYS_Window.getCurrentTheme",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/getCurrentTheme.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Window/getCurrentTheme.json",
+  "signatures": [
+    "getCurrentTheme(): Promise<ESYS_Theme>"
+  ],
+  "description": "获取当前主题",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "获取当前 EDA 主题，\\*\\*浅色\\*\\* 或 \\*\\*深色\\*\\*",
+  "returnSummary": "Promise<[ESYS\\_Theme](../enums/ESYS_Theme.md) >\n\n当前主题",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_getCurrentTheme_' + Date.now();\n  const result = await eda.sys_Window.getCurrentTheme();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

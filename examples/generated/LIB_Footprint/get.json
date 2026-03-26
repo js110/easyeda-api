@@ -1,0 +1,37 @@
+{
+  "className": "LIB_Footprint",
+  "methodName": "get",
+  "slug": "LIB_Footprint.get",
+  "docPath": "references/classes/LIB_Footprint.md",
+  "examplePath": "examples/methods/LIB_Footprint/get.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_Footprint/get.json",
+  "signatures": [
+    "get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | undefined>"
+  ],
+  "description": "获取封装的所有属性",
+  "classSummary": "综合库 / 封装类",
+  "remarks": "",
+  "returnSummary": "Promise<[ILIB\\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \\| undefined>\n\n封装属性",
+  "params": [
+    {
+      "name": "footprintUuid",
+      "type": "string",
+      "description": "封装 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Footprint_get_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const result = await eda.lib_Footprint.get(footprintUuid, footprintLibraryUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

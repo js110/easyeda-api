@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Window",
+  "methodName": "getUrlAnchor",
+  "slug": "SYS_Window.getUrlAnchor",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/getUrlAnchor.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Window/getUrlAnchor.json",
+  "signatures": [
+    "getUrlAnchor(): string"
+  ],
+  "description": "获取 URL 锚点",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "",
+  "returnSummary": "string\n\nURL 锚点值",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_getUrlAnchor_' + Date.now();\n  const result = await eda.sys_Window.getUrlAnchor();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

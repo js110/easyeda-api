@@ -1,0 +1,54 @@
+{
+  "className": "SYS_ClientUrl",
+  "methodName": "request",
+  "slug": "SYS_ClientUrl.request",
+  "docPath": "references/classes/SYS_ClientUrl.md",
+  "examplePath": "examples/methods/SYS_ClientUrl/request.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_ClientUrl/request.json",
+  "signatures": [
+    "request(url: string, method?: 'GET' | 'POST' | 'HEAD' | 'PUT' | 'DELETE' | 'PATCH', data?: string | Blob | FormData | URLSearchParams, options?: {         headers?: {             [header: string]: any;         };         integrity?: string;     }, succeedCallFn?: (data: Response) => void | Promise<void>): Promise<Response>"
+  ],
+  "description": "发起即时请求",
+  "classSummary": "系统 / 外部请求类",
+  "remarks": "请注意，需要在被请求的站点上允许跨源资源共享（CORS），否则接口将始终返回错误结果。\n\n更多信息，请查阅 [跨源资源共享 (CORS) - MDN](https://developer.mozilla.org/docs/Web/HTTP/CORS) 。\n\n注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "Promise<Response>\n\nFetch 的返回结果",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "请求地址"
+    },
+    {
+      "name": "method",
+      "type": "'GET' \\| 'POST' \\| 'HEAD' \\| 'PUT' \\| 'DELETE' \\| 'PATCH'",
+      "description": "_（可选）_ 请求方法"
+    },
+    {
+      "name": "data",
+      "type": "string \\| Blob \\| FormData \\| URLSearchParams",
+      "description": "_（可选）_ 请求发送的数据，可以是直接数据或 URLSearchParams 对象，如果 method 为 `HEAD` 或 `GET` ，本参数将被忽略"
+    },
+    {
+      "name": "options",
+      "type": "\\{ headers?: \\{ \\[header: string\\]: any; \\}; integrity?: string; \\}",
+      "description": "_（可选）_ 请求参数"
+    },
+    {
+      "name": "succeedCallFn",
+      "type": "(data: Response) => void \\| Promise<void>",
+      "description": "_（可选）_ 请求成功后回调的函数"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_ClientUrl_request_' + Date.now();\n  const result = await eda.sys_ClientUrl.request('url', undefined, undefined, undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,4006 @@
+{
+  "generatedAt": "2026-03-26T14:51:17.046Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "pendingRequests": 0,
+    "timestamp": 1774536677035
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 1,
+    "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "7e63af2d471a22d3",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "7e63af2d471a22d3"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "mutating",
+  "results": [
+    {
+      "slug": "PCB_PrimitiveArc.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveArc_create_1774536679159",
+          "created": {
+            "async": true,
+            "primitiveType": "Arc",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "arcAngle": 90,
+            "lineWidth": 10,
+            "interactiveMode": 1,
+            "primitiveLock": false,
+            "primitiveId": "861906dc68abf62d"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "ddfd856250744d06"
+      }
+    },
+    {
+      "slug": "PCB_PrimitiveArc.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveArc_delete_1774536679181",
+          "primitiveId": "450a91e83be72470",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveArc.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveArc_modify_1774536679213",
+          "primitiveId": "b42b853793bc3a5c",
+          "property": {
+            "arcAngle": 120,
+            "lineWidth": 12
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Arc",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "arcAngle": 89.99999999999994,
+            "lineWidth": 10,
+            "interactiveMode": 1,
+            "primitiveLock": false,
+            "primitiveId": "b42b853793bc3a5c"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Arc",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "arcAngle": 120,
+            "lineWidth": 12,
+            "interactiveMode": 1,
+            "primitiveLock": false,
+            "primitiveId": "b42b853793bc3a5c"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Arc",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 999.9999999999999,
+            "arcAngle": 120.00000000000006,
+            "lineWidth": 10,
+            "interactiveMode": 1,
+            "primitiveLock": false,
+            "primitiveId": "b42b853793bc3a5c"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveComponent_create_1774536679247",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "layer": 1,
+            "x": 1200,
+            "y": 1200,
+            "rotation": 0,
+            "primitiveLock": false,
+            "addIntoBom": true,
+            "primitiveId": "c010bc4fd1b59f07",
+            "footprint": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "model3D": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "e062e0b83f39474b8e790aa5b6c0d2b4|0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U1",
+            "pads": [
+              {
+                "primitiveId": "e44",
+                "net": "",
+                "padNumber": "33"
+              },
+              {
+                "primitiveId": "e45",
+                "net": "",
+                "padNumber": "1"
+              },
+              {
+                "primitiveId": "e46",
+                "net": "",
+                "padNumber": "2"
+              },
+              {
+                "primitiveId": "e47",
+                "net": "",
+                "padNumber": "3"
+              },
+              {
+                "primitiveId": "e48",
+                "net": "",
+                "padNumber": "4"
+              },
+              {
+                "primitiveId": "e49",
+                "net": "",
+                "padNumber": "5"
+              },
+              {
+                "primitiveId": "e50",
+                "net": "",
+                "padNumber": "6"
+              },
+              {
+                "primitiveId": "e51",
+                "net": "",
+                "padNumber": "7"
+              },
+              {
+                "primitiveId": "e52",
+                "net": "",
+                "padNumber": "8"
+              },
+              {
+                "primitiveId": "e53",
+                "net": "",
+                "padNumber": "9"
+              },
+              {
+                "primitiveId": "e54",
+                "net": "",
+                "padNumber": "10"
+              },
+              {
+                "primitiveId": "e55",
+                "net": "",
+                "padNumber": "11"
+              },
+              {
+                "primitiveId": "e56",
+                "net": "",
+                "padNumber": "12"
+              },
+              {
+                "primitiveId": "e57",
+                "net": "",
+                "padNumber": "13"
+              },
+              {
+                "primitiveId": "e58",
+                "net": "",
+                "padNumber": "14"
+              },
+              {
+                "primitiveId": "e59",
+                "net": "",
+                "padNumber": "15"
+              },
+              {
+                "primitiveId": "e60",
+                "net": "",
+                "padNumber": "16"
+              },
+              {
+                "primitiveId": "e61",
+                "net": "",
+                "padNumber": "17"
+              },
+              {
+                "primitiveId": "e62",
+                "net": "",
+                "padNumber": "18"
+              },
+              {
+                "primitiveId": "e63",
+                "net": "",
+                "padNumber": "19"
+              },
+              {
+                "primitiveId": "e64",
+                "net": "",
+                "padNumber": "20"
+              },
+              {
+                "primitiveId": "e65",
+                "net": "",
+                "padNumber": "21"
+              },
+              {
+                "primitiveId": "e66",
+                "net": "",
+                "padNumber": "22"
+              },
+              {
+                "primitiveId": "e67",
+                "net": "",
+                "padNumber": "23"
+              },
+              {
+                "primitiveId": "e68",
+                "net": "",
+                "padNumber": "24"
+              },
+              {
+                "primitiveId": "e69",
+                "net": "",
+                "padNumber": "25"
+              },
+              {
+                "primitiveId": "e70",
+                "net": "",
+                "padNumber": "26"
+              },
+              {
+                "primitiveId": "e71",
+                "net": "",
+                "padNumber": "27"
+              },
+              {
+                "primitiveId": "e72",
+                "net": "",
+                "padNumber": "28"
+              },
+              {
+                "primitiveId": "e73",
+                "net": "",
+                "padNumber": "29"
+              },
+              {
+                "primitiveId": "e74",
+                "net": "",
+                "padNumber": "30"
+              },
+              {
+                "primitiveId": "e75",
+                "net": "",
+                "padNumber": "31"
+              },
+              {
+                "primitiveId": "e76",
+                "net": "",
+                "padNumber": "32"
+              }
+            ],
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "Footprint": "SMT-32_L5.0-W5.0-P0.50-TL-EP3.5",
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "3D Model": "e062e0b83f39474b8e790aa5b6c0d2b4|0819f05c4eef4c71ace90d822a990e87",
+              "3D Model Title": "SMT-32_L5.0-W5.0-H1.3-P0.50-TL-EP3.5",
+              "3D Model Transform": "196.85,196.85,0,0,0,0,0.002,-0.002,0",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;",
+              "Device": "HMC871LC5TR",
+              "Reuse Block": "",
+              "Group ID": "",
+              "Channel ID": ""
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveComponent_delete_1774536680978",
+          "primitiveId": "fa24844f92ded219",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveDimension_create_1774536682447",
+          "created": {
+            "async": true,
+            "primitiveType": "Dimension",
+            "dimensionType": "Length Dimension",
+            "coordinateSet": [
+              1000,
+              1000,
+              1000,
+              1150,
+              1600,
+              1150,
+              1600,
+              1000
+            ],
+            "layer": 13,
+            "unit": "mil",
+            "lineWidth": 10,
+            "precision": 2,
+            "primitiveLock": false,
+            "textFollow": 1,
+            "primitiveId": "d4c1ddab15514177"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveDimension_delete_1774536682472",
+          "primitiveId": "ad46c7e983d06ffc",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveDimension_modify_1774536682483",
+          "primitiveId": "ede000668d884fa5",
+          "property": {
+            "lineWidth": 12,
+            "precision": 3
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Dimension",
+            "dimensionType": "Length Dimension",
+            "coordinateSet": [
+              1000,
+              1000,
+              1000,
+              1150,
+              1600,
+              1150,
+              1600,
+              1000
+            ],
+            "layer": 13,
+            "unit": "mil",
+            "lineWidth": 10,
+            "precision": 2,
+            "primitiveLock": false,
+            "primitiveId": "ede000668d884fa5",
+            "textFollow": 1
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Dimension",
+            "dimensionType": "Length Dimension",
+            "coordinateSet": [
+              1000,
+              1000,
+              1000,
+              1150,
+              1600,
+              1150,
+              1600,
+              1000
+            ],
+            "layer": 13,
+            "unit": "mil",
+            "lineWidth": 12,
+            "precision": 3,
+            "primitiveLock": false,
+            "primitiveId": "ede000668d884fa5",
+            "textFollow": 1
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Dimension",
+            "dimensionType": "Length Dimension",
+            "coordinateSet": [
+              1000,
+              1000,
+              1000,
+              1150,
+              1600,
+              1150,
+              1600,
+              1000
+            ],
+            "layer": 13,
+            "unit": "mil",
+            "lineWidth": 12,
+            "precision": 3,
+            "primitiveLock": false,
+            "primitiveId": "ede000668d884fa5",
+            "textFollow": 1
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveFill_create_1774536682499",
+          "created": {
+            "async": true,
+            "primitiveType": "Fill",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "net": "GND",
+            "fillMode": 0,
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "e3"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveFill_delete_1774536682522",
+          "primitiveId": "e4",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveFill_modify_1774536682543",
+          "primitiveId": "e5",
+          "property": {
+            "net": "GND_MOD",
+            "lineWidth": 12
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Fill",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "net": "GND",
+            "fillMode": 0,
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e5"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Fill",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "net": "GND_MOD",
+            "fillMode": 0,
+            "lineWidth": 12,
+            "primitiveLock": false,
+            "primitiveId": "e5"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Fill",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "net": "GND_MOD",
+            "fillMode": 0,
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e5"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.create",
+      "status": "failed",
+      "error": "Cannot read properties of undefined (reading 'getSource')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.delete",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveLine_create_1774536682592",
+          "created": {
+            "async": true,
+            "primitiveType": "Line",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "ca1ddca59d8e0869"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveLine_delete_1774536682605",
+          "primitiveId": "529af822f6492020",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveLine_modify_1774536682618",
+          "primitiveId": "66af6242e6e84fd1",
+          "property": {
+            "endX": 1720,
+            "lineWidth": 12
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Line",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "66af6242e6e84fd1"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Line",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1720,
+            "endY": 1000,
+            "lineWidth": 12,
+            "primitiveLock": false,
+            "primitiveId": "66af6242e6e84fd1"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Line",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1720,
+            "endY": 1000,
+            "lineWidth": 12,
+            "primitiveLock": false,
+            "primitiveId": "66af6242e6e84fd1"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveObject_create_1774536682644",
+          "created": {
+            "async": true,
+            "primitiveType": "Object",
+            "layer": 3,
+            "topLeftX": 1200,
+            "topLeftY": 1200,
+            "binaryData": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO0pF7sAAAAASUVORK5CYII=",
+            "width": 100,
+            "height": 100,
+            "rotation": 0,
+            "mirror": false,
+            "fileName": "codex-dot.png",
+            "primitiveLock": false,
+            "primitiveId": "4f2116f8f2a938f8"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveObject_delete_1774536682654",
+          "primitiveId": "59bb7941518ec09b",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.modify",
+      "status": "failed",
+      "error": "Identifier 'fixtureBinaryData' has already been declared",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePolyline_create_1774536682670",
+          "created": {
+            "async": true,
+            "primitiveType": "Polyline",
+            "net": "GND",
+            "layer": 1,
+            "polygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "8f439ac819d47faa"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePolyline_delete_1774536682680",
+          "primitiveId": "0ecde5a1a6c063ad",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.modify",
+      "status": "failed",
+      "error": "Identifier 'fixturePolygon' has already been declared",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePour_create_1774536682694",
+          "created": {
+            "async": true,
+            "primitiveType": "Pour",
+            "net": "GND",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "pourFillMethod": "solid",
+            "preserveSilos": false,
+            "pourName": "__codex_example___PCB_PrimitivePour_create_1774536682694",
+            "pourPriority": 1,
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "e6"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePour_delete_1774536682705",
+          "primitiveId": "e7",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePour_modify_1774536682716",
+          "primitiveId": "e8",
+          "property": {
+            "pourName": "__codex_example___PCB_PrimitivePour_modify_1774536682716_updated",
+            "pourPriority": 2
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Pour",
+            "net": "GND",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "pourFillMethod": "solid",
+            "preserveSilos": false,
+            "pourName": "__CODEX_EXAMPLE___PCB_PRIMITIVEPOUR_MODIFY_1774536682716",
+            "pourPriority": 2,
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e8"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Pour",
+            "net": "GND",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "pourFillMethod": "solid",
+            "preserveSilos": false,
+            "pourName": "__codex_example___PCB_PrimitivePour_modify_1774536682716_updated",
+            "pourPriority": 2,
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e8"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Pour",
+            "net": "GND",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "pourFillMethod": "solid",
+            "preserveSilos": false,
+            "pourName": "__codex_example___PCB_PrimitivePour_modify_1774536682716_updated",
+            "pourPriority": 2,
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e8"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveRegion_create_1774536682728",
+          "created": {
+            "async": true,
+            "primitiveType": "Region",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "ruleType": [
+              2
+            ],
+            "regionName": "__codex_example___PCB_PrimitiveRegion_create_1774536682728",
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "e9"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveRegion_delete_1774536682738",
+          "primitiveId": "e10",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveRegion_modify_1774536682752",
+          "primitiveId": "e11",
+          "property": {
+            "regionName": "__codex_example___PCB_PrimitiveRegion_modify_1774536682752_updated",
+            "lineWidth": 12
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Region",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "ruleType": [
+              2
+            ],
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e11"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Region",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "ruleType": [
+              2
+            ],
+            "regionName": "__codex_example___PCB_PrimitiveRegion_modify_1774536682752_updated",
+            "lineWidth": 12,
+            "primitiveLock": false,
+            "primitiveId": "e11"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Region",
+            "layer": 1,
+            "complexPolygon": {
+              "polygon": [
+                "R",
+                1000,
+                1000,
+                300,
+                200,
+                0,
+                0
+              ]
+            },
+            "ruleType": [
+              2
+            ],
+            "lineWidth": 0.2,
+            "primitiveLock": false,
+            "primitiveId": "e11"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveVia_create_1774536682766",
+          "created": {
+            "async": true,
+            "primitiveType": "Via",
+            "net": "GND",
+            "x": 1200,
+            "y": 1200,
+            "holeDiameter": 20,
+            "diameter": 40,
+            "viaType": 0,
+            "designRuleBlindViaName": null,
+            "solderMaskExpansion": null,
+            "primitiveLock": false,
+            "primitiveId": "889a080868b91276"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveVia_delete_1774536682779",
+          "primitiveId": "708b8e89bc2514ae",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveVia_modify_1774536682789",
+          "primitiveId": "0b0572930a41044c",
+          "property": {
+            "x": 1260,
+            "y": 1260,
+            "diameter": 50
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Via",
+            "net": "GND",
+            "x": 1200,
+            "y": 1200,
+            "holeDiameter": 20,
+            "diameter": 40,
+            "viaType": 0,
+            "designRuleBlindViaName": "",
+            "solderMaskExpansion": null,
+            "primitiveLock": false,
+            "primitiveId": "0b0572930a41044c"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Via",
+            "net": "GND",
+            "x": 1260,
+            "y": 1260,
+            "holeDiameter": 20,
+            "diameter": 50,
+            "viaType": 0,
+            "designRuleBlindViaName": "",
+            "solderMaskExpansion": null,
+            "primitiveLock": false,
+            "primitiveId": "0b0572930a41044c"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Via",
+            "net": "GND",
+            "x": 1260,
+            "y": 1260,
+            "holeDiameter": 20,
+            "diameter": 50,
+            "viaType": 0,
+            "designRuleBlindViaName": "",
+            "solderMaskExpansion": null,
+            "primitiveLock": false,
+            "primitiveId": "0b0572930a41044c"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveArc.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveArc_create_1774536684892",
+          "created": {
+            "async": true,
+            "primitiveType": "Arc",
+            "startX": 120,
+            "startY": 80,
+            "referenceX": 160,
+            "referenceY": 100,
+            "endX": 200,
+            "endY": 80,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "81c4b74f9dedb7d2"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "7e63af2d471a22d3"
+      }
+    },
+    {
+      "slug": "SCH_PrimitiveArc.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveArc_delete_1774536684923",
+          "primitiveId": "c4b78bcd34831948",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveArc.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveArc_modify_1774536684940",
+          "primitiveId": "73c9336321fb7eb1",
+          "property": {
+            "endX": 230,
+            "endY": 110
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Arc",
+            "startX": 120,
+            "startY": -80,
+            "referenceX": 160,
+            "referenceY": -100,
+            "endX": 200,
+            "endY": -80,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "73c9336321fb7eb1"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Arc",
+            "startX": 120,
+            "startY": -80,
+            "referenceX": 160,
+            "referenceY": -100,
+            "endX": 230,
+            "endY": 110,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "73c9336321fb7eb1"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Arc",
+            "startX": 120,
+            "startY": 80,
+            "referenceX": 160,
+            "referenceY": 100,
+            "endX": 230,
+            "endY": -110,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "73c9336321fb7eb1"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.create",
+      "status": "failed",
+      "error": "create failed!",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.delete",
+      "status": "failed",
+      "error": "create failed!",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveBus_modify_1774536684994",
+          "result": {
+            "async": true,
+            "primitiveType": "Bus",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "a26865c0198d2fdd"
+          },
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveCircle_create_1774536685019",
+          "created": {
+            "async": true,
+            "primitiveType": "Circle",
+            "centerX": 120,
+            "centerY": 80,
+            "radius": 30,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "cbb94085c79cdbd1"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveCircle_delete_1774536685031",
+          "primitiveId": "938d7224bd66776a",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveCircle_modify_1774536685043",
+          "primitiveId": "935b937d71bcc183",
+          "property": {
+            "radius": 40
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Circle",
+            "centerX": 120,
+            "centerY": 80,
+            "radius": 30,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "935b937d71bcc183"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Circle",
+            "centerX": 120,
+            "centerY": 80,
+            "radius": 40,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "935b937d71bcc183"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Circle",
+            "centerX": 120,
+            "centerY": 80,
+            "radius": 40,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "935b937d71bcc183"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_create_1774536685061",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "b6ba650083c668b5",
+            "componentType": "part",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "HMC871LC5TR.1",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "10f40c0c8daba044",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": "c8f8c57d5609ec97",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U?",
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;"
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createNetFlag",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_createNetFlag_1774536686471",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "c411d5e3f254eb26",
+            "componentType": "part",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "HMC871LC5TR.1",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "10f40c0c8daba044",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": "c8f8c57d5609ec97",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U?",
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;"
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createNetPort",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_createNetPort_1774536687526",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "f360cb7b32a4ebdd",
+            "componentType": "part",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "HMC871LC5TR.1",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "10f40c0c8daba044",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": "c8f8c57d5609ec97",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U?",
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;"
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createShortCircuitFlag",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_createShortCircuitFlag_1774536688664",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "abe156066c0e45a3",
+            "componentType": "part",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "HMC871LC5TR.1",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "10f40c0c8daba044",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": "c8f8c57d5609ec97",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U?",
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;"
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_delete_1774536689934",
+          "primitiveId": "fed56d0ec8789fbf",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_AnalogGround",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_Ground",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_Power",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_ProtectGround",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_BI",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_IN",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_OUT",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.create",
+      "status": "failed",
+      "error": "错误：对象未在原理图画布初始化，不存在 PrimitiveId。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePin_delete_1774536691403",
+          "primitiveId": "9bb21565112c48c9-e3",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePin_modify_1774536692836",
+          "primitiveId": "c5078a81c3b5aec3-e3",
+          "property": {
+            "pinNumber": "99"
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Pin",
+            "x": 160,
+            "y": 160,
+            "pinNumber": "33",
+            "pinName": "EP",
+            "rotation": 0,
+            "pinLength": 10,
+            "pinColor": null,
+            "pinShape": "None",
+            "pinType": "Undefined",
+            "primitiveId": "c5078a81c3b5aec3-e3"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Pin",
+            "x": 160,
+            "y": -160,
+            "pinNumber": "99",
+            "pinName": "EP",
+            "rotation": 0,
+            "pinLength": 10,
+            "pinColor": null,
+            "pinShape": "None",
+            "pinType": "Undefined",
+            "primitiveId": "c5078a81c3b5aec3-e3"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Pin",
+            "x": 160,
+            "y": -160,
+            "pinNumber": "99",
+            "pinName": "EP",
+            "rotation": 0,
+            "pinLength": 10,
+            "pinColor": null,
+            "pinShape": "None",
+            "pinType": "Undefined",
+            "primitiveId": "c5078a81c3b5aec3-e3"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePolygon_create_1774536694342",
+          "created": {
+            "async": true,
+            "primitiveType": "Polygon",
+            "line": [
+              120,
+              80,
+              200,
+              80,
+              200,
+              80
+            ],
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "1fd86ca3b78379fe"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePolygon_delete_1774536694358",
+          "primitiveId": "8031bf514121a9a6",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePolygon_modify_1774536694370",
+          "primitiveId": "70ccffe2adecf66a",
+          "property": {
+            "line": [
+              120,
+              80,
+              200,
+              110,
+              240,
+              120
+            ]
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Polygon",
+            "line": [
+              {
+                "x": 120,
+                "y": -80,
+                "hashed": -2146828288
+              },
+              {
+                "x": 200,
+                "y": -80,
+                "hashed": -2143485952
+              },
+              {
+                "x": 200,
+                "y": -80,
+                "hashed": -2143485952
+              }
+            ],
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "70ccffe2adecf66a"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Polygon",
+            "line": [
+              120,
+              80,
+              200,
+              110,
+              240,
+              120
+            ],
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "70ccffe2adecf66a"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Polygon",
+            "line": [
+              {
+                "x": 120,
+                "y": -80,
+                "hashed": -2146828288
+              },
+              {
+                "x": 200,
+                "y": -110,
+                "hashed": -2144174080
+              },
+              {
+                "x": 240,
+                "y": -120,
+                "hashed": -2144337920
+              }
+            ],
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "70ccffe2adecf66a"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveRectangle_create_1774536694384",
+          "created": {
+            "async": true,
+            "primitiveType": "Rectangle",
+            "topLeftX": 120,
+            "topLeftY": 80,
+            "width": 60,
+            "height": 40,
+            "cornerRadius": 0,
+            "rotation": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "e19feab7a0b5896a"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveRectangle_delete_1774536694396",
+          "primitiveId": "a2d3afa359a2083b",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveRectangle_modify_1774536694410",
+          "primitiveId": "c77bd2440c91660f",
+          "property": {
+            "width": 90,
+            "height": 60
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Rectangle",
+            "topLeftX": 120,
+            "topLeftY": -80,
+            "width": 60,
+            "height": 40,
+            "cornerRadius": 0,
+            "rotation": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "c77bd2440c91660f"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Rectangle",
+            "topLeftX": 120,
+            "topLeftY": -80,
+            "width": 90,
+            "height": 60,
+            "cornerRadius": 0,
+            "rotation": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "c77bd2440c91660f"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Rectangle",
+            "topLeftX": 120,
+            "topLeftY": 80,
+            "width": 90,
+            "height": 60,
+            "cornerRadius": 0,
+            "rotation": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": null,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "c77bd2440c91660f"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_create_1774536694425",
+          "created": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 120,
+            "y": 80,
+            "content": "__codex_example___SCH_PrimitiveText_create_1774536694425",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "alignMode": 6,
+            "primitiveId": "94bb32c85e7cc55d"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_delete_1774536694441",
+          "primitiveId": "6a1fb4fc67ea132f",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_modify_1774536694452",
+          "primitiveId": "d7d910141172bdf2",
+          "property": {
+            "x": 140,
+            "y": 100,
+            "content": "__codex_example___SCH_PrimitiveText_modify_1774536694452_updated"
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 120,
+            "y": 80,
+            "content": "__codex_example___SCH_PrimitiveText_modify_1774536694452",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "alignMode": 6,
+            "primitiveId": "d7d910141172bdf2"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 140,
+            "y": -100,
+            "content": "__codex_example___SCH_PrimitiveText_modify_1774536694452_updated",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "primitiveId": "d7d910141172bdf2"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 140,
+            "y": 100,
+            "content": "__codex_example___SCH_PrimitiveText_modify_1774536694452_updated",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "alignMode": 6,
+            "primitiveId": "d7d910141172bdf2"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_create_1774536694462",
+          "created": {
+            "async": true,
+            "primitiveType": "Wire",
+            "line": [
+              [
+                200,
+                -80,
+                160,
+                -80
+              ],
+              [
+                120,
+                -80,
+                160,
+                -80
+              ]
+            ],
+            "net": "",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "ec1efd30f6400561"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_delete_1774536694483",
+          "primitiveId": "83e7b11bbc3d9f18",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "property",
+          "before",
+          "result",
+          "after",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_modify_1774536694498",
+          "primitiveId": "2faaa13a5e6ff71c",
+          "property": {
+            "line": [
+              120,
+              80,
+              200,
+              100
+            ]
+          },
+          "before": {
+            "async": true,
+            "primitiveType": "Wire",
+            "line": [
+              200,
+              80,
+              160,
+              80,
+              120,
+              80,
+              160,
+              80
+            ],
+            "net": "",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "2faaa13a5e6ff71c"
+          },
+          "result": {
+            "async": true,
+            "primitiveType": "Wire",
+            "line": [
+              120,
+              80,
+              200,
+              100
+            ],
+            "net": "",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "2faaa13a5e6ff71c"
+          },
+          "after": {
+            "async": true,
+            "primitiveType": "Wire",
+            "line": [
+              200,
+              80,
+              160,
+              80,
+              120,
+              80,
+              160,
+              80
+            ],
+            "net": "",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "2faaa13a5e6ff71c"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_copy_1774536694525",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_create_1774536694637",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_delete_1774536694647",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.modify",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of null (reading 'description')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.copy",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of undefined (reading 'tags')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_create_1774536694969",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_delete_1774536695093",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_modify_1774536695227",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Device.copy",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.copy",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.create",
+      "status": "failed",
+      "error": "null",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Footprint_delete_1774536702688",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.modify",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_copy_1774536704789",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_create_1774536705719",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_delete_1774536706502",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_modify_1774536707084",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Symbol_copy_1774536708075",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.create",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Symbol_delete_1774536710584",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.modify",
+      "status": "failed",
+      "error": "TypeError: Cannot destructure property 'primaryClassificationUuid' of 'n' as it is undefined.",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

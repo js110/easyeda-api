@@ -1,0 +1,34 @@
+{
+  "className": "DMT_Workspace",
+  "methodName": "toggleToWorkspace",
+  "slug": "DMT_Workspace.toggleToWorkspace",
+  "docPath": "references/classes/DMT_Workspace.md",
+  "examplePath": "examples/methods/DMT_Workspace/toggleToWorkspace.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Workspace/toggleToWorkspace.json",
+  "signatures": [
+    "toggleToWorkspace(workspaceUuid?: string): Promise<boolean>"
+  ],
+  "description": "切换到工作区",
+  "classSummary": "文档树 / 工作区类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n切换操作是否成功",
+  "params": [
+    {
+      "name": "workspaceUuid",
+      "type": "string",
+      "description": "_（可选）_ 工作区 UUID，如若不指定，则将切换到个人工作区"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Workspace_toggleToWorkspace_' + Date.now();\n  const workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\n  const workspaceUuid = workspaces?.[0]?.uuid;\n  const result = await eda.dmt_Workspace.toggleToWorkspace(workspaceUuid);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

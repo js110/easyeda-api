@@ -1,0 +1,26 @@
+{
+  "className": "DMT_EditorControl",
+  "methodName": "getSplitScreenTree",
+  "slug": "DMT_EditorControl.getSplitScreenTree",
+  "docPath": "references/classes/DMT_EditorControl.md",
+  "examplePath": "examples/methods/DMT_EditorControl/getSplitScreenTree.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_EditorControl/getSplitScreenTree.json",
+  "signatures": [
+    "getSplitScreenTree(): Promise<IDMT_EditorSplitScreenItem | undefined>"
+  ],
+  "description": "获取编辑器分屏属性树",
+  "classSummary": "文档树 / 编辑器控制类",
+  "remarks": "",
+  "returnSummary": "Promise<[IDMT\\_EditorSplitScreenItem](../interfaces/IDMT_EditorSplitScreenItem.md) \\| undefined>\n\n编辑器分屏属性树，如若为 `undefined` ，则数据获取失败",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_EditorControl_getSplitScreenTree_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const result = await eda.dmt_EditorControl.getSplitScreenTree();\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n  };\n})(eda);"
+}

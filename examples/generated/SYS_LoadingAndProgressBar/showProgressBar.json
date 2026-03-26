@@ -1,0 +1,37 @@
+{
+  "className": "SYS_LoadingAndProgressBar",
+  "methodName": "showProgressBar",
+  "slug": "SYS_LoadingAndProgressBar.showProgressBar",
+  "docPath": "references/classes/SYS_LoadingAndProgressBar.md",
+  "examplePath": "examples/methods/SYS_LoadingAndProgressBar/showProgressBar.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_LoadingAndProgressBar/showProgressBar.json",
+  "signatures": [
+    "showProgressBar(progress?: number, title?: string): void"
+  ],
+  "description": "显示进度条或设置进度条进度",
+  "classSummary": "系统 / 加载与进度条类",
+  "remarks": "当进度达到 `100` 时，进度条将自动销毁",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "progress",
+      "type": "number",
+      "description": "_（可选）_ 进度值，取值范围 `0-100`"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "_（可选）_ 进度条标题"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_LoadingAndProgressBar_showProgressBar_' + Date.now();\n  const result = await eda.sys_LoadingAndProgressBar.showProgressBar(undefined, undefined);\n  return { fixtureName, result };\n})(eda);"
+}

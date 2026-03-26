@@ -1,0 +1,37 @@
+{
+  "className": "LIB_3DModel",
+  "methodName": "get",
+  "slug": "LIB_3DModel.get",
+  "docPath": "references/classes/LIB_3DModel.md",
+  "examplePath": "examples/methods/LIB_3DModel/get.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_3DModel/get.json",
+  "signatures": [
+    "get(modelUuid: string, libraryUuid?: string): Promise<ILIB_3DModelItem | undefined>"
+  ],
+  "description": "获取 3D 模型的所有属性",
+  "classSummary": "综合库 / 3D 模型类",
+  "remarks": "",
+  "returnSummary": "Promise<[ILIB\\_3DModelItem](../interfaces/ILIB_3DModelItem.md) \\| undefined>\n\n3D 模型属性",
+  "params": [
+    {
+      "name": "modelUuid",
+      "type": "string",
+      "description": "3D 模型 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_3DModel_get_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_3DModel.get('modelUuid', libraryUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

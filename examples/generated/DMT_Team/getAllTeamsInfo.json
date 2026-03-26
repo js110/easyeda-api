@@ -1,0 +1,26 @@
+{
+  "className": "DMT_Team",
+  "methodName": "getAllTeamsInfo",
+  "slug": "DMT_Team.getAllTeamsInfo",
+  "docPath": "references/classes/DMT_Team.md",
+  "examplePath": "examples/methods/DMT_Team/getAllTeamsInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Team/getAllTeamsInfo.json",
+  "signatures": [
+    "getAllTeamsInfo(): Promise<Array<IDMT_TeamItem>>"
+  ],
+  "description": "获取所有直接团队的详细属性",
+  "classSummary": "文档树 / 团队类",
+  "remarks": "个人本质上也是一个名为 \\*\\*个人\\*\\* 的团队",
+  "returnSummary": "Promise<Array<[IDMT\\_TeamItem](../interfaces/IDMT_TeamItem.md) >>\n\n所有团队的详细属性",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Team_getAllTeamsInfo_' + Date.now();\n  const result = await eda.dmt_Team.getAllTeamsInfo();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,28 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "removePrivateMessageBus",
+  "slug": "SYS_MessageBus.removePrivateMessageBus",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/removePrivateMessageBus.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/removePrivateMessageBus.json",
+  "signatures": [
+    "removePrivateMessageBus(): void"
+  ],
+  "description": "移除私有消息总线",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "一般无需调用该方法，除非你知道自己在做什么",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_removePrivateMessageBus_' + Date.now();\n  const result = await eda.sys_MessageBus.removePrivateMessageBus();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,34 @@
+{
+  "className": "SYS_Window",
+  "methodName": "urlPushState",
+  "slug": "SYS_Window.urlPushState",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/urlPushState.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Window/urlPushState.json",
+  "signatures": [
+    "urlPushState(url: string): void"
+  ],
+  "description": "追加新的 URL 历史记录栈信息",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "URL"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_urlPushState_' + Date.now();\n  const result = await eda.sys_Window.urlPushState('url');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Board",
+  "methodName": "getBoardInfo",
+  "slug": "DMT_Board.getBoardInfo",
+  "docPath": "references/classes/DMT_Board.md",
+  "examplePath": "examples/methods/DMT_Board/getBoardInfo.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/DMT_Board/getBoardInfo.json",
+  "signatures": [
+    "getBoardInfo(boardName: string): Promise<IDMT_BoardItem | undefined>"
+  ],
+  "description": "获取板子的详细属性",
+  "classSummary": "文档树 / 板子管理类",
+  "remarks": "",
+  "returnSummary": "Promise<[IDMT\\_BoardItem](../interfaces/IDMT_BoardItem.md) \\| undefined>\n\n板子的详细属性，如若为 `undefined` 则获取失败",
+  "params": [
+    {
+      "name": "boardName",
+      "type": "string",
+      "description": "板子名称"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Board_getBoardInfo_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const result = await eda.dmt_Board.getBoardInfo(fixtureName);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    result,\n  };\n})(eda);"
+}

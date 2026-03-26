@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-03-26T15:10:57.131Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "pendingRequests": 0,
+    "timestamp": 1774537857103
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 1,
+    "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "7e63af2d471a22d3",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": null,
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "7e63af2d471a22d3",
+    "anchor": "#id=4d2b634d01b14dcfbc676e37d222796d,tab=!c40e29a2e5b9f913@4d83a997b6db407d9f82e0a1d74ecf81|*7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d|!27a12f8318645082@4d83a997b6db407d9f82e0a1d74ecf81|!91c0e8e902144b70a87d7dc015fcf27e@0819f05c4eef4c71ace90d822a990e87|!6826692c765b4b90b25154a2d0238490@0819f05c4eef4c71ace90d822a990e87|!2d1ef92aa29543acb4cc9e50b676fdf3@0819f05c4eef4c71ace90d822a990e87"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "mutating",
+  "results": [
+    {
+      "slug": "SCH_PrimitiveComponent.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_create_1774537857175",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "335246d261c08940",
+            "componentType": "part",
+            "component": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "HMC871LC5TR.1",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "10f40c0c8daba044",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": "c8f8c57d5609ec97",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "designator": "U?",
+            "name": "={Manufacturer Part}",
+            "uniqueId": "",
+            "manufacturer": "ADI(亚德诺)",
+            "manufacturerId": "HMC871LC5TR",
+            "supplier": "LCSC",
+            "supplierId": "C661791",
+            "otherProperty": {
+              "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+              "Supplier Footprint": "STM-32(5x5)",
+              "JLCPCB Part Class": "Extended Part",
+              "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+              "Frequency Range": "0Hz~20GHz",
+              "Voltage - Supply": "8V",
+              "Current - Supply": "75mA",
+              "Description": "频率:0Hz~20GHz;"
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": null,
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3",
+        "anchor": "#id=4d2b634d01b14dcfbc676e37d222796d,tab=!c40e29a2e5b9f913@4d83a997b6db407d9f82e0a1d74ecf81|*7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d|!27a12f8318645082@4d83a997b6db407d9f82e0a1d74ecf81|!91c0e8e902144b70a87d7dc015fcf27e@0819f05c4eef4c71ace90d822a990e87|!6826692c765b4b90b25154a2d0238490@0819f05c4eef4c71ace90d822a990e87|!2d1ef92aa29543acb4cc9e50b676fdf3@0819f05c4eef4c71ace90d822a990e87"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

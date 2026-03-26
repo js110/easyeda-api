@@ -1,0 +1,34 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "deleteRuleConfiguration",
+  "slug": "PCB_Drc.deleteRuleConfiguration",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/deleteRuleConfiguration.md",
+  "kind": "delete",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Drc/deleteRuleConfiguration.json",
+  "signatures": [
+    "deleteRuleConfiguration(configurationName: string): Promise<boolean>"
+  ],
+  "description": "删除设计规则配置",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "系统配置不允许删除",
+  "returnSummary": "Promise<boolean>\n\n删除是否成功",
+  "params": [
+    {
+      "name": "configurationName",
+      "type": "string",
+      "description": "配置名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_deleteRuleConfiguration_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Drc.deleteRuleConfiguration('configurationName');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

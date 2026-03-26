@@ -1,0 +1,37 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "listFilesOfFileSystem",
+  "slug": "SYS_FileSystem.listFilesOfFileSystem",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/listFilesOfFileSystem.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_FileSystem/listFilesOfFileSystem.json",
+  "signatures": [
+    "listFilesOfFileSystem(folderPath: string, recursive?: boolean): Promise<Array<ISYS_FileSystemFileList>>"
+  ],
+  "description": "查看文件系统路径下的文件列表",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`\n\n注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "Promise<Array<[ISYS\\_FileSystemFileList](../interfaces/ISYS_FileSystemFileList.md) >>\n\n当前目录下的文件列表",
+  "params": [
+    {
+      "name": "folderPath",
+      "type": "string",
+      "description": "目录路径"
+    },
+    {
+      "name": "recursive",
+      "type": "boolean",
+      "description": "_（可选）_ 是否递归获取所有子文件"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_listFilesOfFileSystem_' + Date.now();\n  const result = await eda.sys_FileSystem.listFilesOfFileSystem('folderPath', undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

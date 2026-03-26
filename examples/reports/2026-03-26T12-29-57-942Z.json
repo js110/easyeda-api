@@ -1,0 +1,2901 @@
+{
+  "generatedAt": "2026-03-26T12:29:43.503Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+    "pendingRequests": 0,
+    "timestamp": 1774528183491
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": false,
+    "projectUuid": null,
+    "projectName": null,
+    "documentType": -1,
+    "tabId": "tab_page1"
+  },
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "DMT_Board.getAllBoardsInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Board.getBoardInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Board.getCurrentBoardInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.getCurrentRenderedAreaImage",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.getSplitScreenIdByTabId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.getSplitScreenTree",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.getTabsBySplitScreenId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.openDocument",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_EditorControl.openLibraryDocument",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Folder.getAllFoldersUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Folder_getAllFoldersUuid_1774528183507",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "DMT_Folder.getFolderInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Folder_getFolderInfo_1774528183509"
+        }
+      }
+    },
+    {
+      "slug": "DMT_Panel.getAllPanelsInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Panel.getCurrentPanelInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Panel.getPanelInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Pcb.getAllPcbsInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Pcb.getCurrentPcbInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Pcb.getPcbInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Project.getAllProjectsUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Project_getAllProjectsUuid_1774528183515",
+          "result": [
+            "6cf4e8ac4da7407a9ff0b282880ba562",
+            "4d83a997b6db407d9f82e0a1d74ecf81"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "DMT_Project.getCurrentProjectInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Project.getProjectInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Project_getProjectInfo_1774528183517"
+        }
+      }
+    },
+    {
+      "slug": "DMT_Schematic.getAllSchematicPagesInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getAllSchematicsInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getCurrentSchematicAllSchematicPagesInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getCurrentSchematicInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getCurrentSchematicPageInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getSchematicInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Schematic.getSchematicPageInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_SelectControl.getCurrentDocumentInfo",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "DMT_Team.getAllInvolvedTeamInfo",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of undefined (reading 'map')"
+    },
+    {
+      "slug": "DMT_Team.getAllTeamsInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Team_getAllTeamsInfo_1774528183525",
+          "result": [
+            {
+              "itemType": "Team",
+              "name": "Personal",
+              "uuid": "7c211dfab31b4ac481f8303db8aec3ef",
+              "identity": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "DMT_Team.getCurrentTeamInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Team_getCurrentTeamInfo_1774528183529",
+          "result": {
+            "itemType": "Team",
+            "name": "",
+            "uuid": "",
+            "identity": 0
+          }
+        }
+      }
+    },
+    {
+      "slug": "DMT_Workspace.getAllWorkspacesInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Workspace_getAllWorkspacesInfo_1774528183532",
+          "result": [
+            {
+              "itemType": "Workspace",
+              "uuid": "Personal",
+              "name": "Personal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "DMT_Workspace.getCurrentWorkspaceInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___DMT_Workspace_getCurrentWorkspaceInfo_1774528183533",
+          "result": {
+            "itemType": "Workspace",
+            "uuid": "Personal",
+            "name": "Personal"
+          }
+        }
+      }
+    },
+    {
+      "slug": "LIB_3DModel.get",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_get_1774528183535"
+        }
+      }
+    },
+    {
+      "slug": "LIB_3DModel.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_search_1774528183537",
+          "result": [
+            {
+              "uuid": "d20c684f66c5415ea699b21ac6f067c5",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 0,
+              "name": "key-smd_key3-6-3.5mm",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1745747600000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "544d0ce62b33425aabbe02733edc98dd",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 1,
+              "name": "key-smd_4p-l6.0-w6.0-p4.50-ls8.6_h8.5",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1740089230000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "b094534b95e6470e9b55dc1754198653",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 2,
+              "name": "key-smd_hx-ts35ca-250gf",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1741817358000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "fad7511c0f224e16ab7d02a3e9109604",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 3,
+              "name": "conn-th_keystone-1202",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1743111146000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "93c5e9f78b604f8997aa255bcfd01917",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 4,
+              "name": "bat-smd_keystont3000",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1743585176000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "e48c8d037c504891bc3219c5dc888fb4",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 5,
+              "name": "bat-smd_keystone-120",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1743585062000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "41688d75a82b460d9fae4924e3ce9347",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 6,
+              "name": "bat-th_keystone_1065",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1743594786000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "e34bb6be9a7b4fa8a6a5f11eef7c8a20",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 7,
+              "name": "bat-th__keystone-52",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1744402049000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "dc09cf8604bc489c9ef89da512a178a5",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 8,
+              "name": "key-th_k6-8811d0x",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1744152675000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "224b0a218ba647da9d8172f741145705",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "5"
+              },
+              "ordinal": 9,
+              "name": "bat-th_keystone-1101",
+              "type": 16,
+              "description": "",
+              "updateTimestamp": 1748462511000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "LIB_Cbb.get",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_get_1774528184100"
+        }
+      }
+    },
+    {
+      "slug": "LIB_Cbb.openProjectInEditor",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_openProjectInEditor_1774528184182",
+          "result": false
+        }
+      }
+    },
+    {
+      "slug": "LIB_Cbb.openSymbolInEditor",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_openSymbolInEditor_1774528184492"
+        }
+      }
+    },
+    {
+      "slug": "LIB_Cbb.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_search_1774528184580",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "LIB_Classification.getAllClassificationTree",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Classification_getAllClassificationTree_1774528186887",
+          "result": [
+            {
+              "name": "All",
+              "uuid": "@all",
+              "children": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "LIB_Classification.getIndexByName",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Classification_getIndexByName_1774528187093"
+        }
+      }
+    },
+    {
+      "slug": "LIB_Classification.getNameByIndex",
+      "status": "failed",
+      "error": "TypeError: Cannot destructure property 'libraryUuid' of 'undefined' as it is undefined."
+    },
+    {
+      "slug": "LIB_Classification.getNameByUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Classification_getNameByUuid_1774528187268"
+        }
+      }
+    },
+    {
+      "slug": "LIB_Device.get",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Device_get_1774528187404",
+          "result": {
+            "libraryType": "3",
+            "uuid": "c798bb9d27a344d2b39e242ee0f4bb0a",
+            "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+            "name": "HMC871LC5TR",
+            "classification": {
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "libraryType": "3",
+              "primaryClassificationUuid": "4c49dabd0c0449359196f14187722ae8",
+              "secondaryClassificationUuid": "0a42aea366eb4e5d83accd687b78af11"
+            },
+            "association": {
+              "symbolType": 2,
+              "symbolUuid": "635dd5f38ad94874a70cd50dbcccb88b",
+              "symbol": {
+                "type": 2,
+                "uuid": "635dd5f38ad94874a70cd50dbcccb88b",
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+              },
+              "footprintUuid": "19df0fe6dc304f66805d7169d0cb9a4d",
+              "footprint": {
+                "uuid": "19df0fe6dc304f66805d7169d0cb9a4d",
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+              },
+              "images": []
+            },
+            "description": "频率:0Hz~20GHz;",
+            "property": {
+              "name": "HMC871LC5TR",
+              "designator": "U?",
+              "addIntoBom": "yes",
+              "addIntoPcb": "yes",
+              "manufacturer": "ADI(亚德诺)",
+              "manufacturerId": "HMC871LC5TR",
+              "supplier": "LCSC",
+              "supplierId": "C661791",
+              "otherProperty": {
+                "LCSC Part Name": "EA光学调制器驱动器，采用SMT封装，DC - 20 GHz",
+                "Supplier Part": "C661791",
+                "Manufacturer": "ADI(亚德诺)",
+                "Manufacturer Part": "HMC871LC5TR",
+                "Supplier Footprint": "STM-32(5x5)",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/HMC871LC5TR/691288.html",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "635dd5f38ad94874a70cd50dbcccb88b",
+                "Designator": "U?",
+                "Footprint": "19df0fe6dc304f66805d7169d0cb9a4d",
+                "3D Model": "e062e0b83f39474b8e790aa5b6c0d2b4",
+                "3D Model Title": "SMT-32_L5.0-W5.0-H1.3-P0.50-TL-EP3.5",
+                "3D Model Transform": "196.85,196.85,0,0,0,0,0.002,-0.002,0",
+                "Frequency Range": "0Hz~20GHz",
+                "Voltage - Supply": "8V",
+                "Current - Supply": "75mA",
+                "Name": "={Manufacturer Part}",
+                "Description": "频率:0Hz~20GHz;"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "LIB_Device.getByLcscIds",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Device_getByLcscIds_1774528188658",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "LIB_Device.getByLcscIds<T extends boolean>",
+      "status": "failed",
+      "error": "Unexpected token 'extends'"
+    },
+    {
+      "slug": "LIB_Device.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Device_search_1774528188710",
+          "result": [
+            {
+              "uuid": "3c47cb9bca994b42a1a25d9b6e2c3c5d",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 0,
+              "name": "KEY",
+              "symbolName": "KEY_C9900023212",
+              "symbolUuid": "61dd26b538e04f9883a8041359e9f9af",
+              "footprintName": "SW-SMD_L6.0-W3.7-LS8.0",
+              "footprintUuid": "fa984458ac8a4d0ba3d5b91896198c1b",
+              "model3DName": "SW-SMD_L6.0-W3.7-LS8.0",
+              "model3DUuid": "03afe034294f42918911b8734f3e0fb3",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "KEY",
+              "supplier": "LCSC",
+              "supplierId": "C9900023212",
+              "otherProperty": {
+                "LCSC Part Name": "KEY",
+                "Supplier Part": "C9900023212",
+                "Manufacturer": "",
+                "Manufacturer Part": "KEY",
+                "Supplier Footprint": "SW-SMD-2P",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "61dd26b538e04f9883a8041359e9f9af",
+                "Designator": "KEY?",
+                "Footprint": "fa984458ac8a4d0ba3d5b91896198c1b",
+                "3D Model": "03afe034294f42918911b8734f3e0fb3",
+                "3D Model Title": "SW-SMD_L6.0-W3.7-LS8.0",
+                "3D Model Transform": "314.96,145.68,0,0,0,0,0,0,0",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "c542f7960ae945f38333d7335d80a54d",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 1,
+              "name": "KEY_6.5X6.5X5-4P",
+              "symbolName": "KEY_6.5X6.5X5-4P",
+              "symbolUuid": "13cfccf495124dd9b542ebb9613ecfdd",
+              "footprintName": "KEY-SMD_4P-L6.0-W6.0-P4.00-LS6.7",
+              "footprintUuid": "c89e5699ba494f13bf0d73a463980f9c",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "KEY_6.5X6.5X5-4P",
+              "supplier": "LCSC",
+              "supplierId": "C9900018298",
+              "otherProperty": {
+                "LCSC Part Name": "KEY_6.5X6.5X5-4P",
+                "Supplier Part": "C9900018298",
+                "Manufacturer": "",
+                "Manufacturer Part": "KEY_6.5X6.5X5-4P",
+                "Supplier Footprint": "KEY-SMD_4P",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "13cfccf495124dd9b542ebb9613ecfdd",
+                "Designator": "KEY?",
+                "Footprint": "c89e5699ba494f13bf0d73a463980f9c",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "548f5fd84f1740f1b9e6ff24d3c85790",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 2,
+              "name": "TSWDIP-6*6*6",
+              "symbolName": "TSWDIP-6*6*6",
+              "symbolUuid": "b9294c55f0a047b99d08488694796ab3",
+              "footprintName": "KEY-TH_4P-L6.0-W6.0-P4.50-LS6.50",
+              "footprintUuid": "1aeb5f1bbd2941ee9669f9b9862c8075",
+              "model3DName": "KEY-TH_4P-L6.0-W6.0-P4.50-LS6.50",
+              "model3DUuid": "b38fea4b2e4e408486f1d54ff7bc5cc0",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "TSWDIP-6*6*6",
+              "supplier": "LCSC",
+              "supplierId": "C9900020134",
+              "otherProperty": {
+                "LCSC Part Name": "TSWDIP-6*6*6",
+                "Supplier Part": "C9900020134",
+                "Manufacturer": "",
+                "Manufacturer Part": "TSWDIP-6*6*6",
+                "Supplier Footprint": "KEY-TH_4P-L6.0-W6.0-P4.50-LS6.50",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "b9294c55f0a047b99d08488694796ab3",
+                "Designator": "U?",
+                "Footprint": "1aeb5f1bbd2941ee9669f9b9862c8075",
+                "3D Model": "b38fea4b2e4e408486f1d54ff7bc5cc0",
+                "3D Model Title": "KEY-TH_4P-L6.0-W6.0-P4.50-LS6.50",
+                "3D Model Transform": "307.086,236.22,0,0,0,0,0,0,-137.795",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "e526cc5e57ef4019b3ad2d35f9597816",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 3,
+              "name": "KEY_3X3",
+              "symbolName": "KEY_3X3",
+              "symbolUuid": "5083af74bfe642e8958d4cc2e2b90777",
+              "footprintName": "KEY-SMD_4P-L3.1-W3.1-P2.00-LS4.0",
+              "footprintUuid": "fc3a06eb2cd0487aa1fe9654ff7e6ccb",
+              "model3DName": "KEY-SMD_4P-L3.1-W3.1-P2.00-LS4.0",
+              "model3DUuid": "1773225d8ecd4a439776deafe6cf16b5",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "KEY_3X3",
+              "supplier": "LCSC",
+              "supplierId": "C9900016564",
+              "otherProperty": {
+                "LCSC Part Name": "KEY_3X3",
+                "Supplier Part": "C9900016564",
+                "Manufacturer": "",
+                "Manufacturer Part": "KEY_3X3",
+                "Supplier Footprint": "KEY-SMD",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "5083af74bfe642e8958d4cc2e2b90777",
+                "Designator": "SW?",
+                "Footprint": "fc3a06eb2cd0487aa1fe9654ff7e6ccb",
+                "3D Model": "1773225d8ecd4a439776deafe6cf16b5",
+                "3D Model Title": "KEY-SMD_4P-L3.1-W3.1-P2.00-LS4.0",
+                "3D Model Transform": "157.48,133.858,0,0,0,0,0,0,0",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "f5ac1b9406504ce8812e7c512cf53408",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 4,
+              "name": "key1push",
+              "symbolName": "KEY1PUSH",
+              "symbolUuid": "70338cc0a24140dabc30b4a6953f7048",
+              "footprintName": "SW-SMD_L4.7-W3.5-P3.35-EH",
+              "footprintUuid": "b21f19dde78c4e348fbdbc946fb38672",
+              "model3DName": "SW-SMD_L4.7-W3.5-H1.9-P3.35-EH",
+              "model3DUuid": "763936bace60400091d42d91968ac4d8",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "key1push",
+              "supplier": "LCSC",
+              "supplierId": "C9900015021",
+              "otherProperty": {
+                "LCSC Part Name": "key1push",
+                "Supplier Part": "C9900015021",
+                "Manufacturer": "",
+                "Manufacturer Part": "key1push",
+                "Supplier Footprint": "KEY1_push",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "70338cc0a24140dabc30b4a6953f7048",
+                "Designator": "U?",
+                "Footprint": "b21f19dde78c4e348fbdbc946fb38672",
+                "3D Model": "763936bace60400091d42d91968ac4d8",
+                "3D Model Title": "SW-SMD_L4.7-W3.5-H1.9-P3.35-EH",
+                "3D Model Transform": "185.039,143.691,0,0,0,0,0,23.974,-15.748",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "68c989a8fe6e4084bf48b68f9503c43f",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 5,
+              "name": "NGFFM.2BKEY/8.2",
+              "symbolName": "NGFFM.2BKEY/8.2",
+              "symbolUuid": "8073288c2621433eb3d7b1b6f401ed30",
+              "footprintName": "PCIE-SMD_75P-P0.50_NGFFM.2BKEY-8.2",
+              "footprintUuid": "812b532226614ca6be2830cad5b7aa8e",
+              "model3DName": "PCIE-SMD_75P-P0.50_NGFFM.2BKEY-8.2",
+              "model3DUuid": "da71e5a133344cf88eca7917b19a0da4",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "NGFFM.2BKEY/8.2",
+              "supplier": "LCSC",
+              "supplierId": "C9900050782",
+              "otherProperty": {
+                "LCSC Part Name": "NGFFM.2BKEY/8.2",
+                "Supplier Part": "C9900050782",
+                "Manufacturer": "",
+                "Manufacturer Part": "NGFFM.2BKEY/8.2",
+                "Supplier Footprint": "NGFF_KEYB_40",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "8073288c2621433eb3d7b1b6f401ed30",
+                "Designator": "U?",
+                "Footprint": "812b532226614ca6be2830cad5b7aa8e",
+                "3D Model": "da71e5a133344cf88eca7917b19a0da4",
+                "3D Model Title": "PCIE-SMD_75P-P0.50_NGFFM.2BKEY-8.2",
+                "3D Model Transform": "860.62816,275.59,0,0,0,0,0,9.842,-23.622",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "cbbf01cf03d642449d0a42dbe841f982",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 6,
+              "name": "TS-A002",
+              "symbolName": "TS-A002",
+              "symbolUuid": "c4cb13eb2f6b4776afd74063b9aabc80",
+              "footprintName": "SW-SMD_TS-A002",
+              "footprintUuid": "84ad0a3541684c5e93bf47dc308e52d6",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "TS-A002",
+              "supplier": "LCSC",
+              "supplierId": "C9900049095",
+              "otherProperty": {
+                "LCSC Part Name": "TS-A002",
+                "Supplier Part": "C9900049095",
+                "Manufacturer": "",
+                "Manufacturer Part": "TS-A002",
+                "Supplier Footprint": "KEY-SMD",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "c4cb13eb2f6b4776afd74063b9aabc80",
+                "Designator": "U?",
+                "Footprint": "84ad0a3541684c5e93bf47dc308e52d6",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "1667868834a440c9b1f4fd4264962617",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 7,
+              "name": "贴片侧按键",
+              "symbolName": "贴片侧按键",
+              "symbolUuid": "7578fad79a464ef295b7ea54be3bbe84",
+              "footprintName": "KEY-SMD_1TS003B",
+              "footprintUuid": "fad76ec4b4e344309a80a66c26b60145",
+              "model3DName": "KEY-SMD_L4.6-W2.3-H1.8-P3.4",
+              "model3DUuid": "d59c0297adac4306a1d4ba4f2a7de8bf",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "贴片侧按键",
+              "supplier": "LCSC",
+              "supplierId": "C9900026825",
+              "otherProperty": {
+                "LCSC Part Name": "贴片侧按键",
+                "Supplier Part": "C9900026825",
+                "Manufacturer": "",
+                "Manufacturer Part": "贴片侧按键",
+                "Supplier Footprint": "Key",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "7578fad79a464ef295b7ea54be3bbe84",
+                "Designator": "KEY?",
+                "Footprint": "fad76ec4b4e344309a80a66c26b60145",
+                "3D Model": "d59c0297adac4306a1d4ba4f2a7de8bf",
+                "3D Model Title": "KEY-SMD_L4.6-W2.3-H1.8-P3.4",
+                "3D Model Transform": "181.102,139.7635,0,0,0,0,-0.009,-28.544,-19.685",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "3ccf628bb95a416eaa575841cdeb5b8d",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 8,
+              "name": "5006",
+              "symbolName": "5006",
+              "symbolUuid": "5a4b7818eecd4bc68d3a28b2deac5780",
+              "footprintName": "TESTPOINT-TH_BD3.2",
+              "footprintUuid": "b8e01c277735450eb6f34e65585c4171",
+              "model3DName": "TESTPOINT-TH_BD3.2",
+              "model3DUuid": "6bb19dcb8ff8413ea73fe7a5b79be1e3",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "5006",
+              "supplier": "LCSC",
+              "supplierId": "C9900013363",
+              "otherProperty": {
+                "LCSC Part Name": "5006",
+                "Supplier Part": "C9900013363",
+                "Manufacturer": "",
+                "Manufacturer Part": "5006",
+                "Supplier Footprint": "keystone5006",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "5a4b7818eecd4bc68d3a28b2deac5780",
+                "Designator": "U?",
+                "Footprint": "b8e01c277735450eb6f34e65585c4171",
+                "3D Model": "6bb19dcb8ff8413ea73fe7a5b79be1e3",
+                "3D Model Title": "TESTPOINT-TH_BD3.2",
+                "3D Model Transform": "125.984,125.84132,0,0,0,0,0,0,-125.984",
+                "Name": "={Manufacturer Part}"
+              }
+            },
+            {
+              "uuid": "ee6a5aae18404a099d9bd05b689fe6eb",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "3"
+              },
+              "ordinal": 9,
+              "name": "600-508S-180_C9900122558",
+              "symbolName": "600-508S-180_C9900122558",
+              "symbolUuid": "8566b8e8adb94a4fabe31dfb3f7b027a",
+              "footprintName": "KEY-SMD_BD5.0_600-508S-180",
+              "footprintUuid": "1c6daae142044636b716d54f8e105c34",
+              "model3DName": "KEY-SMD_BD5.0_600-508S-180",
+              "model3DUuid": "ff4a899531864b0cbc1b16ebb493acbe",
+              "description": "",
+              "manufacturer": "",
+              "manufacturerId": "600-508S-180",
+              "supplier": "LCSC",
+              "supplierId": "C9900122558",
+              "otherProperty": {
+                "LCSC Part Name": "600-508S-180",
+                "Supplier Part": "C9900122558",
+                "Manufacturer": "",
+                "Manufacturer Part": "600-508S-180",
+                "Supplier Footprint": "KEY-SMD_BD5.0_600-508S-180",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "8566b8e8adb94a4fabe31dfb3f7b027a",
+                "Designator": "U?",
+                "Footprint": "1c6daae142044636b716d54f8e105c34",
+                "3D Model": "ff4a899531864b0cbc1b16ebb493acbe",
+                "3D Model Title": "KEY-SMD_BD5.0_600-508S-180",
+                "3D Model Transform": "196.85,196.517,0,90,0,0,47.094,1.428,0",
+                "Name": "={Manufacturer Part}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "LIB_Footprint.get",
+      "status": "failed",
+      "error": "[object Object]"
+    },
+    {
+      "slug": "LIB_Footprint.openInEditor",
+      "status": "failed",
+      "error": "[object Object]"
+    },
+    {
+      "slug": "LIB_Footprint.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Footprint_search_1774528190808",
+          "result": [
+            {
+              "uuid": "8ee16e9745144495a17b57df80cc2a7f",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 0,
+              "name": "KEY-SMD_MP3_KEY",
+              "type": 4,
+              "description": ";SMD",
+              "updateTimestamp": 1634629220000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "fe39dd044895429f85fd1a692aafe782",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 1,
+              "name": "KEY-SMD_KEY2-4-3.5",
+              "type": 4,
+              "description": ";ChipKey",
+              "updateTimestamp": 1643093064000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "dbb6d0ed849c4ac39751d8c0caae5888",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 2,
+              "name": "KEY-SMD_4P-L8.0-W4.8-P5.00_KEY_B010CT",
+              "type": 4,
+              "description": "",
+              "updateTimestamp": 1749014406000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "c63e4817ea014adf95c1c1f1f36dffbc",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "6bb59de31fa7402096f6c3ce6084b092"
+              },
+              "ordinal": 3,
+              "name": "SW-TH_KEY_CODEKEY",
+              "type": 4,
+              "description": "",
+              "updateTimestamp": 1736928605000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "8968b061d8084799b5f280e954697e66",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "39a6cdd90d224e09aa457963ecabbbea"
+              },
+              "ordinal": 4,
+              "name": "KEY-TH_COMP-KEY011",
+              "type": 4,
+              "description": "",
+              "updateTimestamp": 1764915910000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "44648be621774966bc76469a5e67a780",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 5,
+              "name": "KEY-SMD_6P-L10.0-W10.0_6P_KEY",
+              "type": 4,
+              "description": ";SMD-6_L10.0-W10.0-P2.80_3.70-LS13.0",
+              "updateTimestamp": 1632897254000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "fbc45d1a537d44b1be3dde00804fdcd1",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 6,
+              "name": "KEY-SMD_4P_KEY-114A",
+              "type": 4,
+              "description": ";SMD",
+              "updateTimestamp": 1644280870000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "7cf3d0d620474755acb734f840865ec6",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 7,
+              "name": "KEY-SMD_KEY3-6-3.5MM",
+              "type": 4,
+              "description": ";KEY3X6X3.5MM",
+              "updateTimestamp": 1649660881000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "85a316c84b494544b1704f98a0025edf",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "39a6cdd90d224e09aa457963ecabbbea"
+              },
+              "ordinal": 8,
+              "name": "KEY-TH_KEY-8P",
+              "type": 4,
+              "description": "",
+              "updateTimestamp": 1733804534000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            },
+            {
+              "uuid": "53f2867693834867a2efdeddee0dd0a1",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "4",
+                "primaryClassificationUuid": "a9eaad4128a74e37ad7398c5bc336d58"
+              },
+              "ordinal": 9,
+              "name": "KEY-SMD_BZCN_TSB017A3112A",
+              "type": 4,
+              "description": ";SMD",
+              "updateTimestamp": 1637120736000,
+              "ascription": "LCSC",
+              "lastModifiedBy": "LCSC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "LIB_LibrariesList.getAllLibrariesList",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_LibrariesList_getAllLibrariesList_1774528191879",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "LIB_LibrariesList.getFavoriteLibraryUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_LibrariesList_getFavoriteLibraryUuid_1774528191881",
+          "result": "star"
+        }
+      }
+    },
+    {
+      "slug": "LIB_LibrariesList.getPersonalLibraryUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_LibrariesList_getPersonalLibraryUuid_1774528191883",
+          "result": "7c211dfab31b4ac481f8303db8aec3ef"
+        }
+      }
+    },
+    {
+      "slug": "LIB_LibrariesList.getProjectLibraryUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_LibrariesList_getProjectLibraryUuid_1774528191884",
+          "result": "project"
+        }
+      }
+    },
+    {
+      "slug": "LIB_LibrariesList.getSystemLibraryUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_LibrariesList_getSystemLibraryUuid_1774528191885",
+          "result": "0819f05c4eef4c71ace90d822a990e87"
+        }
+      }
+    },
+    {
+      "slug": "LIB_PanelLibrary.get",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_get_1774528191886"
+        }
+      }
+    },
+    {
+      "slug": "LIB_PanelLibrary.openInEditor",
+      "status": "failed",
+      "error": "[object Object]"
+    },
+    {
+      "slug": "LIB_PanelLibrary.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_search_1774528193237",
+          "result": [
+            {
+              "uuid": "78c6c16797924e05949bbc4cd7313cc2",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "29",
+                "primaryClassificationUuid": "bb2799064b974c8cbd0a9413ca9eb209"
+              },
+              "ordinal": 0,
+              "name": "星号键_asterisk-key",
+              "type": 29,
+              "description": "",
+              "updateTimestamp": 1717673592000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "LIB_SelectControl.getSelectedLibraryRowInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_SelectControl_getSelectedLibraryRowInfo_1774528193759"
+        }
+      }
+    },
+    {
+      "slug": "LIB_Symbol.get",
+      "status": "failed",
+      "error": "[object Object]"
+    },
+    {
+      "slug": "LIB_Symbol.openInEditor",
+      "status": "failed",
+      "error": "[object Object]"
+    },
+    {
+      "slug": "LIB_Symbol.search",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Symbol_search_1774528195259",
+          "result": [
+            {
+              "uuid": "656c0d0406ce4169987f1c74f5538522",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 0,
+              "name": "KEY",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1747074371000
+            },
+            {
+              "uuid": "199808136b604a53a659f662ca8b68d9",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 1,
+              "name": "Key_TH_3.5x6x4.3",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1670485282000
+            },
+            {
+              "uuid": "736d5369401141d88548218cda31d9d6",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 2,
+              "name": "KEY-SMD-4*4",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1747074413000
+            },
+            {
+              "uuid": "d3913e85c7d6472791f10f0948fe66a6",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 3,
+              "name": "D21122000003-KEY7X7",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1744300107000
+            },
+            {
+              "uuid": "a71c3074313740a4a51438a68b84d49a",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 4,
+              "name": "KEY-4*4*0.8MM",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1726259381000
+            },
+            {
+              "uuid": "7341a66e02f444eeac788cd95fbada7b",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 5,
+              "name": "TOUCHKEY200831CS",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1747073290000
+            },
+            {
+              "uuid": "0a6f95a32f534c038be736a00bfe690e",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 6,
+              "name": "KEY_C9900097835",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1744303922000
+            },
+            {
+              "uuid": "d41a779f2109432f87ccec07805000d5",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2"
+              },
+              "ordinal": 7,
+              "name": "KEY_M",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1667592806000
+            },
+            {
+              "uuid": "ea21f93ef0cc4e3db2c1c94eba8812ac",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2",
+                "primaryClassificationUuid": "8e857e0bb05947dfae4266702061e90d",
+                "secondaryClassificationUuid": "33e741ca0d6e4f5cb6527697e459f6e0"
+              },
+              "ordinal": 8,
+              "name": "1631-37125-BTKEYA",
+              "type": 2,
+              "description": "",
+              "updateTimestamp": 1742864704000
+            },
+            {
+              "uuid": "ac702c39e3a14f138b52e8308416bba2",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+              "classification": {
+                "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+                "libraryType": "2",
+                "primaryClassificationUuid": "fef618332b804f7387a19fc14679918d",
+                "secondaryClassificationUuid": "928c932350a8481fa969624890b56a82"
+              },
+              "ordinal": 9,
+              "name": "KEY-6*6*9.5",
+              "type": 2,
+              "description": "6x6x9.5",
+              "updateTimestamp": 1672237503000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "PCB_Document.getCalculatingRatlineStatus",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Document.getCanvasOrigin",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Document.getCurrentFilterConfiguration",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Document.getPrimitiveAtPoint",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Document.getPrimitivesInRegion",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.check",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getAllDifferentialPairs",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getAllEqualLengthNetGroups",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getAllNetClasses",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getAllPadPairGroups",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getAllRuleConfigurations",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getCurrentRuleConfiguration",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getCurrentRuleConfigurationName",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getDefaultRuleConfigurationName",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getNetByNetRules",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getNetRules",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getPadPairGroupMinWireLength",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getRegionRules",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Drc.getRuleConfiguration",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Layer.getAllLayers",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.get3DFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.get3DShellFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getAltiumDesignerFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getAutoLayoutJsonFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getAutoRouteJsonFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getBomFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getBomTemplateFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getBomTemplates",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getDsnFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getDxfFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getFlyingProbeTestFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getIdxFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getIpcD356AFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getManufactureData",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getNetlistFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getOpenDatabaseDoublePlusFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getPadsFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getPcbInfoFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getPickAndPlaceFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_ManufactureData.getTestPointFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Net.getAllNetName",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Net.getAllNetsName",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Net.getAllPrimitivesByNet",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Net.getNetLength",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Net.getNetlist",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_Primitive.getPrimitivesBBox",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveArc.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveArc.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveArc.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.getAllPinsByPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveFill.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveFill.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveFill.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveImage.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveImage.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveImage.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveLine.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveLine.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveLine.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveObject.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveObject.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveObject.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePad.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePad.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePad.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePour.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePour.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePour.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePoured.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePoured.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitivePoured.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveVia.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveVia.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_PrimitiveVia.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_SelectControl.getAllSelectedPrimitives",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_SelectControl.getAllSelectedPrimitives_PrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_SelectControl.getCurrentMousePosition",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "PCB_SelectControl.getSelectedPrimitives",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_Drc.check",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_ManufactureData.getAssemblyVariantsConfigs",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_ManufactureData.getBomFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_ManufactureData.getNetlistFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_ManufactureData.getSimulationNetlistFile",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_Netlist.getNetlist",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_Primitive.getPrimitiveByPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_Primitive.getPrimitivesBBox",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_Primitive.getPrimitiveTypeByPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveArc.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveArc.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveArc.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveAttribute.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveAttribute.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveAttribute.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveBus.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveBus.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveBus.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.getAllPinsByPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.getAllPropertyNames",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePin.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePin.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePin.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveText.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveText.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveText.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveWire.get",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveWire.getAll",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_PrimitiveWire.getAllPrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_SelectControl.getAllSelectedPrimitives",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_SelectControl.getAllSelectedPrimitives_PrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_SelectControl.getCurrentMousePosition",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_SelectControl.getSelectedPrimitives",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SCH_SelectControl.getSelectedPrimitives_PrimitiveId",
+      "status": "blocked",
+      "reason": "当前没有打开工程。"
+    },
+    {
+      "slug": "SYS_Dialog.showConfirmationMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Dialog_showConfirmationMessage_1774528195932"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Dialog.showInformationMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Dialog_showInformationMessage_1774528195934"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Dialog.showSelectDialog",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Dialog_showSelectDialog_1774528195935"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Environment.getEditorCompliedDate",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Environment_getEditorCompliedDate_1774528195937",
+          "result": "02/05/2026"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Environment.getEditorCurrentVersion",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Environment_getEditorCurrentVersion_1774528195939",
+          "result": "3.2.91"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Environment.getUserInfo",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Environment_getUserInfo_1774528195940",
+          "result": {
+            "username": "js110",
+            "nickname": "js110",
+            "avatar": "/image/avatar-default.png",
+            "uuid": "7c211dfab31b4ac481f8303db8aec3ef",
+            "customerCode": "10877869A"
+          }
+        }
+      }
+    },
+    {
+      "slug": "SYS_FileManager.getCbbFileByCbbUuid",
+      "status": "failed",
+      "error": "TypeError: Cannot destructure property 'fileName' of 'o' as it is undefined."
+    },
+    {
+      "slug": "SYS_FileManager.getDeviceFileByDeviceUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_FileManager_getDeviceFileByDeviceUuid_1774528195944",
+          "result": {}
+        }
+      }
+    },
+    {
+      "slug": "SYS_FileManager.getDocumentFile",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of undefined (reading 'message')"
+    },
+    {
+      "slug": "SYS_FileManager.getDocumentFootprintSources",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of undefined (reading 'message')"
+    },
+    {
+      "slug": "SYS_FileManager.getDocumentSource",
+      "status": "failed",
+      "error": "Cannot destructure property 'message' of '(intermediate value)' as it is undefined."
+    },
+    {
+      "slug": "SYS_FileManager.getFootprintFileByFootprintUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_FileManager_getFootprintFileByFootprintUuid_1774528196922",
+          "result": {}
+        }
+      }
+    },
+    {
+      "slug": "SYS_FileManager.getPanelLibraryFileByPanelLibraryUuid",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_FileManager_getPanelLibraryFileByPanelLibraryUuid_1774528197721",
+          "result": {}
+        }
+      }
+    },
+    {
+      "slug": "SYS_FileManager.getProjectFile",
+      "status": "failed",
+      "error": "Error: invalid null value! undefined"
+    },
+    {
+      "slug": "SYS_FileManager.getProjectFileByProjectUuid",
+      "status": "failed",
+      "error": "Error: invalid null value! undefined"
+    },
+    {
+      "slug": "SYS_FileSystem.getDocumentsPath",
+      "status": "failed",
+      "error": "错误：非客户端环境无法调用本接口！"
+    },
+    {
+      "slug": "SYS_FileSystem.getEdaPath",
+      "status": "failed",
+      "error": "错误：非客户端环境无法调用本接口！"
+    },
+    {
+      "slug": "SYS_FileSystem.getExtensionFile",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_FileSystem_getExtensionFile_1774528197853"
+        }
+      }
+    },
+    {
+      "slug": "SYS_FileSystem.getLibrariesPaths",
+      "status": "failed",
+      "error": "错误：非客户端全离线环境无法调用本接口！"
+    },
+    {
+      "slug": "SYS_FileSystem.getProjectsPaths",
+      "status": "failed",
+      "error": "错误：非客户端离线环境无法调用本接口！"
+    },
+    {
+      "slug": "SYS_FileSystem.listFilesOfFileSystem",
+      "status": "failed",
+      "error": "错误：非客户端环境无法调用本接口！"
+    },
+    {
+      "slug": "SYS_FontManager.getFontsList",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_FontManager_getFontsList_1774528197859",
+          "result": [
+            "default",
+            "default2",
+            "宋体",
+            "黑体",
+            "隶书",
+            "楷体",
+            "仿宋",
+            "Arial",
+            "Times New Roman",
+            "Verdana"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "SYS_I18n.getAllSupportedLanguages",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_I18n_getAllSupportedLanguages_1774528197861",
+          "result": [
+            "ar",
+            "bn",
+            "cs",
+            "de",
+            "en",
+            "es",
+            "fr",
+            "hi",
+            "ja",
+            "mr",
+            "ms",
+            "pa",
+            "pl",
+            "pt",
+            "ru",
+            "sv",
+            "ta",
+            "te",
+            "uk",
+            "ur",
+            "vi",
+            "zh",
+            "zh-Hans",
+            "zh-Hans-CN",
+            "zh-Hans-HK",
+            "zh-Hans-MO",
+            "zh-Hans-SG",
+            "zh-Hans-TW",
+            "zh-Hant",
+            "zh-Hant-CN",
+            "zh-Hant-HK",
+            "zh-Hant-MO",
+            "zh-Hant-SG",
+            "zh-Hant-TW",
+            "en-boont",
+            "en-scouse",
+            "gan",
+            "cdo",
+            "cjy",
+            "cmn",
+            "cnp",
+            "cpx",
+            "csp",
+            "czh",
+            "czo",
+            "hak",
+            "hsn",
+            "lzh",
+            "mnp",
+            "nan",
+            "wuu",
+            "yue"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "SYS_I18n.getCurrentLanguage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_I18n_getCurrentLanguage_1774528197863",
+          "result": "zh-Hans"
+        }
+      }
+    },
+    {
+      "slug": "SYS_IFrame.openIFrame",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_IFrame_openIFrame_1774528197866"
+        }
+      }
+    },
+    {
+      "slug": "SYS_IFrame.showIFrame",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_IFrame_showIFrame_1774528197870",
+          "result": false
+        }
+      }
+    },
+    {
+      "slug": "SYS_LoadingAndProgressBar.showLoading",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_LoadingAndProgressBar_showLoading_1774528197875"
+        }
+      }
+    },
+    {
+      "slug": "SYS_LoadingAndProgressBar.showProgressBar",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_LoadingAndProgressBar_showProgressBar_1774528197876"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Log.export",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Log_export_1774528197878"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Log.find",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Log_find_1774528197882",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "SYS_Message.showToastMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Message_showToastMessage_1774528197885"
+        }
+      }
+    },
+    {
+      "slug": "SYS_MessageBox.showConfirmationMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_MessageBox_showConfirmationMessage_1774528197887"
+        }
+      }
+    },
+    {
+      "slug": "SYS_MessageBox.showInformationMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_MessageBox_showInformationMessage_1774528197889"
+        }
+      }
+    },
+    {
+      "slug": "SYS_PanelControl.openBottomPanel",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_PanelControl_openBottomPanel_1774528197891"
+        }
+      }
+    },
+    {
+      "slug": "SYS_PanelControl.openLeftPanel",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_PanelControl_openLeftPanel_1774528197896"
+        }
+      }
+    },
+    {
+      "slug": "SYS_PanelControl.openRightPanel",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_PanelControl_openRightPanel_1774528197915"
+        }
+      }
+    },
+    {
+      "slug": "SYS_ShortcutKey.getShortcutKeys",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_ShortcutKey_getShortcutKeys_1774528197927",
+          "result": []
+        }
+      }
+    },
+    {
+      "slug": "SYS_Storage.getExtensionAllUserConfigs",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Storage_getExtensionAllUserConfigs_1774528197932",
+          "result": {}
+        }
+      }
+    },
+    {
+      "slug": "SYS_Storage.getExtensionUserConfig",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Storage_getExtensionUserConfig_1774528197934"
+        }
+      }
+    },
+    {
+      "slug": "SYS_ToastMessage.showMessage",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_ToastMessage_showMessage_1774528197935"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Unit.getSystemDataUnit",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Unit_getSystemDataUnit_1774528197937",
+          "result": "mil"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Window.getCurrentTheme",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Window_getCurrentTheme_1774528197939",
+          "result": "dark"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Window.getUrlAnchor",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Window_getUrlAnchor_1774528197941",
+          "result": "#id=cbbUuid"
+        }
+      }
+    },
+    {
+      "slug": "SYS_Window.getUrlParam",
+      "status": "passed",
+      "windowId": "49930bca-2573-49e7-94b7-5d8801eab2f4",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SYS_Window_getUrlParam_1774528197942",
+          "result": null
+        }
+      }
+    }
+  ]
+}

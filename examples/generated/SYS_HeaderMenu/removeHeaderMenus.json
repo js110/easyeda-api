@@ -1,0 +1,28 @@
+{
+  "className": "SYS_HeaderMenu",
+  "methodName": "removeHeaderMenus",
+  "slug": "SYS_HeaderMenu.removeHeaderMenus",
+  "docPath": "references/classes/SYS_HeaderMenu.md",
+  "examplePath": "examples/methods/SYS_HeaderMenu/removeHeaderMenus.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_HeaderMenu/removeHeaderMenus.json",
+  "signatures": [
+    "removeHeaderMenus(): void"
+  ],
+  "description": "移除顶部菜单数据",
+  "classSummary": "系统 / 顶部菜单类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_HeaderMenu_removeHeaderMenus_' + Date.now();\n  const result = await eda.sys_HeaderMenu.removeHeaderMenus();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

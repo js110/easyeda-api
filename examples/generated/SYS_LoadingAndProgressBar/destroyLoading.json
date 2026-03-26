@@ -1,0 +1,28 @@
+{
+  "className": "SYS_LoadingAndProgressBar",
+  "methodName": "destroyLoading",
+  "slug": "SYS_LoadingAndProgressBar.destroyLoading",
+  "docPath": "references/classes/SYS_LoadingAndProgressBar.md",
+  "examplePath": "examples/methods/SYS_LoadingAndProgressBar/destroyLoading.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_LoadingAndProgressBar/destroyLoading.json",
+  "signatures": [
+    "destroyLoading(): void"
+  ],
+  "description": "销毁无进度加载覆盖",
+  "classSummary": "系统 / 加载与进度条类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_LoadingAndProgressBar_destroyLoading_' + Date.now();\n  const result = await eda.sys_LoadingAndProgressBar.destroyLoading();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

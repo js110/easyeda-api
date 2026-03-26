@@ -1,0 +1,26 @@
+{
+  "className": "LIB_LibrariesList",
+  "methodName": "getProjectLibraryUuid",
+  "slug": "LIB_LibrariesList.getProjectLibraryUuid",
+  "docPath": "references/classes/LIB_LibrariesList.md",
+  "examplePath": "examples/methods/LIB_LibrariesList/getProjectLibraryUuid.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_LibrariesList/getProjectLibraryUuid.json",
+  "signatures": [
+    "getProjectLibraryUuid(): Promise<string | undefined>"
+  ],
+  "description": "获取工程库的 UUID",
+  "classSummary": "综合库 / 库列表类",
+  "remarks": "在未打开工程的情况下调用将返回 `undefined`",
+  "returnSummary": "Promise<string \\| undefined>\n\n工程库的 UUID",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_LibrariesList_getProjectLibraryUuid_' + Date.now();\n  const result = await eda.lib_LibrariesList.getProjectLibraryUuid();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

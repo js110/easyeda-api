@@ -1,0 +1,39 @@
+{
+  "className": "SYS_I18n",
+  "methodName": "importMultilingual",
+  "slug": "SYS_I18n.importMultilingual",
+  "docPath": "references/classes/SYS_I18n.md",
+  "examplePath": "examples/methods/SYS_I18n/importMultilingual.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_I18n/importMultilingual.json",
+  "signatures": [
+    "importMultilingual(language: string, source: ISYS_LanguageKeyValuePairs): boolean"
+  ],
+  "description": "导入多语言",
+  "classSummary": "系统 / 多语言类",
+  "remarks": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "boolean\n\n导入是否成功",
+  "params": [
+    {
+      "name": "language",
+      "type": "string",
+      "description": "语言"
+    },
+    {
+      "name": "source",
+      "type": "ISYS\\_LanguageKeyValuePairs",
+      "description": "欲导入的多语言数据对象"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_I18n_importMultilingual_' + Date.now();\n  const result = await eda.sys_I18n.importMultilingual('language', undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

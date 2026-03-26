@@ -1,0 +1,39 @@
+{
+  "className": "LIB_Cbb",
+  "methodName": "openProjectInEditor",
+  "slug": "LIB_Cbb.openProjectInEditor",
+  "docPath": "references/classes/LIB_Cbb.md",
+  "examplePath": "examples/methods/LIB_Cbb/openProjectInEditor.md",
+  "kind": "ui",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/LIB_Cbb/openProjectInEditor.json",
+  "signatures": [
+    "openProjectInEditor(cbbUuid: string, libraryUuid: string): Promise<boolean>"
+  ],
+  "description": "在编辑器打开复用模块工程",
+  "classSummary": "综合库 / 复用模块类",
+  "remarks": "本操作将会在 EDA 前端打开模块工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据",
+  "returnSummary": "Promise<boolean>",
+  "params": [
+    {
+      "name": "cbbUuid",
+      "type": "string",
+      "description": "复用模块 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [
+    "当前工作区不一定能搜索到可用的复用模块样本，运行前请先替换成真实 cbbUuid。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Cbb_openProjectInEditor_' + Date.now();\n  const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n  const libraryUuid = libraries?.[0]?.uuid;\n  const result = await eda.lib_Cbb.openProjectInEditor('cbbUuid', libraryUuid);\n  return { fixtureName, result };\n})(eda);"
+}

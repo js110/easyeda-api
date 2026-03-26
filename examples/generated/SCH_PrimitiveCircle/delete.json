@@ -1,0 +1,34 @@
+{
+  "className": "SCH_PrimitiveCircle",
+  "methodName": "delete",
+  "slug": "SCH_PrimitiveCircle.delete",
+  "docPath": "references/classes/SCH_PrimitiveCircle.md",
+  "examplePath": "examples/methods/SCH_PrimitiveCircle/delete.md",
+  "kind": "delete",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/SCH_PrimitiveCircle/delete.json",
+  "signatures": [
+    "delete(primitiveIds: string | ISCH_PrimitiveCircle | Array<string> | Array<ISCH_PrimitiveCircle>): Promise<boolean>"
+  ],
+  "description": "删除圆",
+  "classSummary": "原理图 & 符号 / 圆图元类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n删除操作是否成功",
+  "params": [
+    {
+      "name": "primitiveIds",
+      "type": "string \\| ISCH\\_PrimitiveCircle \\| Array<string> \\| Array<ISCH\\_PrimitiveCircle >",
+      "description": "圆的图元 ID 或圆图元对象"
+    }
+  ],
+  "exampleNotes": [
+    "删除案例会先创建一个临时图元，再立即调用删除接口，避免误删当前工程里的真实对象。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveCircle_delete_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveCircle.create(\n    120,\n    80,\n    30,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可删除的测试图元。'); }\n  const deleted = await eda.sch_PrimitiveCircle.delete([primitiveId]);\n  return { fixtureName, primitiveId, deleted };\n})(eda);"
+}

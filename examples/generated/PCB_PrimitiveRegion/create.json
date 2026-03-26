@@ -1,0 +1,59 @@
+{
+  "className": "PCB_PrimitiveRegion",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveRegion.create",
+  "docPath": "references/classes/PCB_PrimitiveRegion.md",
+  "examplePath": "examples/methods/PCB_PrimitiveRegion/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveRegion/create.json",
+  "signatures": [
+    "create(layer: TPCB_LayersOfRegion, complexPolygon: IPCB_Polygon, ruleType?: Array<EPCB_PrimitiveRegionRuleType>, regionName?: string, lineWidth?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveRegion | undefined>"
+  ],
+  "description": "创建区域",
+  "classSummary": "PCB & 封装 / 禁止区域和约束区域图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveRegion](./IPCB_PrimitiveRegion.md) \\| undefined>\n\n区域图元对象",
+  "params": [
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfRegion",
+      "description": "层"
+    },
+    {
+      "name": "complexPolygon",
+      "type": "IPCB\\_Polygon",
+      "description": "复杂多边形对象"
+    },
+    {
+      "name": "ruleType",
+      "type": "Array<EPCB\\_PrimitiveRegionRuleType >",
+      "description": "_（可选）_ 区域规则类型"
+    },
+    {
+      "name": "regionName",
+      "type": "string",
+      "description": "_（可选）_ 区域名称"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number",
+      "description": "_（可选）_ 线宽"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveRegion_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixturePolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 300, 200, 0, 0]);\n  if (!fixturePolygon) { throw new Error('无法创建用于案例演示的测试多边形。'); }\n  const createdPrimitive = await eda.pcb_PrimitiveRegion.create(\n    1,\n    fixturePolygon,\n    undefined,\n    fixtureName,\n    10,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveRegion.delete([primitiveId]); }\n  }\n})(eda);"
+}

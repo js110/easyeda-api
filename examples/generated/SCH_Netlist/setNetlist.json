@@ -1,0 +1,40 @@
+{
+  "className": "SCH_Netlist",
+  "methodName": "setNetlist",
+  "slug": "SCH_Netlist.setNetlist",
+  "docPath": "references/classes/SCH_Netlist.md",
+  "examplePath": "examples/methods/SCH_Netlist/setNetlist.md",
+  "kind": "update",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SCH_Netlist/setNetlist.json",
+  "signatures": [
+    "setNetlist(type: ESYS_NetlistType | undefined, netlist: string): Promise<void>"
+  ],
+  "description": "更新网表",
+  "classSummary": "原理图 & 符号 / 网表类",
+  "remarks": "",
+  "returnSummary": "Promise<void>",
+  "params": [
+    {
+      "name": "type",
+      "type": "ESYS\\_NetlistType \\| undefined",
+      "description": "网表格式"
+    },
+    {
+      "name": "netlist",
+      "type": "string",
+      "description": "网表数据"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "这个参数是枚举类型 ESYS_NetlistType | undefined，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_Netlist_setNetlist_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_Netlist.setNetlist(undefined, 'netlist');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

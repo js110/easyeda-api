@@ -1,0 +1,54 @@
+{
+  "className": "SCH_PrimitiveBus",
+  "methodName": "create",
+  "slug": "SCH_PrimitiveBus.create",
+  "docPath": "references/classes/SCH_PrimitiveBus.md",
+  "examplePath": "examples/methods/SCH_PrimitiveBus/create.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitiveBus/create.json",
+  "signatures": [
+    "create(busName: string, line: Array<number> | Array<Array<number>>, color?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null): Promise<ISCH_PrimitiveBus | undefined>"
+  ],
+  "description": "创建总线",
+  "classSummary": "原理图 & 符号 / 总线图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitiveBus](./ISCH_PrimitiveBus.md) \\| undefined>\n\n总线图元对象",
+  "params": [
+    {
+      "name": "busName",
+      "type": "string",
+      "description": "总线名称"
+    },
+    {
+      "name": "line",
+      "type": "Array<number> \\| Array<Array<number>>",
+      "description": "多段线坐标组，每段都是连续的一组 `[x1, y1, x2, y2, x3, y3]` 所描述的线，如若多段线彼此无任何连接则创建将会失败"
+    },
+    {
+      "name": "color",
+      "type": "string \\| null",
+      "description": "_（可选）_ 总线颜色，`null` 表示默认"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number \\| null",
+      "description": "_（可选）_ 线宽，范围 `1-10` ，`null` 表示默认"
+    },
+    {
+      "name": "lineType",
+      "type": "ESCH\\_PrimitiveLineType \\| null",
+      "description": "_（可选）_ 线型，`null` 表示默认"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitiveBus_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.sch_PrimitiveBus.create(\n    'BUS0',\n    [120, 80, 200, 80, 200, 80],\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.sch_PrimitiveBus.delete([primitiveId]); }\n  }\n})(eda);"
+}

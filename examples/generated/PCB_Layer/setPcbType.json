@@ -1,0 +1,35 @@
+{
+  "className": "PCB_Layer",
+  "methodName": "setPcbType",
+  "slug": "PCB_Layer.setPcbType",
+  "docPath": "references/classes/PCB_Layer.md",
+  "examplePath": "examples/methods/PCB_Layer/setPcbType.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Layer/setPcbType.json",
+  "signatures": [
+    "setPcbType(pcbType: EPCB_PcbPlateType): Promise<boolean>"
+  ],
+  "description": "设置 PCB 类型",
+  "classSummary": "PCB & 封装 / 图层操作类",
+  "remarks": "此处主要是为了适配 FPC 软板的设计，如若将 PCB 类型设置为 FPC 软板，将会新增 FPC 补强层图层。\n\n请注意：\n\n1. 嘉立创暂不支持超过 2 层铜箔层的 FPC 软板生产；\n\n2. 将 PCB 类型从 FPC 软板切换为普通板材时需要预先删除 FPC 补强层上的任何图元，否则将无法切换并返回 `false` 的结果。",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "pcbType",
+      "type": "EPCB\\_PcbPlateType",
+      "description": "PCB 类型"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "这个参数是枚举类型 EPCB_PcbPlateType，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Layer_setPcbType_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Layer.setPcbType(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

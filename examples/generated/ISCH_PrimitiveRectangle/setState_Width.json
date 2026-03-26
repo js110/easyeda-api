@@ -1,0 +1,28 @@
+{
+  "className": "ISCH_PrimitiveRectangle",
+  "methodName": "setState_Width",
+  "slug": "ISCH_PrimitiveRectangle.setState_Width",
+  "docPath": "references/classes/ISCH_PrimitiveRectangle.md",
+  "examplePath": "examples/methods/ISCH_PrimitiveRectangle/setState_Width.md",
+  "kind": "update",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "selection-primitive-mutation",
+  "generatedPath": "examples/generated/ISCH_PrimitiveRectangle/setState_Width.json",
+  "signatures": [
+    "setState_Width(width: number): ISCH_PrimitiveRectangle"
+  ],
+  "description": "",
+  "classSummary": "矩形图元",
+  "remarks": "",
+  "returnSummary": "",
+  "params": [],
+  "exampleNotes": [
+    "这类接口实例通常来自当前选中的图元对象，因此自动验证默认走 manual 模式。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___ISCH_PrimitiveRectangle_setState_Width_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const selectedPrimitiveIds = eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\n  const primitiveId = Array.isArray(selectedPrimitiveIds) ? selectedPrimitiveIds[0] : undefined;\n  if (!primitiveId) {\n    throw new Error('请先在原理图画布上选中一个与 ISCH_PrimitiveRectangle 匹配的图元，再运行这个案例。');\n  }\n  const fetched = await eda.sch_PrimitiveRectangle.get([primitiveId]);\n  const primitive = Array.isArray(fetched) ? fetched[0] : fetched;\n  if (!primitive) { throw new Error('没有取到目标图元对象。'); }\n  const editable = primitive.toAsync ? primitive.toAsync() : primitive;\n  const before = editable.getState_Width ? editable.getState_Width() : undefined;\n  editable.setState_Width(0);\n  if (editable.done) { editable.done(); }\n  const afterFetch = await eda.sch_PrimitiveRectangle.get([primitiveId]);\n  const afterPrimitive = Array.isArray(afterFetch) ? afterFetch[0] : afterFetch;\n  const after = afterPrimitive?.getState_Width ? afterPrimitive.getState_Width() : undefined;\n  return { fixtureName, primitiveId, before, after };\n})(eda);"
+}

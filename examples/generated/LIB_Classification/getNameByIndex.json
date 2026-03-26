@@ -1,0 +1,34 @@
+{
+  "className": "LIB_Classification",
+  "methodName": "getNameByIndex",
+  "slug": "LIB_Classification.getNameByIndex",
+  "docPath": "references/classes/LIB_Classification.md",
+  "examplePath": "examples/methods/LIB_Classification/getNameByIndex.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/LIB_Classification/getNameByIndex.json",
+  "signatures": [
+    "getNameByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<{         primaryClassificationName: string;         secondaryClassificationName?: string | undefined;     } | undefined>"
+  ],
+  "description": "获取指定索引的分类的名称",
+  "classSummary": "综合库 / 库分类索引类",
+  "remarks": "",
+  "returnSummary": "Promise<{ primaryClassificationName: string; secondaryClassificationName?: string \\| undefined; } \\| undefined>\n\n两级分类的名称",
+  "params": [
+    {
+      "name": "classificationIndex",
+      "type": "ILIB\\_ClassificationIndex",
+      "description": "分类索引"
+    }
+  ],
+  "exampleNotes": [
+    "分类索引案例会先从一个真实搜索结果里提取 classification 字段，再调用目标 API。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Classification_getNameByIndex_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const classificationIndex = footprintItem?.classification;\n  const result = await eda.lib_Classification.getNameByIndex(classificationIndex);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

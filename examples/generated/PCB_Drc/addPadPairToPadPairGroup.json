@@ -1,0 +1,37 @@
+{
+  "className": "PCB_Drc",
+  "methodName": "addPadPairToPadPairGroup",
+  "slug": "PCB_Drc.addPadPairToPadPairGroup",
+  "docPath": "references/classes/PCB_Drc.md",
+  "examplePath": "examples/methods/PCB_Drc/addPadPairToPadPairGroup.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_Drc/addPadPairToPadPairGroup.json",
+  "signatures": [
+    "addPadPairToPadPairGroup(padPairGroupName: string, padPair: [string, string] | Array<[string, string]>): Promise<boolean>"
+  ],
+  "description": "将焊盘对添加到焊盘对组",
+  "classSummary": "PCB & 封装 / 设计规则检查（DRC）类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "padPairGroupName",
+      "type": "string",
+      "description": "焊盘对组名称"
+    },
+    {
+      "name": "padPair",
+      "type": "\\[string, string\\] \\| Array<\\[string, string\\]>",
+      "description": "焊盘对"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Drc_addPadPairToPadPairGroup_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_Drc.addPadPairToPadPairGroup('padPairGroupName', 'padPair');\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_Drc.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

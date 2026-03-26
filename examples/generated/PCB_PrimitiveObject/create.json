@@ -1,0 +1,79 @@
+{
+  "className": "PCB_PrimitiveObject",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveObject.create",
+  "docPath": "references/classes/PCB_PrimitiveObject.md",
+  "examplePath": "examples/methods/PCB_PrimitiveObject/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveObject/create.json",
+  "signatures": [
+    "create(layer: TPCB_LayersOfObject, topLeftX: number, topLeftY: number, binaryData: string, width: number, height: number, rotation?: number, mirror?: boolean, fileName?: string, primitiveLock?: boolean): Promise<IPCB_PrimitiveObject | undefined>"
+  ],
+  "description": "创建二进制内嵌对象",
+  "classSummary": "PCB & 封装 / 二进制内嵌对象图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveObject](./IPCB_PrimitiveObject.md) \\| undefined>\n\n- 二进制内嵌对象图元对象",
+  "params": [
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfObject",
+      "description": "层"
+    },
+    {
+      "name": "topLeftX",
+      "type": "number",
+      "description": "左上点 X"
+    },
+    {
+      "name": "topLeftY",
+      "type": "number",
+      "description": "左上点 Y"
+    },
+    {
+      "name": "binaryData",
+      "type": "string",
+      "description": "二进制数据"
+    },
+    {
+      "name": "width",
+      "type": "number",
+      "description": "宽"
+    },
+    {
+      "name": "height",
+      "type": "number",
+      "description": "高"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "description": "_（可选）_ 旋转角度"
+    },
+    {
+      "name": "mirror",
+      "type": "boolean",
+      "description": "_（可选）_ 是否水平镜像"
+    },
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveObject_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixtureBinaryData = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO0pF7sAAAAASUVORK5CYII=';\n  const createdPrimitive = await eda.pcb_PrimitiveObject.create(\n    3,\n    1200,\n    1200,\n    fixtureBinaryData,\n    100,\n    100,\n    0,\n    false,\n    'codex-dot.png',\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveObject.delete([primitiveId]); }\n  }\n})(eda);"
+}

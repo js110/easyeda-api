@@ -1,0 +1,39 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "saveFile",
+  "slug": "SYS_FileSystem.saveFile",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/saveFile.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_FileSystem/saveFile.json",
+  "signatures": [
+    "saveFile(fileData: File | Blob, fileName?: string): Promise<void>"
+  ],
+  "description": "保存文件",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "调用浏览器下载接口或 Electron 保存文件接口，将传入的文件流保存到本地",
+  "returnSummary": "Promise<void>",
+  "params": [
+    {
+      "name": "fileData",
+      "type": "File \\| Blob",
+      "description": "文件数据"
+    },
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_saveFile_' + Date.now();\n  const result = await eda.sys_FileSystem.saveFile(undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

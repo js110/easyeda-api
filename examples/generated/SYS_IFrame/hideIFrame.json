@@ -1,0 +1,34 @@
+{
+  "className": "SYS_IFrame",
+  "methodName": "hideIFrame",
+  "slug": "SYS_IFrame.hideIFrame",
+  "docPath": "references/classes/SYS_IFrame.md",
+  "examplePath": "examples/methods/SYS_IFrame/hideIFrame.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_IFrame/hideIFrame.json",
+  "signatures": [
+    "hideIFrame(id?: string): Promise<boolean>"
+  ],
+  "description": "隐藏内联框架窗口",
+  "classSummary": "系统 / 内联框架窗口类",
+  "remarks": "本接口为结果导向的： 如若未找到指定内联框架窗口，接口将会返回 `false` ； 如若在执行操作前该内联框架窗口已处于隐藏状态，接口将会返回 `true`\n\n注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "_（可选）_ 内联框架窗口 ID"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_IFrame_hideIFrame_' + Date.now();\n  const result = await eda.sys_IFrame.hideIFrame(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

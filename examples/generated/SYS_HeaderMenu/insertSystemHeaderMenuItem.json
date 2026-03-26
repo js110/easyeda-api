@@ -1,0 +1,45 @@
+{
+  "className": "SYS_HeaderMenu",
+  "methodName": "insertSystemHeaderMenuItem",
+  "slug": "SYS_HeaderMenu.insertSystemHeaderMenuItem",
+  "docPath": "references/classes/SYS_HeaderMenu.md",
+  "examplePath": "examples/methods/SYS_HeaderMenu/insertSystemHeaderMenuItem.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_HeaderMenu/insertSystemHeaderMenuItem.json",
+  "signatures": [
+    "insertSystemHeaderMenuItem(env: ESYS_HeaderMenuEnvironment, id: Array<string>, props: {         title: string;         registerFn?: string;         menuItems?: Array<ISYS_HeaderMenuSub1MenuItem | ISYS_HeaderMenuSub2MenuItem | null>;         insertDividerBefore?: boolean;         insertDividerAfter?: boolean;         insertBefore?: string;         crossDividerWhenInsert?: boolean;     }): Promise<string | undefined>"
+  ],
+  "description": "在指定位置插入系统顶部菜单项",
+  "classSummary": "系统 / 顶部菜单类",
+  "remarks": "系统顶部菜单一旦新增无法有效删除，需要重启嘉立创 EDA 软件才可以恢复\n\n本接口需要在系统已有的系统一级菜单下新增子菜单，无法新增和修改一级菜单，`id` 数组请至少传递 `2` 个值\n\n本接口将会强制新建的系统顶部菜单的 ID 包含扩展 UUID，例如输入的 `id = 'example'` ，将会被自动重写为 `e143d88179874e7f851cc890cd22fc71|example` ，后续如需移除该菜单，请输入重写后的名称\n\n本接口不能在 \\*\\*高级\\*\\* 菜单下新增任何子菜单\n\n本接口新增的子菜单将默认排列在原菜单的结尾，除非指定了 `props.insertBefore` 参数\n\n注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`\n\n非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+  "returnSummary": "Promise<string \\| undefined>\n\n顶部菜单项的 ID 数组，分隔线是否插入并不会影响操作结果的返回值",
+  "params": [
+    {
+      "name": "env",
+      "type": "ESYS\\_HeaderMenuEnvironment",
+      "description": "环境"
+    },
+    {
+      "name": "id",
+      "type": "Array<string>",
+      "description": "菜单项 ID 树，将会按照数组顺序按层级匹配菜单项，并将数组最后一位作为插入的菜单项的 ID"
+    },
+    {
+      "name": "props",
+      "type": "{ title: string; registerFn?: string; menuItems?: Array<ISYS\\_HeaderMenuSub1MenuItem \\| ISYS\\_HeaderMenuSub2MenuItem \\| null>; insertDividerBefore?: boolean; insertDividerAfter?: boolean; insertBefore?: string; crossDividerWhenInsert?: boolean; }",
+      "description": "其它参数"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "这个参数是枚举类型 ESYS_HeaderMenuEnvironment，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_HeaderMenu_insertSystemHeaderMenuItem_' + Date.now();\n  const result = await eda.sys_HeaderMenu.insertSystemHeaderMenuItem(undefined, 'id', false);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

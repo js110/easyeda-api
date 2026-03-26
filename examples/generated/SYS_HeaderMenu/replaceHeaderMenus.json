@@ -1,0 +1,34 @@
+{
+  "className": "SYS_HeaderMenu",
+  "methodName": "replaceHeaderMenus",
+  "slug": "SYS_HeaderMenu.replaceHeaderMenus",
+  "docPath": "references/classes/SYS_HeaderMenu.md",
+  "examplePath": "examples/methods/SYS_HeaderMenu/replaceHeaderMenus.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_HeaderMenu/replaceHeaderMenus.json",
+  "signatures": [
+    "replaceHeaderMenus(headerMenus: ISYS_HeaderMenus): Promise<void>"
+  ],
+  "description": "替换顶部菜单数据",
+  "classSummary": "系统 / 顶部菜单类",
+  "remarks": "本接口相当于同时执行了 [移除](./SYS_HeaderMenu.md) 和 [导入](./SYS_HeaderMenu.md) 操作",
+  "returnSummary": "Promise<void>",
+  "params": [
+    {
+      "name": "headerMenus",
+      "type": "ISYS\\_HeaderMenus",
+      "description": "顶部菜单数据"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_HeaderMenu_replaceHeaderMenus_' + Date.now();\n  const result = await eda.sys_HeaderMenu.replaceHeaderMenus(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

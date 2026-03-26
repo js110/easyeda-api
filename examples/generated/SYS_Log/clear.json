@@ -1,0 +1,28 @@
+{
+  "className": "SYS_Log",
+  "methodName": "clear",
+  "slug": "SYS_Log.clear",
+  "docPath": "references/classes/SYS_Log.md",
+  "examplePath": "examples/methods/SYS_Log/clear.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Log/clear.json",
+  "signatures": [
+    "clear(): void"
+  ],
+  "description": "清空日志",
+  "classSummary": "系统 / 日志类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Log_clear_' + Date.now();\n  const result = await eda.sys_Log.clear();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

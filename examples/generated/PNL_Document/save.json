@@ -1,0 +1,28 @@
+{
+  "className": "PNL_Document",
+  "methodName": "save",
+  "slug": "PNL_Document.save",
+  "docPath": "references/classes/PNL_Document.md",
+  "examplePath": "examples/methods/PNL_Document/save.md",
+  "kind": "action",
+  "domain": "MISC",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PNL_Document/save.json",
+  "signatures": [
+    "save(): Promise<boolean>"
+  ],
+  "description": "保存文档",
+  "classSummary": "面板 / 文档操作类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n保存操作是否成功，保存失败、上传失败等错误均返回 `false`",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PNL_Document_save_' + Date.now();\n  const result = await eda.pnl_Document.save();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

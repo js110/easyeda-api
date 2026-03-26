@@ -1,0 +1,35 @@
+{
+  "className": "PCB_Layer",
+  "methodName": "setInactiveLayerDisplayMode",
+  "slug": "PCB_Layer.setInactiveLayerDisplayMode",
+  "docPath": "references/classes/PCB_Layer.md",
+  "examplePath": "examples/methods/PCB_Layer/setInactiveLayerDisplayMode.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Layer/setInactiveLayerDisplayMode.json",
+  "signatures": [
+    "setInactiveLayerDisplayMode(displayMode?: EPCB_InactiveLayerDisplayMode): Promise<boolean>"
+  ],
+  "description": "设置非激活层展示模式",
+  "classSummary": "PCB & 封装 / 图层操作类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否设置成功",
+  "params": [
+    {
+      "name": "displayMode",
+      "type": "EPCB\\_InactiveLayerDisplayMode",
+      "description": "_（可选）_ 展示模式"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "这个参数是枚举类型 EPCB_InactiveLayerDisplayMode，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Layer_setInactiveLayerDisplayMode_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Layer.setInactiveLayerDisplayMode(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-03-26T14:07:50.553Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+    "pendingRequests": 0,
+    "timestamp": 1774534070529
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "9d7c0923-a1b4-42e1-9f33-db3c21ba799b",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 3,
+    "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+    "documentUuid": "ddfd856250744d06",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "ddfd856250744d06"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "safe",
+  "results": [
+    {
+      "slug": "PCB_Primitive.getPrimitivesBBox",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

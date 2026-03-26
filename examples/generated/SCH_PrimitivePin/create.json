@@ -1,0 +1,75 @@
+{
+  "className": "SCH_PrimitivePin",
+  "methodName": "create",
+  "slug": "SCH_PrimitivePin.create",
+  "docPath": "references/classes/SCH_PrimitivePin.md",
+  "examplePath": "examples/methods/SCH_PrimitivePin/create.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/SCH_PrimitivePin/create.json",
+  "signatures": [
+    "create(x: number, y: number, pinNumber: string, pinName?: string, rotation?: number, pinLength?: number, pinColor?: string | null, pinShape?: ESCH_PrimitivePinShape, pinType?: ESCH_PrimitivePinType): Promise<ISCH_PrimitivePin | undefined>"
+  ],
+  "description": "创建引脚",
+  "classSummary": "原理图 & 符号 / 引脚图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[ISCH\\_PrimitivePin](./ISCH_PrimitivePin.md) \\| undefined>\n\n引脚图元对象",
+  "params": [
+    {
+      "name": "x",
+      "type": "number",
+      "description": "坐标 X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "description": "坐标 Y"
+    },
+    {
+      "name": "pinNumber",
+      "type": "string",
+      "description": "引脚编号"
+    },
+    {
+      "name": "pinName",
+      "type": "string",
+      "description": "_（可选）_ 引脚名称"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "description": "_（可选）_ 旋转角度，可选 `0` `90` `180` `270`"
+    },
+    {
+      "name": "pinLength",
+      "type": "number",
+      "description": "_（可选）_ 引脚长度"
+    },
+    {
+      "name": "pinColor",
+      "type": "string \\| null",
+      "description": "_（可选）_ 引脚颜色，`null` 表示默认"
+    },
+    {
+      "name": "pinShape",
+      "type": "ESCH\\_PrimitivePinShape",
+      "description": "_（可选）_ 引脚形状"
+    },
+    {
+      "name": "pinType",
+      "type": "ESCH\\_PrimitivePinType",
+      "description": "_（可选）_ 引脚类型"
+    }
+  ],
+  "exampleNotes": [
+    "这个参数是枚举类型 ESCH_PrimitivePinShape，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。",
+    "这个参数是枚举类型 ESCH_PrimitivePinType，生成器先给出最保守的占位值，使用前建议结合对应枚举文档细化。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_PrimitivePin_create_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sch_PrimitivePin.create(120, 80, 'pinNumber', undefined, 0, undefined, undefined, undefined, undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sch_PrimitivePin.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

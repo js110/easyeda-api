@@ -1,0 +1,42 @@
+{
+  "className": "PCB_PrimitiveLine",
+  "methodName": "getAllPrimitiveId",
+  "slug": "PCB_PrimitiveLine.getAllPrimitiveId",
+  "docPath": "references/classes/PCB_PrimitiveLine.md",
+  "examplePath": "examples/methods/PCB_PrimitiveLine/getAllPrimitiveId.md",
+  "kind": "query",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/PCB_PrimitiveLine/getAllPrimitiveId.json",
+  "signatures": [
+    "getAllPrimitiveId(net?: string, layer?: TPCB_LayersOfLine, primitiveLock?: boolean): Promise<Array<string>>"
+  ],
+  "description": "获取所有直线的图元 ID",
+  "classSummary": "PCB & 封装 / 直线图元类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<string>>\n\n折线的图元 ID 数组",
+  "params": [
+    {
+      "name": "net",
+      "type": "string",
+      "description": "_（可选）_ 网络名称"
+    },
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfLine",
+      "description": "_（可选）_ 层"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveLine_getAllPrimitiveId_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_PrimitiveLine.getAllPrimitiveId('GND', 1, false);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,32 @@
+{
+  "className": "SYS_ShortcutKey",
+  "methodName": "getShortcutKeys",
+  "slug": "SYS_ShortcutKey.getShortcutKeys",
+  "docPath": "references/classes/SYS_ShortcutKey.md",
+  "examplePath": "examples/methods/SYS_ShortcutKey/getShortcutKeys.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_ShortcutKey/getShortcutKeys.json",
+  "signatures": [
+    "getShortcutKeys(includeSystem?: boolean): Promise<Array<{         shortcutKey: TSYS_ShortcutKeys;         title: string;         documentType: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>;         scene: Array<ESYS_ShortcutKeyEffectiveEditorScene>;     }>>"
+  ],
+  "description": "查询快捷键列表",
+  "classSummary": "系统 / 快捷键类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<{ shortcutKey: [TSYS\\_ShortcutKeys](../types/TSYS_ShortcutKeys.md) ; title: string; documentType: Array<[ESYS\\_ShortcutKeyEffectiveEditorDocumentType](../enums/ESYS_ShortcutKeyEffectiveEditorDocumentType.md) >; scene: Array<[ESYS\\_ShortcutKeyEffectiveEditorScene](../enums/ESYS_ShortcutKeyEffectiveEditorScene.md) >; }>>\n\n快捷键列表",
+  "params": [
+    {
+      "name": "includeSystem",
+      "type": "boolean",
+      "description": "_（可选）_ 是否包含系统快捷键"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_ShortcutKey_getShortcutKeys_' + Date.now();\n  const result = await eda.sys_ShortcutKey.getShortcutKeys(undefined);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Schematic",
+  "methodName": "createSchematic",
+  "slug": "DMT_Schematic.createSchematic",
+  "docPath": "references/classes/DMT_Schematic.md",
+  "examplePath": "examples/methods/DMT_Schematic/createSchematic.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Schematic/createSchematic.json",
+  "signatures": [
+    "createSchematic(boardName?: string): Promise<string | undefined>"
+  ],
+  "description": "创建原理图",
+  "classSummary": "文档树 / 原理图管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n原理图 UUID，如若为 `undefined` 则创建失败",
+  "params": [
+    {
+      "name": "boardName",
+      "type": "string",
+      "description": "_（可选）_ 所属板子名称，如若不指定则为游离原理图"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Schematic_createSchematic_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.dmt_Schematic.createSchematic(fixtureName);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Schematic.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

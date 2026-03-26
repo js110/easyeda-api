@@ -1,0 +1,35 @@
+{
+  "className": "LIB_Classification",
+  "methodName": "deleteByIndex",
+  "slug": "LIB_Classification.deleteByIndex",
+  "docPath": "references/classes/LIB_Classification.md",
+  "examplePath": "examples/methods/LIB_Classification/deleteByIndex.md",
+  "kind": "delete",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/LIB_Classification/deleteByIndex.json",
+  "signatures": [
+    "deleteByIndex(classificationIndex: ILIB_ClassificationIndex): Promise<boolean>"
+  ],
+  "description": "删除指定索引的分类",
+  "classSummary": "综合库 / 库分类索引类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "classificationIndex",
+      "type": "ILIB\\_ClassificationIndex",
+      "description": "分类索引"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。",
+    "分类索引案例会先从一个真实搜索结果里提取 classification 字段，再调用目标 API。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Classification_deleteByIndex_' + Date.now();\n  const footprintCandidates = await eda.lib_Footprint.search('STM32');\n  const footprintItem = footprintCandidates?.[0];\n  const footprintUuid = footprintItem?.uuid;\n  const footprintLibraryUuid = footprintItem?.libraryUuid;\n  const classificationIndex = footprintItem?.classification;\n  const result = await eda.lib_Classification.deleteByIndex(classificationIndex);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

@@ -1,0 +1,34 @@
+{
+  "className": "PCB_Layer",
+  "methodName": "unlockLayer",
+  "slug": "PCB_Layer.unlockLayer",
+  "docPath": "references/classes/PCB_Layer.md",
+  "examplePath": "examples/methods/PCB_Layer/unlockLayer.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Layer/unlockLayer.json",
+  "signatures": [
+    "unlockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>): Promise<boolean>"
+  ],
+  "description": "取消锁定层",
+  "classSummary": "PCB & 封装 / 图层操作类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersInTheSelectable \\| Array<TPCB\\_LayersInTheSelectable >",
+      "description": "_（可选）_ 层，如若不指定任何层则默认为所有层"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Layer_unlockLayer_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Layer.unlockLayer(1);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

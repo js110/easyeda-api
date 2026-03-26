@@ -1,0 +1,32 @@
+{
+  "className": "PCB_MathPolygon",
+  "methodName": "createPolygon",
+  "slug": "PCB_MathPolygon.createPolygon",
+  "docPath": "references/classes/PCB_MathPolygon.md",
+  "examplePath": "examples/methods/PCB_MathPolygon/createPolygon.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/PCB_MathPolygon/createPolygon.json",
+  "signatures": [
+    "createPolygon(polygon: TPCB_PolygonSourceArray): IPCB_Polygon | undefined"
+  ],
+  "description": "创建单多边形",
+  "classSummary": "PCB & 封装 / 多边形数学类",
+  "remarks": "",
+  "returnSummary": "[IPCB\\_Polygon](./IPCB_Polygon.md) \\| undefined\n\n单多边形对象，`undefined` 表示数据不合法",
+  "params": [
+    {
+      "name": "polygon",
+      "type": "TPCB\\_PolygonSourceArray",
+      "description": "单多边形数据"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_MathPolygon_createPolygon_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.pcb_MathPolygon.createPolygon(undefined);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.pcb_MathPolygon.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

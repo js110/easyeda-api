@@ -1,0 +1,39 @@
+{
+  "className": "DMT_Pcb",
+  "methodName": "modifyPcbName",
+  "slug": "DMT_Pcb.modifyPcbName",
+  "docPath": "references/classes/DMT_Pcb.md",
+  "examplePath": "examples/methods/DMT_Pcb/modifyPcbName.md",
+  "kind": "update",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Pcb/modifyPcbName.json",
+  "signatures": [
+    "modifyPcbName(pcbUuid: string, pcbName: string): Promise<boolean>"
+  ],
+  "description": "修改 PCB 名称",
+  "classSummary": "文档树 / PCB 管理类",
+  "remarks": "如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联原理图名称",
+  "returnSummary": "Promise<boolean>\n\n是否修改成功",
+  "params": [
+    {
+      "name": "pcbUuid",
+      "type": "string",
+      "description": "PCB UUID"
+    },
+    {
+      "name": "pcbName",
+      "type": "string",
+      "description": "PCB 名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Pcb_modifyPcbName_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\n  const pcbUuid = pcbs?.[0]?.uuid;\n  const result = await eda.dmt_Pcb.modifyPcbName(pcbUuid, fixtureName);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

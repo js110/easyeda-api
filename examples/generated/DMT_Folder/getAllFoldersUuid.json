@@ -1,0 +1,32 @@
+{
+  "className": "DMT_Folder",
+  "methodName": "getAllFoldersUuid",
+  "slug": "DMT_Folder.getAllFoldersUuid",
+  "docPath": "references/classes/DMT_Folder.md",
+  "examplePath": "examples/methods/DMT_Folder/getAllFoldersUuid.md",
+  "kind": "query",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/DMT_Folder/getAllFoldersUuid.json",
+  "signatures": [
+    "getAllFoldersUuid(teamUuid: string): Promise<Array<string>>"
+  ],
+  "description": "获取所有文件夹的 UUID",
+  "classSummary": "文档树 / 文件夹类",
+  "remarks": "本接口忽略层级信息，将会返回所有层级的文件夹的 UUID 并放置于一维数组中",
+  "returnSummary": "Promise<Array<string>>\n\n文件夹 UUID 数组",
+  "params": [
+    {
+      "name": "teamUuid",
+      "type": "string",
+      "description": "团队 UUID"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Folder_getAllFoldersUuid_' + Date.now();\n  const teams = await eda.dmt_Team.getAllTeamsInfo();\n  const teamUuid = teams?.[0]?.uuid;\n  const result = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

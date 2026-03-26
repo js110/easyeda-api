@@ -1,0 +1,34 @@
+{
+  "className": "SYS_Window",
+  "methodName": "removeEventListener",
+  "slug": "SYS_Window.removeEventListener",
+  "docPath": "references/classes/SYS_Window.md",
+  "examplePath": "examples/methods/SYS_Window/removeEventListener.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_Window/removeEventListener.json",
+  "signatures": [
+    "removeEventListener(removableObject: ISYS_WindowEventListenerRemovableObject): void"
+  ],
+  "description": "移除事件监听",
+  "classSummary": "系统 / 窗口类",
+  "remarks": "",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "removableObject",
+      "type": "ISYS\\_WindowEventListenerRemovableObject",
+      "description": "窗口事件监听可移除对象"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Window_removeEventListener_' + Date.now();\n  const result = await eda.sys_Window.removeEventListener(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

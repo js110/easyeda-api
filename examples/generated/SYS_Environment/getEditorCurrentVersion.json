@@ -1,0 +1,26 @@
+{
+  "className": "SYS_Environment",
+  "methodName": "getEditorCurrentVersion",
+  "slug": "SYS_Environment.getEditorCurrentVersion",
+  "docPath": "references/classes/SYS_Environment.md",
+  "examplePath": "examples/methods/SYS_Environment/getEditorCurrentVersion.md",
+  "kind": "query",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SYS_Environment/getEditorCurrentVersion.json",
+  "signatures": [
+    "getEditorCurrentVersion(): string"
+  ],
+  "description": "获取编辑器当前版本",
+  "classSummary": "系统 / 运行环境类",
+  "remarks": "",
+  "returnSummary": "string\n\n编辑器当前版本",
+  "params": [],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Environment_getEditorCurrentVersion_' + Date.now();\n  const result = await eda.sys_Environment.getEditorCurrentVersion();\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

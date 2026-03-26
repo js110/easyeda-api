@@ -1,0 +1,37 @@
+{
+  "className": "SYS_Message",
+  "methodName": "showFollowMouseTip",
+  "slug": "SYS_Message.showFollowMouseTip",
+  "docPath": "references/classes/SYS_Message.md",
+  "examplePath": "examples/methods/SYS_Message/showFollowMouseTip.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_Message/showFollowMouseTip.json",
+  "signatures": [
+    "showFollowMouseTip(tip: string, msTimeout?: number): Promise<void>"
+  ],
+  "description": "展示跟随鼠标的提示",
+  "classSummary": "系统 / 消息通知类",
+  "remarks": "同一时间只能展示一条提示，如果展示新的提示，则之前的提示将被自动移除",
+  "returnSummary": "Promise<void>",
+  "params": [
+    {
+      "name": "tip",
+      "type": "string",
+      "description": "提示内容"
+    },
+    {
+      "name": "msTimeout",
+      "type": "number",
+      "description": "_（可选）_ 展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 removeFollowMouseTip 或被其它提示覆盖"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_Message_showFollowMouseTip_' + Date.now();\n  const result = await eda.sys_Message.showFollowMouseTip('Codex example running inside EasyEDA', 1500);\n  return { fixtureName, result };\n})(eda);"
+}

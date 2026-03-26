@@ -1,0 +1,28 @@
+{
+  "className": "SYS_PanelControl",
+  "methodName": "isBottomPanelLocked",
+  "slug": "SYS_PanelControl.isBottomPanelLocked",
+  "docPath": "references/classes/SYS_PanelControl.md",
+  "examplePath": "examples/methods/SYS_PanelControl/isBottomPanelLocked.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_PanelControl/isBottomPanelLocked.json",
+  "signatures": [
+    "isBottomPanelLocked(): Promise<boolean>"
+  ],
+  "description": "查询底部面板是否已锁定",
+  "classSummary": "系统 / 面板控制类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否已锁定",
+  "params": [],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_PanelControl_isBottomPanelLocked_' + Date.now();\n  const result = await eda.sys_PanelControl.isBottomPanelLocked();\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

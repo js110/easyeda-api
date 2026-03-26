@@ -1,0 +1,54 @@
+{
+  "className": "SYS_ShortcutKey",
+  "methodName": "registerShortcutKey",
+  "slug": "SYS_ShortcutKey.registerShortcutKey",
+  "docPath": "references/classes/SYS_ShortcutKey.md",
+  "examplePath": "examples/methods/SYS_ShortcutKey/registerShortcutKey.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_ShortcutKey/registerShortcutKey.json",
+  "signatures": [
+    "registerShortcutKey(shortcutKey: TSYS_ShortcutKeys, title: string, callbackFn: (shortcutKey: TSYS_ShortcutKeys) => void | Promise<void>, documentType?: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>, scene?: Array<ESYS_ShortcutKeyEffectiveEditorScene>): Promise<boolean>"
+  ],
+  "description": "注册快捷键",
+  "classSummary": "系统 / 快捷键类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n注册操作是否成功",
+  "params": [
+    {
+      "name": "shortcutKey",
+      "type": "TSYS\\_ShortcutKeys",
+      "description": "快捷键，数组中包含多个元素则解析为组合快捷键，将按规则排序后存入缓存"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "快捷键标题，快捷键的友好名称"
+    },
+    {
+      "name": "callbackFn",
+      "type": "(shortcutKey: TSYS\\_ShortcutKeys ) => void \\| Promise<void>",
+      "description": "回调函数"
+    },
+    {
+      "name": "documentType",
+      "type": "Array<ESYS\\_ShortcutKeyEffectiveEditorDocumentType >",
+      "description": "_(Optional)_"
+    },
+    {
+      "name": "scene",
+      "type": "Array<ESYS\\_ShortcutKeyEffectiveEditorScene >",
+      "description": "_(Optional)_"
+    }
+  ],
+  "exampleNotes": [
+    "快捷键案例默认使用 Ctrl+Shift+G 这一组按键，便于开发者直接替换成自己的组合。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_ShortcutKey_registerShortcutKey_' + Date.now();\n  const result = await eda.sys_ShortcutKey.registerShortcutKey(['CONTROL', 'SHIFT', 'G'], 'title', async (shortcutKey) => { await eda.sys_Message.showToastMessage('Shortcut fired: ' + shortcutKey.join('+')); }, [ESYS_ShortcutKeyEffectiveEditorDocumentType.PCB], [ESYS_ShortcutKeyEffectiveEditorScene.SELECT_CANVAS]);\n  return { fixtureName, result };\n})(eda);"
+}

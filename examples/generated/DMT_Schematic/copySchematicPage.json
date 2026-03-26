@@ -1,0 +1,37 @@
+{
+  "className": "DMT_Schematic",
+  "methodName": "copySchematicPage",
+  "slug": "DMT_Schematic.copySchematicPage",
+  "docPath": "references/classes/DMT_Schematic.md",
+  "examplePath": "examples/methods/DMT_Schematic/copySchematicPage.md",
+  "kind": "create",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/DMT_Schematic/copySchematicPage.json",
+  "signatures": [
+    "copySchematicPage(schematicPageUuid: string, schematicUuid?: string): Promise<string | undefined>"
+  ],
+  "description": "复制原理图图页",
+  "classSummary": "文档树 / 原理图管理类",
+  "remarks": "",
+  "returnSummary": "Promise<string \\| undefined>\n\n新原理图图页 UUID，如若为 `undefined` 则复制失败",
+  "params": [
+    {
+      "name": "schematicPageUuid",
+      "type": "string",
+      "description": "源原理图图页 UUID"
+    },
+    {
+      "name": "schematicUuid",
+      "type": "string",
+      "description": "_（可选）_ 目标原理图 UUID，如若不指定则为当前原理图"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Schematic_copySchematicPage_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const schematicPages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\n  const schematicPageUuid = schematicPages?.[0]?.uuid;\n  const schematics = await eda.dmt_Schematic.getAllSchematicsInfo();\n  const schematicUuid = schematics?.[0]?.uuid;\n  const created = await eda.dmt_Schematic.copySchematicPage(schematicPageUuid, schematicUuid);\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.dmt_Schematic.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

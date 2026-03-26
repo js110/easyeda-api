@@ -1,0 +1,49 @@
+{
+  "className": "SYS_WebSocket",
+  "methodName": "close",
+  "slug": "SYS_WebSocket.close",
+  "docPath": "references/classes/SYS_WebSocket.md",
+  "examplePath": "examples/methods/SYS_WebSocket/close.md",
+  "kind": "delete",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_WebSocket/close.json",
+  "signatures": [
+    "close(id: string, code?: number, reason?: string, extensionUuid?: string): void"
+  ],
+  "description": "关闭 WebSocket 连接",
+  "classSummary": "系统 / WebSocket 类",
+  "remarks": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "自定义的 WebSocket ID"
+    },
+    {
+      "name": "code",
+      "type": "number",
+      "description": "_（可选）_ 数字状态码，对应 WebSocket.CloseEvent 内允许的状态码"
+    },
+    {
+      "name": "reason",
+      "type": "string",
+      "description": "_（可选）_ 一个人类可读的字符串，解释连接关闭的原因"
+    },
+    {
+      "name": "extensionUuid",
+      "type": "string",
+      "description": "_（可选）_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_WebSocket_close_' + Date.now();\n  const result = await eda.sys_WebSocket.close('id', undefined, undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

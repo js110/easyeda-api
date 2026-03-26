@@ -1,0 +1,37 @@
+{
+  "className": "LIB_PanelLibrary",
+  "methodName": "get",
+  "slug": "LIB_PanelLibrary.get",
+  "docPath": "references/classes/LIB_PanelLibrary.md",
+  "examplePath": "examples/methods/LIB_PanelLibrary/get.md",
+  "kind": "query",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-by-identifier",
+  "generatedPath": "examples/generated/LIB_PanelLibrary/get.json",
+  "signatures": [
+    "get(panelLibraryUuid: string, libraryUuid?: string): Promise<ILIB_PanelLibraryItem | undefined>"
+  ],
+  "description": "获取面板库的所有属性",
+  "classSummary": "综合库 / 面板库类",
+  "remarks": "",
+  "returnSummary": "Promise<[ILIB\\_PanelLibraryItem](../interfaces/ILIB_PanelLibraryItem.md) \\| undefined>\n\n面板库属性",
+  "params": [
+    {
+      "name": "panelLibraryUuid",
+      "type": "string",
+      "description": "面板库 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "_（可选）_ 库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_PanelLibrary_get_' + Date.now();\n  const panelLibraryCandidates = await eda.lib_PanelLibrary.search('A4');\n  const panelLibraryItem = panelLibraryCandidates?.[0];\n  const panelLibraryUuid = panelLibraryItem?.uuid;\n  const panelLibraryLibraryUuid = panelLibraryItem?.libraryUuid;\n  const result = await eda.lib_PanelLibrary.get(panelLibraryUuid, panelLibraryLibraryUuid);\n  return {\n    fixtureName,\n    result,\n  };\n})(eda);"
+}

@@ -1,0 +1,39 @@
+{
+  "className": "SYS_MessageBus",
+  "methodName": "publish",
+  "slug": "SYS_MessageBus.publish",
+  "docPath": "references/classes/SYS_MessageBus.md",
+  "examplePath": "examples/methods/SYS_MessageBus/publish.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_MessageBus/publish.json",
+  "signatures": [
+    "publish(topic: string, message: any): void"
+  ],
+  "description": "私有消息总线：发布消息",
+  "classSummary": "系统 / 消息总线类",
+  "remarks": "将消息广播给每一个 Subscriber",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "topic",
+      "type": "string",
+      "description": "主题"
+    },
+    {
+      "name": "message",
+      "type": "any",
+      "description": "消息"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_MessageBus_publish_' + Date.now();\n  const result = await eda.sys_MessageBus.publish('topic', 'Codex example running inside EasyEDA');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

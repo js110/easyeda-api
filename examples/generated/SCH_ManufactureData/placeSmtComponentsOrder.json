@@ -1,0 +1,39 @@
+{
+  "className": "SCH_ManufactureData",
+  "methodName": "placeSmtComponentsOrder",
+  "slug": "SCH_ManufactureData.placeSmtComponentsOrder",
+  "docPath": "references/classes/SCH_ManufactureData.md",
+  "examplePath": "examples/methods/SCH_ManufactureData/placeSmtComponentsOrder.md",
+  "kind": "action",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SCH_ManufactureData/placeSmtComponentsOrder.json",
+  "signatures": [
+    "placeSmtComponentsOrder(interactive?: boolean, ignoreWarning?: boolean): Promise<boolean>"
+  ],
+  "description": "SMT 元件下单",
+  "classSummary": "原理图 & 符号 / 生产资料类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n是否通过下单检查",
+  "params": [
+    {
+      "name": "interactive",
+      "type": "boolean",
+      "description": "_（可选）_ 是否启用交互式检查\n\n如若启用，则会存在弹窗等待用户进行交互，且无法使用 `ignoreWarning` 参数忽略警告， 即 `ignoreWarning` 参数将被忽略；\n\n如若禁用，则在调用后不会有任何 EDA 内部弹窗，程序执行静默检查， 如若达成下单条件，将返回 `true` 并在新标签页打开下单页面"
+    },
+    {
+      "name": "ignoreWarning",
+      "type": "boolean",
+      "description": "_（可选）_ 在非交互式检查时忽略警告\n\n如果设置为 `true` ，将会忽略所有检查警告项并尽可能生成下单资料；\n\n如果设置为 `false` ，存在任意警告将中断执行并返回 `false` 的结果"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_ManufactureData_placeSmtComponentsOrder_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_ManufactureData.placeSmtComponentsOrder(undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

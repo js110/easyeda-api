@@ -1,0 +1,34 @@
+{
+  "className": "DMT_Board",
+  "methodName": "deleteBoard",
+  "slug": "DMT_Board.deleteBoard",
+  "docPath": "references/classes/DMT_Board.md",
+  "examplePath": "examples/methods/DMT_Board/deleteBoard.md",
+  "kind": "delete",
+  "domain": "DMT",
+  "requiresDocumentType": null,
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/DMT_Board/deleteBoard.json",
+  "signatures": [
+    "deleteBoard(boardName: string): Promise<boolean>"
+  ],
+  "description": "删除板子",
+  "classSummary": "文档树 / 板子管理类",
+  "remarks": "如若指定板子不存在，接口将返回 `false` 的结果，表示操作失败",
+  "returnSummary": "Promise<boolean>\n\n操作是否成功",
+  "params": [
+    {
+      "name": "boardName",
+      "type": "string",
+      "description": "板子名称"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___DMT_Board_deleteBoard_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const result = await eda.dmt_Board.deleteBoard(fixtureName);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

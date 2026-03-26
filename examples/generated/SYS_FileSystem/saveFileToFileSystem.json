@@ -1,0 +1,49 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "saveFileToFileSystem",
+  "slug": "SYS_FileSystem.saveFileToFileSystem",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/saveFileToFileSystem.md",
+  "kind": "action",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/SYS_FileSystem/saveFileToFileSystem.json",
+  "signatures": [
+    "saveFileToFileSystem(uri: string, fileData: File | Blob, fileName?: string, force?: boolean): Promise<boolean>"
+  ],
+  "description": "向文件系统写入文件",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`\n\n注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+  "returnSummary": "Promise<boolean>\n\n写入操作是否成功，如若不允许覆盖但文件已存在将返回 `false` 的结果",
+  "params": [
+    {
+      "name": "uri",
+      "type": "string",
+      "description": "文件资源定位符\n\n如若结尾为斜杠 `/` （Windows 为反斜杠 `\\` ），则识别为文件夹；\n\n如若结尾非斜杠，则识别为完整文件名，此时 `fileName` 参数将被忽略"
+    },
+    {
+      "name": "fileData",
+      "type": "File \\| Blob",
+      "description": "文件数据"
+    },
+    {
+      "name": "fileName",
+      "type": "string",
+      "description": "_（可选）_ 文件名称"
+    },
+    {
+      "name": "force",
+      "type": "boolean",
+      "description": "_（可选）_ 强制写入（文件存在则覆盖文件）"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_saveFileToFileSystem_' + Date.now();\n  const result = await eda.sys_FileSystem.saveFileToFileSystem('uri', undefined, undefined, undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

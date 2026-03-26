@@ -1,0 +1,34 @@
+{
+  "className": "PCB_PrimitiveObject",
+  "methodName": "delete",
+  "slug": "PCB_PrimitiveObject.delete",
+  "docPath": "references/classes/PCB_PrimitiveObject.md",
+  "examplePath": "examples/methods/PCB_PrimitiveObject/delete.md",
+  "kind": "delete",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "delete-fixture",
+  "generatedPath": "examples/generated/PCB_PrimitiveObject/delete.json",
+  "signatures": [
+    "delete(primitiveIds: string | IPCB_PrimitiveObject | Array<string> | Array<IPCB_PrimitiveObject>): Promise<boolean>"
+  ],
+  "description": "删除二进制内嵌对象",
+  "classSummary": "PCB & 封装 / 二进制内嵌对象图元类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\n删除操作是否成功",
+  "params": [
+    {
+      "name": "primitiveIds",
+      "type": "string \\| IPCB\\_PrimitiveObject \\| Array<string> \\| Array<IPCB\\_PrimitiveObject >",
+      "description": "二进制内嵌对象的图元 ID 或二进制内嵌对象图元对象"
+    }
+  ],
+  "exampleNotes": [
+    "删除案例会先创建一个临时图元，再立即调用删除接口，避免误删当前工程里的真实对象。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveObject_delete_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixtureBinaryData = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO0pF7sAAAAASUVORK5CYII=';\n  const createdPrimitive = await eda.pcb_PrimitiveObject.create(\n    3,\n    1200,\n    1200,\n    fixtureBinaryData,\n    100,\n    100,\n    0,\n    false,\n    'codex-dot.png',\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可删除的测试图元。'); }\n  const deleted = await eda.pcb_PrimitiveObject.delete([primitiveId]);\n  return { fixtureName, primitiveId, deleted };\n})(eda);"
+}

@@ -1,0 +1,44 @@
+{
+  "className": "LIB_Symbol",
+  "methodName": "updateDocumentSource",
+  "slug": "LIB_Symbol.updateDocumentSource",
+  "docPath": "references/classes/LIB_Symbol.md",
+  "examplePath": "examples/methods/LIB_Symbol/updateDocumentSource.md",
+  "kind": "action",
+  "domain": "LIB",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/LIB_Symbol/updateDocumentSource.json",
+  "signatures": [
+    "updateDocumentSource(symbolUuid: string, libraryUuid: string, documentSource: string): Promise<boolean | undefined>"
+  ],
+  "description": "更新符号的文档源码",
+  "classSummary": "综合库 / 符号类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean \\| undefined>\n\n是否更新成功",
+  "params": [
+    {
+      "name": "symbolUuid",
+      "type": "string",
+      "description": "符号 UUID"
+    },
+    {
+      "name": "libraryUuid",
+      "type": "string",
+      "description": "库 UUID，可以使用 LIB\\_LibrariesList 内的接口获取"
+    },
+    {
+      "name": "documentSource",
+      "type": "string",
+      "description": "文档源码"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___LIB_Symbol_updateDocumentSource_' + Date.now();\n  const symbolCandidates = await eda.lib_Symbol.search('STM32');\n  const symbolItem = symbolCandidates?.[0];\n  const symbolUuid = symbolItem?.uuid;\n  const symbolLibraryUuid = symbolItem?.libraryUuid;\n  const result = await eda.lib_Symbol.updateDocumentSource(symbolUuid, symbolLibraryUuid, 'documentSource');\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}

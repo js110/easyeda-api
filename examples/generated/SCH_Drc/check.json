@@ -1,0 +1,43 @@
+{
+  "className": "SCH_Drc",
+  "methodName": "check",
+  "slug": "SCH_Drc.check",
+  "docPath": "references/classes/SCH_Drc.md",
+  "examplePath": "examples/methods/SCH_Drc/check.md",
+  "kind": "query",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "safe",
+  "status": "ready",
+  "templateName": "query-context",
+  "generatedPath": "examples/generated/SCH_Drc/check.json",
+  "signatures": [
+    "check(strict: boolean, userInterface: boolean, includeVerboseError: false): Promise<boolean>",
+    "check(strict: boolean, userInterface: boolean, includeVerboseError: true): Promise<Array<any>>"
+  ],
+  "description": "检查 DRC",
+  "classSummary": "原理图 & 符号 / 设计规则检查（DRC）类",
+  "remarks": "",
+  "returnSummary": "Promise<boolean>\n\nDRC 检查是否通过",
+  "params": [
+    {
+      "name": "strict",
+      "type": "boolean",
+      "description": "是否严格检查，当前原理图统一为严格检查模式"
+    },
+    {
+      "name": "userInterface",
+      "type": "boolean",
+      "description": "是否显示 UI（呼出底部 DRC 窗口）"
+    },
+    {
+      "name": "includeVerboseError",
+      "type": "false",
+      "description": "是否在返回值中包含详细错误信息，如若为 `true` ，则返回值将始终为数组"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_Drc_check_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先打开一个工程再运行这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 1) {\n    throw new Error('当前文档类型不是 SCHEMATIC_PAGE，请先切到 原理图图页 再运行这个案例。');\n  }\n  const result = await eda.sch_Drc.check(true, false, false);\n  return {\n    fixtureName,\n    currentProject: currentProject?.friendlyName ?? currentProject?.name ?? currentProject?.uuid ?? null,\n    currentDocumentType: currentDocument?.documentType ?? null,\n    result,\n  };\n})(eda);"
+}

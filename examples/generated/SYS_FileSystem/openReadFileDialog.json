@@ -1,0 +1,38 @@
+{
+  "className": "SYS_FileSystem",
+  "methodName": "openReadFileDialog",
+  "slug": "SYS_FileSystem.openReadFileDialog",
+  "docPath": "references/classes/SYS_FileSystem.md",
+  "examplePath": "examples/methods/SYS_FileSystem/openReadFileDialog.md",
+  "kind": "ui",
+  "domain": "SYS",
+  "requiresDocumentType": null,
+  "requiresProject": false,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "ui-action",
+  "generatedPath": "examples/generated/SYS_FileSystem/openReadFileDialog.json",
+  "signatures": [
+    "openReadFileDialog(filenameExtensions?: string | Array<string>, multiFiles?: true): Promise<Array<File> | undefined>",
+    "openReadFileDialog(filenameExtensions?: string | Array<string>, multiFiles?: false): Promise<File | undefined>"
+  ],
+  "description": "打开读入文件窗口",
+  "classSummary": "系统 / 文件系统交互类",
+  "remarks": "",
+  "returnSummary": "Promise<Array<File> \\| undefined>\n\nFile 格式文件数组",
+  "params": [
+    {
+      "name": "filenameExtensions",
+      "type": "string \\| Array<string>",
+      "description": "_（可选）_ 文件扩展名"
+    },
+    {
+      "name": "multiFiles",
+      "type": "true",
+      "description": "_（可选）_ 是否允许读取多文件"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SYS_FileSystem_openReadFileDialog_' + Date.now();\n  const result = await eda.sys_FileSystem.openReadFileDialog(undefined, undefined);\n  return { fixtureName, result };\n})(eda);"
+}

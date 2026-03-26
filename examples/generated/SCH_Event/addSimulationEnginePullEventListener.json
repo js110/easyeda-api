@@ -1,0 +1,42 @@
+{
+  "className": "SCH_Event",
+  "methodName": "addSimulationEnginePullEventListener",
+  "slug": "SCH_Event.addSimulationEnginePullEventListener",
+  "docPath": "references/classes/SCH_Event.md",
+  "examplePath": "examples/methods/SCH_Event/addSimulationEnginePullEventListener.md",
+  "kind": "create",
+  "domain": "SCH",
+  "requiresDocumentType": "SCHEMATIC_PAGE",
+  "requiresProject": true,
+  "cleanupStrategy": "manual",
+  "validationMode": "manual",
+  "status": "ready",
+  "templateName": "create-with-context",
+  "generatedPath": "examples/generated/SCH_Event/addSimulationEnginePullEventListener.json",
+  "signatures": [
+    "addSimulationEnginePullEventListener(id: string, eventType: 'all', callFn: (eventType: ESCH_DynamicSimulationEnginePullEventType | ESCH_SpiceSimulationEnginePullEventType, props: {         [key: string]: any;     }) => void | Promise<void>): void"
+  ],
+  "description": "注册仿真引擎拉取事件监听",
+  "classSummary": "原理图 & 符号 / 事件类",
+  "remarks": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+  "returnSummary": "void",
+  "params": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "事件 ID，用以防止重复注册事件"
+    },
+    {
+      "name": "eventType",
+      "type": "'all'",
+      "description": "事件类型"
+    },
+    {
+      "name": "callFn",
+      "type": "(eventType: ESCH\\_DynamicSimulationEnginePullEventType \\| ESCH\\_SpiceSimulationEnginePullEventType , props: { \\[key: string\\]: any; }) => void \\| Promise<void>",
+      "description": "事件触发时的回调函数"
+    }
+  ],
+  "exampleNotes": [],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___SCH_Event_addSimulationEnginePullEventListener_' + Date.now();\n  const fixtureSlug = fixtureName.toLowerCase().replace(/[^a-z0-9]+/g, '-');\n  const created = await eda.sch_Event.addSimulationEnginePullEventListener('id', undefined, 'callFn');\n  const primitiveId = created?.getState_PrimitiveId?.() ?? created?.primitiveId ?? created?.id;\n  if (primitiveId) {\n    await eda.sch_Event.delete([primitiveId]);\n  }\n  return {\n    fixtureName,\n    created,\n    cleanupStrategy: 'auto',\n  };\n})(eda);"
+}

@@ -1,0 +1,2368 @@
+{
+  "generatedAt": "2026-03-26T14:44:57.244Z",
+  "bridgeBaseUrl": "http://127.0.0.1:49620",
+  "health": {
+    "service": "easyeda-bridge",
+    "status": "ok",
+    "edaConnected": true,
+    "edaWindowCount": 1,
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "pendingRequests": 0,
+    "timestamp": 1774536297232
+  },
+  "windows": {
+    "windows": [
+      {
+        "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+        "connected": true,
+        "active": true
+      }
+    ],
+    "activeWindowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+    "count": 1
+  },
+  "contextSnapshot": {
+    "hasProject": true,
+    "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+    "projectName": "New Project_2026-03-26_20-34-36",
+    "documentType": 2,
+    "tabId": "3b14e3ac8f58419599bbb715b04fca48@0819f05c4eef4c71ace90d822a990e87",
+    "documentUuid": "3b14e3ac8f58419599bbb715b04fca48",
+    "schematicPageUuid": "7e63af2d471a22d3",
+    "pcbUuid": "ddfd856250744d06",
+    "panelUuid": null,
+    "activeProjectDocumentUuid": "3b14e3ac8f58419599bbb715b04fca48"
+  },
+  "seededAnchorContext": null,
+  "requestedMode": "mutating",
+  "results": [
+    {
+      "slug": "PCB_PrimitiveArc.create",
+      "status": "failed",
+      "error": "错误：无法创建圆弧/圆弧线图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "ddfd856250744d06"
+      }
+    },
+    {
+      "slug": "PCB_PrimitiveArc.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveArc_delete_1774536302604",
+          "primitiveId": "5f0c4948d368170b",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveArc.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.create",
+      "status": "failed",
+      "error": "Cannot convert undefined or null to object",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveComponent.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveComponent_delete_1774536302643",
+          "primitiveId": "ff0c23cd85803c04",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.create",
+      "status": "failed",
+      "error": "错误：无法创建尺寸标注图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveDimension_delete_1774536304813",
+          "primitiveId": "5a4fedb771b9f18a",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveDimension.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.create",
+      "status": "failed",
+      "error": "错误：无法创建填充图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveFill_delete_1774536304836",
+          "primitiveId": "e0",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveFill.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.create",
+      "status": "failed",
+      "error": "Cannot read properties of undefined (reading 'getSource')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.delete",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveImage.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveLine_create_1774536304871",
+          "created": {
+            "async": true,
+            "primitiveType": "Line",
+            "net": "GND",
+            "layer": 1,
+            "startX": 1000,
+            "startY": 1000,
+            "endX": 1600,
+            "endY": 1000,
+            "lineWidth": 10,
+            "primitiveLock": false,
+            "primitiveId": "e9c7529eeb09b890"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveLine_delete_1774536304885",
+          "primitiveId": "469ac9d118ec4683",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveLine.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveObject_create_1774536304904",
+          "created": {
+            "async": true,
+            "primitiveType": "Object",
+            "layer": 1,
+            "topLeftX": 0,
+            "topLeftY": 0,
+            "binaryData": "binaryData",
+            "width": 0,
+            "height": 0,
+            "rotation": 0,
+            "mirror": false,
+            "fileName": "",
+            "primitiveLock": false,
+            "primitiveId": "018da2c88b5d467f"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveObject_delete_1774536304916",
+          "primitiveId": "e61e16d05d91c3c1",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveObject.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.create",
+      "status": "failed",
+      "error": "错误：无法创建多边形图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePolyline_delete_1774536304938",
+          "primitiveId": "ca69fd2a05ed9c5d",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePolyline.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.create",
+      "status": "failed",
+      "error": "错误：无法创建覆铜边框图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitivePour_delete_1774536304961",
+          "primitiveId": "e1",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitivePour.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.create",
+      "status": "failed",
+      "error": "错误：无法创建区域图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveRegion_delete_1774536304984",
+          "primitiveId": "e2",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveRegion.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveVia_create_1774536305000",
+          "created": {
+            "async": true,
+            "primitiveType": "Via",
+            "net": "GND",
+            "x": 1200,
+            "y": 1200,
+            "holeDiameter": 20,
+            "diameter": 40,
+            "viaType": 0,
+            "designRuleBlindViaName": null,
+            "solderMaskExpansion": null,
+            "primitiveLock": false,
+            "primitiveId": "0082e3e09837a072"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___PCB_PrimitiveVia_delete_1774536305010",
+          "primitiveId": "adbf52f2146eeddd",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "PCB_PrimitiveVia.modify",
+      "status": "blocked",
+      "reason": "当前PCB文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 3,
+        "tabId": "ddfd856250744d06@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "ddfd856250744d06",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "ddfd856250744d06"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveArc.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveArc_create_1774536308615",
+          "created": {
+            "async": true,
+            "primitiveType": "Arc",
+            "startX": 1000,
+            "startY": 1000,
+            "referenceX": 0,
+            "referenceY": 0,
+            "endX": 1600,
+            "endY": 1000,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": 10,
+            "lineType": null,
+            "primitiveId": "3e67ab421008bffa"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": {
+        "restored": true,
+        "openedProject": true,
+        "switchedTabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "targetProjectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "targetDocumentUuid": "7e63af2d471a22d3"
+      }
+    },
+    {
+      "slug": "SCH_PrimitiveArc.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveArc_delete_1774536308627",
+          "primitiveId": "9e6c02151f1d3921",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveArc.modify",
+      "status": "blocked",
+      "reason": "当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.create",
+      "status": "failed",
+      "error": "create failed!",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.delete",
+      "status": "failed",
+      "error": "create failed!",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveBus.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveBus_modify_1774536308657",
+          "result": {
+            "async": true,
+            "primitiveType": "Bus",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "a26865c0198d2fdd"
+          },
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveCircle_create_1774536308669",
+          "created": {
+            "async": true,
+            "primitiveType": "Circle",
+            "centerX": 0,
+            "centerY": 0,
+            "radius": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": 10,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "04d57a352384749f"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveCircle_delete_1774536308680",
+          "primitiveId": "f5f880eb4cb99847",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveCircle.modify",
+      "status": "blocked",
+      "reason": "当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.create",
+      "status": "failed",
+      "error": "数据不符合规范",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createNetFlag",
+      "status": "failed",
+      "error": "数据不符合规范",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createNetPort",
+      "status": "failed",
+      "error": "数据不符合规范",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.createShortCircuitFlag",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_createShortCircuitFlag_1774536308707",
+          "created": {
+            "async": true,
+            "primitiveType": "Component",
+            "primitiveId": "a1f0b19f068e802f",
+            "componentType": "short_symbol",
+            "component": {
+              "uuid": "969e264ca0d545929f65fa01b3959f6d",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "x": 120,
+            "y": 80,
+            "subPartName": "pid8a0e77bacb214e",
+            "rotation": 0,
+            "mirror": false,
+            "addIntoBom": true,
+            "addIntoPcb": true,
+            "symbol": {
+              "uuid": "13cfaf8a3fdc088d",
+              "libraryUuid": "0819f05c4eef4c71ace90d822a990e87"
+            },
+            "footprint": {
+              "uuid": ""
+            },
+            "name": "",
+            "otherProperty": {
+              "Description": ""
+            }
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveComponent_delete_1774536309714",
+          "primitiveId": "01cc00aaa84d28eb",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_AnalogGround",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_Ground",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_Power",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetFlagComponentUuid_ProtectGround",
+      "status": "failed",
+      "error": "传入的器件非正确的网络标识",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_BI",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_IN",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveComponent.setNetPortComponentUuid_OUT",
+      "status": "failed",
+      "error": "传入的器件非正确的网络端口",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.create",
+      "status": "failed",
+      "error": "错误：对象未在原理图画布初始化，不存在 PrimitiveId。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePin_delete_1774536311405",
+          "primitiveId": "a06ad9d25fc7c041-e3",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePin.modify",
+      "status": "blocked",
+      "reason": "当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.create",
+      "status": "failed",
+      "error": "错误：无法创建矩形图元，可能是传入的参数不正确。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitivePolygon_delete_1774536312759",
+          "primitiveId": "b962d15c0109d387",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitivePolygon.modify",
+      "status": "blocked",
+      "reason": "当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveRectangle_create_1774536312777",
+          "created": {
+            "async": true,
+            "primitiveType": "Rectangle",
+            "topLeftX": 0,
+            "topLeftY": 0,
+            "width": 0,
+            "height": 0,
+            "cornerRadius": 0,
+            "rotation": 0,
+            "color": null,
+            "fillColor": null,
+            "lineWidth": 10,
+            "lineType": null,
+            "fillStyle": null,
+            "primitiveId": "481f3e79668d20ca"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveRectangle_delete_1774536312786",
+          "primitiveId": "3d68e866262dda36",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveRectangle.modify",
+      "status": "blocked",
+      "reason": "当前原理图文档里没有可用于演示的图元，先放一个对应类型的图元再运行这个案例。",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_create_1774536312801",
+          "created": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 120,
+            "y": 80,
+            "content": "content",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "alignMode": 6,
+            "primitiveId": "e1554a887ff18385"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_delete_1774536312811",
+          "primitiveId": "14ecd1ea9bab6418",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveText.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveText_modify_1774536312820",
+          "result": {
+            "async": true,
+            "primitiveType": "Text",
+            "x": 120,
+            "y": -80,
+            "content": "__codex_example___SCH_PrimitiveText_get_1774534885115",
+            "rotation": 0,
+            "textColor": null,
+            "fontName": null,
+            "fontSize": null,
+            "bold": null,
+            "italic": null,
+            "underLine": null,
+            "primitiveId": "b85e8f8d80194041"
+          },
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "created",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_create_1774536312827",
+          "created": {
+            "async": true,
+            "primitiveType": "Wire",
+            "line": [],
+            "net": "GND",
+            "primitiveId": "cb9facad149b5a36"
+          },
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "primitiveId",
+          "deleted"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_delete_1774536312846",
+          "primitiveId": "21c4f51eae6f98a4",
+          "deleted": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "SCH_PrimitiveWire.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___SCH_PrimitiveWire_modify_1774536312864",
+          "result": {
+            "async": true,
+            "primitiveType": "Wire",
+            "net": "",
+            "color": null,
+            "lineWidth": null,
+            "lineType": null,
+            "primitiveId": "6f7ed3026ecbc6c9"
+          },
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_copy_1774536312874",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_create_1774536312976",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_3DModel_delete_1774536312983",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_3DModel.modify",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of null (reading 'description')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.copy",
+      "status": "failed",
+      "error": "TypeError: Cannot read properties of undefined (reading 'tags')",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_create_1774536313383",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_delete_1774536314114",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Cbb.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Cbb_modify_1774536314300",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Device.copy",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.copy",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.create",
+      "status": "failed",
+      "error": "null",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Footprint_delete_1774536324128",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Footprint.modify",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_copy_1774536326522",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.create",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_create_1774536328358",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_delete_1774536329352",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_PanelLibrary.modify",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_PanelLibrary_modify_1774536330647",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.copy",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "cleanupStrategy"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Symbol_copy_1774536332588",
+          "cleanupStrategy": "auto"
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.create",
+      "status": "failed",
+      "error": "[object Object]",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.delete",
+      "status": "passed",
+      "windowId": "6a1f45e0-7784-476f-873d-3a9a88d6ba2e",
+      "summary": {
+        "type": "object",
+        "keys": [
+          "fixtureName",
+          "result",
+          "needsReview"
+        ],
+        "preview": {
+          "fixtureName": "__codex_example___LIB_Symbol_delete_1774536335559",
+          "result": false,
+          "needsReview": true
+        }
+      },
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    },
+    {
+      "slug": "LIB_Symbol.modify",
+      "status": "failed",
+      "error": "TypeError: Cannot destructure property 'primaryClassificationUuid' of 'n' as it is undefined.",
+      "contextSnapshot": {
+        "hasProject": true,
+        "projectUuid": "4d2b634d01b14dcfbc676e37d222796d",
+        "projectName": "New Project_2026-03-26_20-34-36",
+        "documentType": 1,
+        "tabId": "7e63af2d471a22d3@4d2b634d01b14dcfbc676e37d222796d",
+        "documentUuid": "7e63af2d471a22d3",
+        "schematicPageUuid": "7e63af2d471a22d3",
+        "pcbUuid": "ddfd856250744d06",
+        "panelUuid": null,
+        "activeProjectDocumentUuid": "7e63af2d471a22d3"
+      },
+      "restoreAttempt": null
+    }
+  ]
+}

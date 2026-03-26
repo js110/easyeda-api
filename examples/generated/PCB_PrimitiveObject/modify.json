@@ -1,0 +1,39 @@
+{
+  "className": "PCB_PrimitiveObject",
+  "methodName": "modify",
+  "slug": "PCB_PrimitiveObject.modify",
+  "docPath": "references/classes/PCB_PrimitiveObject.md",
+  "examplePath": "examples/methods/PCB_PrimitiveObject/modify.md",
+  "kind": "update",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "update-with-fixture",
+  "generatedPath": "examples/generated/PCB_PrimitiveObject/modify.json",
+  "signatures": [
+    "modify(primitiveId: string | IPCB_PrimitiveObject, property: {         layer?: TPCB_LayersOfObject;         topLeftX?: number;         topLeftY?: number;         binaryData?: string;         width?: number;         height?: number;         rotation?: number;         mirror?: boolean;         fileName?: string;         primitiveLock?: boolean;     }): Promise<IPCB_PrimitiveObject | undefined>"
+  ],
+  "description": "修改二进制内嵌对象",
+  "classSummary": "PCB & 封装 / 二进制内嵌对象图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveObject](./IPCB_PrimitiveObject.md) \\| undefined>\n\n二进制内嵌对象图元对象，`undefined` 表示修改失败",
+  "params": [
+    {
+      "name": "primitiveId",
+      "type": "string \\| IPCB\\_PrimitiveObject",
+      "description": "图元 ID"
+    },
+    {
+      "name": "property",
+      "type": "{ layer?: TPCB\\_LayersOfObject ; topLeftX?: number; topLeftY?: number; binaryData?: string; width?: number; height?: number; rotation?: number; mirror?: boolean; fileName?: string; primitiveLock?: boolean; }",
+      "description": "修改参数"
+    }
+  ],
+  "exampleNotes": [
+    "修改案例会先创建一个临时图元，再构造一个最小但真实的 property 对象执行 modify，最后自动清理。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveObject_modify_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const fixtureBinaryData = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO0pF7sAAAAASUVORK5CYII=';\n  const createdPrimitive = await eda.pcb_PrimitiveObject.create(\n    3,\n    1200,\n    1200,\n    fixtureBinaryData,\n    100,\n    100,\n    0,\n    false,\n    'codex-dot.png',\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于修改的测试图元。'); }\n  const property = {\n    topLeftX: 1280,\n    topLeftY: 1280,\n    fileName: fixtureName + '-updated.png',\n  };\n  try {\n    const before = await eda.pcb_PrimitiveObject.get(primitiveId);\n    const result = await eda.pcb_PrimitiveObject.modify(primitiveId, property);\n    const after = await eda.pcb_PrimitiveObject.get(primitiveId);\n    return {\n      fixtureName,\n      primitiveId,\n      property,\n      before,\n      result,\n      after,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveObject.delete([primitiveId]); }\n  }\n})(eda);"
+}

@@ -1,0 +1,64 @@
+{
+  "className": "PCB_PrimitiveDimension",
+  "methodName": "create",
+  "slug": "PCB_PrimitiveDimension.create",
+  "docPath": "references/classes/PCB_PrimitiveDimension.md",
+  "examplePath": "examples/methods/PCB_PrimitiveDimension/create.md",
+  "kind": "create",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "auto",
+  "validationMode": "mutating",
+  "status": "ready",
+  "templateName": "create-with-cleanup",
+  "generatedPath": "examples/generated/PCB_PrimitiveDimension/create.json",
+  "signatures": [
+    "create(dimensionType: EPCB_PrimitiveDimensionType, coordinateSet: TPCB_PrimitiveDimensionCoordinateSet, layer?: TPCB_LayersOfDimension, unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL, lineWidth?: number, precision?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveDimension | undefined>"
+  ],
+  "description": "创建尺寸标注",
+  "classSummary": "PCB & 封装 / 尺寸标注图元类",
+  "remarks": "",
+  "returnSummary": "Promise<[IPCB\\_PrimitiveDimension](./IPCB_PrimitiveDimension.md) \\| undefined>\n\n尺寸标注图元对象",
+  "params": [
+    {
+      "name": "dimensionType",
+      "type": "EPCB\\_PrimitiveDimensionType",
+      "description": "尺寸标注类型"
+    },
+    {
+      "name": "coordinateSet",
+      "type": "TPCB\\_PrimitiveDimensionCoordinateSet",
+      "description": "尺寸标注坐标集"
+    },
+    {
+      "name": "layer",
+      "type": "TPCB\\_LayersOfDimension",
+      "description": "_（可选）_ 层"
+    },
+    {
+      "name": "unit",
+      "type": "ESYS\\_Unit.MILLIMETER \\| ESYS\\_Unit.CENTIMETER \\| ESYS\\_Unit.INCH \\| ESYS\\_Unit.MIL",
+      "description": "_（可选）_ 单位"
+    },
+    {
+      "name": "lineWidth",
+      "type": "number",
+      "description": "_（可选）_ 线宽"
+    },
+    {
+      "name": "precision",
+      "type": "number",
+      "description": "_（可选）_ 精度，取值范围 `0` -`4`"
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "_（可选）_ 是否锁定"
+    }
+  ],
+  "exampleNotes": [
+    "创建案例会复用一套已验证可运行的夹具参数，确保开发者拿到的示例能直接在 EasyEDA 里跑通。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_PrimitiveDimension_create_' + Date.now();\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const createdPrimitive = await eda.pcb_PrimitiveDimension.create(\n    'Length Dimension',\n    [1000, 1000, 1000, 1150, 1600, 1150, 1600, 1000],\n    undefined,\n    'mil',\n    10,\n    2,\n    false,\n  );\n  const primitiveId = createdPrimitive?.getState_PrimitiveId?.() ?? createdPrimitive?.primitiveId ?? createdPrimitive?.id;\n  if (!primitiveId) { throw new Error('没有创建出可用于演示的测试图元。'); }\n  try {\n    return {\n      fixtureName,\n      created: createdPrimitive,\n      cleanupStrategy: 'auto',\n    };\n  } finally {\n    if (primitiveId) { await eda.pcb_PrimitiveDimension.delete([primitiveId]); }\n  }\n})(eda);"
+}

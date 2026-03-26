@@ -1,0 +1,34 @@
+{
+  "className": "PCB_Document",
+  "methodName": "importAutoLayoutJsonFile",
+  "slug": "PCB_Document.importAutoLayoutJsonFile",
+  "docPath": "references/classes/PCB_Document.md",
+  "examplePath": "examples/methods/PCB_Document/importAutoLayoutJsonFile.md",
+  "kind": "action",
+  "domain": "PCB",
+  "requiresDocumentType": "PCB",
+  "requiresProject": true,
+  "cleanupStrategy": "none",
+  "validationMode": "manual",
+  "status": "needs-review",
+  "templateName": "review-placeholder",
+  "generatedPath": "examples/generated/PCB_Document/importAutoLayoutJsonFile.json",
+  "signatures": [
+    "importAutoLayoutJsonFile(autoLayoutFile: File): Promise<boolean>"
+  ],
+  "description": "导入自动布局文件（JSON）",
+  "classSummary": "PCB & 封装 / 文档操作类",
+  "remarks": "可以使用  读入文件",
+  "returnSummary": "Promise<boolean>\n\n导入操作是否成功",
+  "params": [
+    {
+      "name": "autoLayoutFile",
+      "type": "File",
+      "description": "欲导入的 JSON 文件"
+    }
+  ],
+  "exampleNotes": [
+    "这个案例由生成器自动补齐为可读草稿，但当前仍建议结合对应类文档做人工复核。"
+  ],
+  "code": "return await (async function(eda) {\n  const fixtureName = '__codex_example___PCB_Document_importAutoLayoutJsonFile_' + Date.now();\n  const currentProject = await eda.dmt_Project.getCurrentProjectInfo();\n  if (!currentProject) { throw new Error('当前没有打开工程，先补齐环境再调试这个案例。'); }\n  const currentDocument = await eda.dmt_SelectControl.getCurrentDocumentInfo();\n  if (!currentDocument) {\n    throw new Error('当前没有活动文档，先打开一个可操作的文档页。');\n  }\n  if (currentDocument.documentType !== 3) {\n    throw new Error('当前文档类型不是 PCB，请先切到 PCB 再运行这个案例。');\n  }\n  const result = await eda.pcb_Document.importAutoLayoutJsonFile(undefined);\n  return { fixtureName, result, needsReview: true };\n})(eda);"
+}
